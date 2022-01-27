@@ -30,6 +30,7 @@ import { AppComponent } from './app.component';
 import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
     NavegacaoComponent,
     FeedComponent,
     AppLoginComponent,
-    AppCadastroComponent
+    AppCadastroComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,9 +64,10 @@ import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
-    HotToastModule.forRoot()
+    HotToastModule.forRoot(),
+    RecaptchaModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -2,28 +2,62 @@
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{conteudo}}</mat-card-title>
+      <mat-card-title>{{ conteudo }}</mat-card-title>
       <mat-card-subtitle>Entre na estante</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="../../assets/imagens/4.png" alt="Banner de Login">
-    <mat-card-content>
+    <img
+      mat-card-image
+      src="../../assets/imagens/4.png"
+      alt="Banner de Login"
+    />
+    <mat-card-content *ngIf="nTry < 3">
       <form [formGroup]="formularioLogin" (ngSubmit)="loginFirebase()">
         <mat-form-field>
-          <input matInput placeholder="Email de Login" formControlName="email">
-          <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
-          <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
+          <input
+            matInput
+            placeholder="Email de Login"
+            formControlName="email"
+          />
+          <mat-error *ngIf="email?.errors?.['required']"
+            >Será necessário informar um e-mail</mat-error
+          >
+          <mat-error *ngIf="email?.errors?.['email']"
+            >O formato do e-mail não é valido</mat-error
+          >
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Entre coma senha" formControlName="senha" type="password">
-          <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
+          <input
+            matInput
+            placeholder="Entre coma senha"
+            formControlName="senha"
+            type="password"
+          />
+          <mat-error *ngIf="senha?.errors?.['required']"
+            >Esqueceu a senha</mat-error
+          >
         </mat-form-field>
         <mat-card-footer>
           <button mat-raised-button color="accent" type="submit">Entrar</button>
-          <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
+          <button mat-raised-button mat-dialog-close color="primary">
+            Fechar
+          </button>
         </mat-card-footer>
       </form>
+      <small *ngIf="nTry > 0">Numero de tentativas de login: {{ nTry }}</small>
     </mat-card-content>
-    <span>Você ainda <strong>não tem cadastro</strong> clique <a routerLink="/app-app-cadastro">aqui</a>
-      e venha fazer parte desta comunidade de leitores</span>
+    <span
+      >Você ainda <strong>não tem cadastro</strong> clique
+      <a routerLink="/app-app-cadastro">aqui</a> e venha fazer parte desta
+      comunidade de leitores</span
+    >
   </mat-card>
 </div>
+
+<div [hidden]="captcha" *ngIf="nTry >= 3">
+  <p>Somente humanos podem ler</p>
+  <re-captcha
+    (resolved)="resolveRecaptcha($event)"
+    siteKey="6LdmQT4eAAAAACdz1WhmtVLRPPzhqjfqxfge8aZ1"
+  ></re-captcha>
+</div>
+<div [hidden]="!captcha"></div>

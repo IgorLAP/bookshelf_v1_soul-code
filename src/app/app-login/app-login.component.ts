@@ -17,9 +17,9 @@ export class AppLoginComponent {
     email: new FormControl('',[Validators.required, Validators.email]),
     senha: new FormControl('', Validators.required)
   });
-
+  nTry: number = 0
   hasUnitNumber=false;
-
+  captcha!: string
   constructor(
     private loginBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public conteudo:string,
@@ -37,6 +37,9 @@ export class AppLoginComponent {
     }
     loginFirebase(){
       if(!this.formularioLogin.valid){
+        this.nTry ++
+        this.captcha = ''
+        console.log(this.nTry)
         return;
       }
       const {email, senha} = this.formularioLogin.value;
@@ -48,8 +51,15 @@ export class AppLoginComponent {
           error: 'Algo deu errado, confira as informações'
         })
       ).subscribe(()=>{
+        this.nTry = 0
         this.rotas.navigate(['/cdd'])
+        console.log(this.nTry)
       })
   }
 
+  resolveRecaptcha(response : string){
+    this.captcha = response;
+    this.nTry = 0;
+    console.log('Resolve Recaptcha', response);
+  }
 }
