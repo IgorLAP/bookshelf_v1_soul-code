@@ -75,4 +75,9 @@ export class AppLoginComponent {
     this.nTry = 0;
     console.log('Resolve Recaptcha', response);
   }
+
+  fecharDialog(route: string){
+    this.rotas.navigate([`${route}`]);
+    this.telaLogin.closeAll();
+  }
 }
