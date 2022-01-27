@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 
@@ -24,7 +24,8 @@ export class AppLoginComponent {
     @Inject(MAT_DIALOG_DATA) public conteudo:string,
     private toast: HotToastService,
     private rotas: Router,
-    private autenticacaoFirebaseService: AutenticacaoFirebaseService
+    private autenticacaoFirebaseService: AutenticacaoFirebaseService,
+    private telaLogin: MatDialog
     ) {}
 
     get email(){
@@ -53,7 +54,15 @@ export class AppLoginComponent {
         this.nTry = 0
         this.rotas.navigate(['/cdd'])
         console.log(this.nTry)
+        this.telaLogin.closeAll();
       })
+  }
+
+  abrirLoginGoogle(){
+    this.autenticacaoFirebaseService.loginGoogle()
+    .subscribe(()=>{
+      this.rotas.navigate(['/feed'])
+    })
   }
 
   resolveRecaptcha(response : string){
