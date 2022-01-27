@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
+import { NavegacaoComponent } from '../navegacao/navegacao.component';
 
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
@@ -24,7 +25,7 @@ export class AppLoginComponent {
     @Inject(MAT_DIALOG_DATA) public conteudo:string,
     private toast: HotToastService,
     private rotas: Router,
-    private autenticacaoFirebaseService: AutenticacaoFirebaseService
+    private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     ) {}
 
     get email(){
@@ -58,6 +59,13 @@ export class AppLoginComponent {
         this.captcha = ''
       }, 500);
     }
+
+  abrirLoginGoogle(){
+    this.autenticacaoFirebaseService.loginGoogle()
+    .subscribe(()=>{
+      this.rotas.navigate(['/feed'])
+    })
+  }
 
   resolveRecaptcha(response : string){
     this.captcha = response;

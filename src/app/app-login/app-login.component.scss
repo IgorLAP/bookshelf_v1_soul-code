@@ -38,3 +38,26 @@ mat-card-footer{
   }
   margin: auto;
 }
+
+form{
+  display: flex;
+  align-items: center;
+}
+
+.loginGoogle{
+  margin: 20px auto;
+
+  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+
+    img{
+      margin-right: 15px;
+      width: 35px;
+    }
+  }
+}
