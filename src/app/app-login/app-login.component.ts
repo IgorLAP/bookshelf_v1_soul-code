@@ -39,7 +39,6 @@ export class AppLoginComponent {
       if(!this.formularioLogin.valid){
         this.nTry ++
         this.captcha = ''
-        console.log(this.nTry)
         return;
       }
       const {email, senha} = this.formularioLogin.value;
@@ -58,7 +57,11 @@ export class AppLoginComponent {
         console.log(this.nTry)
         this.telaLogin.closeAll();
       })
-  }
+      setTimeout(() => {
+        this.nTry ++
+        this.captcha = ''
+      }, 500);
+    }
 
   abrirLoginGoogle(){
     this.autenticacaoFirebaseService.loginGoogle()
