@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 
@@ -16,15 +16,16 @@ export class AppLoginComponent {
     email: new FormControl('',[Validators.required, Validators.email]),
     senha: new FormControl('', Validators.required)
   });
-
+  nTry: number = 0
   hasUnitNumber=false;
-
+  captcha!: string
   constructor(
     private loginBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public conteudo:string,
     private toast: HotToastService,
     private rotas: Router,
-    private autenticacaoFirebaseService: AutenticacaoFirebaseService
+    private autenticacaoFirebaseService: AutenticacaoFirebaseService,
+    private telaLogin: MatDialog
     ) {}
 
     get email(){
@@ -36,6 +37,8 @@ export class AppLoginComponent {
     }
     loginFirebase(){
       if(!this.formularioLogin.valid){
+        this.nTry ++
+        this.captcha = ''
         return;
       }
       const {email, senha} = this.formularioLogin.value;
@@ -47,7 +50,27 @@ export class AppLoginComponent {
           error: 'Algo deu errado, confira as informações'
         })
       ).subscribe(()=>{
+        this.nTry =0
         this.rotas.navigate(['/cdd'])
+        console.log(this.nTry)
+        this.telaLogin.closeAll();
       })
+      setTimeout(() => {
+        this.nTry ++
+        this.captcha = ''
+      }, 500);
+    }
+
+  abrirLoginGoogle(){
+    this.autenticacaoFirebaseService.loginGoogle()
+    .subscribe(()=>{
+      this.rotas.navigate(['/feed'])
+    })
+  }
+
+  resolveRecaptcha(response : string){
+    this.captcha = response;
+    this.nTry = 0;
+    console.log('Resolve Recaptcha', response);
   }
 }

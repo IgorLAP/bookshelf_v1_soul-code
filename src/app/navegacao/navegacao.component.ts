@@ -56,4 +56,10 @@ export class NavegacaoComponent {
         this.rotas.navigate([''])
       })
     }
+
+    voltarTelaInicial(){
+      this.rotas.navigate(['']);
+    }
+
+
 }
