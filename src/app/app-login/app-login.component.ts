@@ -38,7 +38,6 @@ export class AppLoginComponent {
       if(!this.formularioLogin.valid){
         this.nTry ++
         this.captcha = ''
-        console.log(this.nTry)
         return;
       }
       const {email, senha} = this.formularioLogin.value;
@@ -50,11 +49,15 @@ export class AppLoginComponent {
           error: 'Algo deu errado, confira as informações'
         })
       ).subscribe(()=>{
-        this.nTry = 0
+        this.nTry =0
         this.rotas.navigate(['/cdd'])
         console.log(this.nTry)
       })
-  }
+      setTimeout(() => {
+        this.nTry ++
+        this.captcha = ''
+      }, 500);
+    }
 
   resolveRecaptcha(response : string){
     this.captcha = response;
