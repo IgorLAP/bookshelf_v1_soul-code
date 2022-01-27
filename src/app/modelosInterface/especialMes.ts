@@ -1,4 +1,4 @@
-export interface Reportagens {
+export interface EspecialMes {
   titulo: string;
   subtitulo: string;
   img: string;
