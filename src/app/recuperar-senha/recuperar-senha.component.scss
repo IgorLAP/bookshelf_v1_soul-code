@@ -1,0 +1,25 @@
+.form{
+
+  form{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    mat-form-field{
+      width: 25rem;
+    }
+    p{
+      font-size: 17px;
+    }
+    img{
+      width: 250px;
+    }
+    .form-container{
+      display: block;
+    }
+  }
+
+}
