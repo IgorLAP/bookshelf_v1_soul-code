@@ -1,0 +1,50 @@
+[
+  {
+    "titulo": "Livro sobre traição contra Anne Frank e família revela investigação séria, mas conclusão exige cautela",
+    "subtitulo": "Investigações sobre o caso apontam diferentes cenários. Mais nova divulgação, publicada em um livro, aponta que um tabelião judeu entregou o esconderijo da família.",
+    "img": "../../assets/imagens/anne-frank.jpg",
+    "reportagem": "O lançamento na França do livro sobre a traição contra Anne Frank (Qui a trahi Anne Frank, título em francês), da escritora canadense Rosemary Sullivan, recebeu vários comentários na imprensa nesta semana. A obra relata as conclusões de uma extensa investigação dirigida por um ex-agente do FBI, Vincent Pankoke.",
+    "links":[
+      {"ref":"https://g1.globo.com/mundo/noticia/2022/01/21/livro-sobre-traicao-contra-anne-frank-e-familia-revela-investigacao-seria-mas-conclusao-exige-cautela.ghtml", "texto":"Reportagem completa"},
+      {"ref":"https://en.wikipedia.org/wiki/Rosemary_Sullivan","texto":"Escritora e seus principais livros"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "Livro sobre traição contra Anne Frank e família revela investigação séria, mas conclusão exige cautela",
+    "subtitulo": "Investigações sobre o caso apontam diferentes cenários. Mais nova divulgação, publicada em um livro, aponta que um tabelião judeu entregou o esconderijo da família.",
+    "img": "../../assets/imagens/anne-frank.jpg",
+    "reportagem": "O lançamento na França do livro sobre a traição contra Anne Frank (Qui a trahi Anne Frank, título em francês), da escritora canadense Rosemary Sullivan, recebeu vários comentários na imprensa nesta semana. A obra relata as conclusões de uma extensa investigação dirigida por um ex-agente do FBI, Vincent Pankoke.",
+    "links":[
+      {"ref":"https://g1.globo.com/mundo/noticia/2022/01/21/livro-sobre-traicao-contra-anne-frank-e-familia-revela-investigacao-seria-mas-conclusao-exige-cautela.ghtml", "texto":"Reportagem completa"},
+      {"ref":"https://en.wikipedia.org/wiki/Rosemary_Sullivan","texto":"Escritora e seus principais livros"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "Livro sobre traição contra Anne Frank e família revela investigação séria, mas conclusão exige cautela",
+    "subtitulo": "Investigações sobre o caso apontam diferentes cenários. Mais nova divulgação, publicada em um livro, aponta que um tabelião judeu entregou o esconderijo da família.",
+    "img": "../../assets/imagens/anne-frank.jpg",
+    "reportagem": "O lançamento na França do livro sobre a traição contra Anne Frank (Qui a trahi Anne Frank, título em francês), da escritora canadense Rosemary Sullivan, recebeu vários comentários na imprensa nesta semana. A obra relata as conclusões de uma extensa investigação dirigida por um ex-agente do FBI, Vincent Pankoke.",
+    "links":[
+      {"ref":"https://g1.globo.com/mundo/noticia/2022/01/21/livro-sobre-traicao-contra-anne-frank-e-familia-revela-investigacao-seria-mas-conclusao-exige-cautela.ghtml", "texto":"Reportagem completa"},
+      {"ref":"https://en.wikipedia.org/wiki/Rosemary_Sullivan","texto":"Escritora e seus principais livros"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "Livro sobre traição contra Anne Frank e família revela investigação séria, mas conclusão exige cautela",
+    "subtitulo": "Investigações sobre o caso apontam diferentes cenários. Mais nova divulgação, publicada em um livro, aponta que um tabelião judeu entregou o esconderijo da família.",
+    "img": "../../assets/imagens/anne-frank.jpg",
+    "reportagem": "O lançamento na França do livro sobre a traição contra Anne Frank (Qui a trahi Anne Frank, título em francês), da escritora canadense Rosemary Sullivan, recebeu vários comentários na imprensa nesta semana. A obra relata as conclusões de uma extensa investigação dirigida por um ex-agente do FBI, Vincent Pankoke.",
+    "links":[
+      {"ref":"https://g1.globo.com/mundo/noticia/2022/01/21/livro-sobre-traicao-contra-anne-frank-e-familia-revela-investigacao-seria-mas-conclusao-exige-cautela.ghtml", "texto":"Reportagem completa"},
+      {"ref":"https://en.wikipedia.org/wiki/Rosemary_Sullivan","texto":"Escritora e seus principais livros"}
+    ],
+    "cols": 1,
+    "rows": 2
+  }
+]
