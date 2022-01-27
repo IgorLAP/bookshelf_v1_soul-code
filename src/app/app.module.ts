@@ -22,16 +22,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HotToastModule } from '@ngneat/hot-toast';
-import { RecaptchaModule } from 'ng-recaptcha';
+import {  RecaptchaModule } from 'ng-recaptcha';
 
 import { environment } from '../environments/environment';
-import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
+import {  AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { AppMaterialModule } from './app-compartilhado/app-material/app-material.module';
 import { AppLoginComponent } from './app-login/app-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
+import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NavegacaoComponent } from './navegacao/navegacao.component';
     FeedComponent,
     AppLoginComponent,
     AppCadastroComponent,
+    RecuperarSenhaComponent,
   ],
   imports: [
     BrowserModule,

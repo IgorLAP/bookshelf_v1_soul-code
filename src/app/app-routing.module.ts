@@ -1,8 +1,10 @@
+import { NgModule } from '@angular/core';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { RouterModule, Routes } from '@angular/router';
+
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { FeedComponent } from './feed/feed.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -12,6 +14,10 @@ const routes: Routes = [
   },
   {
     path:'app-app-cadastro', component: AppCadastroComponent
+  },
+  {
+    path: 'recuperar',
+    component: RecuperarSenhaComponent
   },
   {
     path: 'feed', component: FeedComponent,
