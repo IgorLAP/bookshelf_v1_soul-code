@@ -3,6 +3,7 @@ import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'especial-mes', component: EspecialMesComponent,
     ...canActivate(enviarSemLogin)
   }
 ];

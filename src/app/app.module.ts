@@ -31,6 +31,7 @@ import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
     FeedComponent,
     AppLoginComponent,
     AppCadastroComponent,
+    EspecialMesComponent,
   ],
   imports: [
     BrowserModule,
