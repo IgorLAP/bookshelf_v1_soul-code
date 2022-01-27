@@ -1,0 +1,54 @@
+.grid-container {
+  margin: 20px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.special-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.special-card-titles {
+  text-align: left;
+  line-height: 1.9em;
+}
+
+.special-card-content {
+  text-align: justify;
+  line-height: 1.8em;
+}
+
+.mat-h1{
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #7E56C2;
+  text-align: center;
+}
+
+//Imagem Logo avatar-card
+.example-header-image {
+  width: 90px;
+  height: 90px;
+  background-image: url('../../assets/imagens/logoBS4.png');
+  background-size: cover;
+
+}
+
+//Linha do <mat-divider>
+.mat-divider {
+  margin: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #c0a7ec;
+}
