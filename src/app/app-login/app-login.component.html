@@ -12,6 +12,30 @@
     />
     <mat-card-content *ngIf="nTry < 3">
       <form [formGroup]="formularioLogin" (ngSubmit)="loginFirebase()">
+<<<<<<< HEAD
+        <div class="formContainer">
+          <mat-form-field>
+            <input matInput placeholder="Email de Login" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Entre coma senha" formControlName="senha" type="password">
+            <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
+          </mat-form-field>
+          <mat-card-footer>
+            <button mat-raised-button color="accent" type="submit">Entrar</button>
+            <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
+          </mat-card-footer>
+        </div>
+        <div class="loginGoogle">
+          <span>Ou entre com sua conta Google:</span>
+          <button (click)="abrirLoginGoogle()" mat-raised-button>
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/imagem-google-logo-com-fundo-transparente-1.png" alt="">
+            Logar com o Google
+          </button>
+        </div>
+=======
         <mat-form-field>
           <input
             matInput
@@ -42,6 +66,7 @@
             Fechar
           </button>
         </mat-card-footer>
+>>>>>>> ff08ede0be21e06d810d6a3bbe2961ce282ba1ec
       </form>
       <small *ngIf="nTry > 0">Numero de tentativas de login: {{ nTry }}</small>
     </mat-card-content>

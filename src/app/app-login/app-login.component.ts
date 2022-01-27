@@ -57,6 +57,13 @@ export class AppLoginComponent {
       })
   }
 
+  abrirLoginGoogle(){
+    this.autenticacaoFirebaseService.loginGoogle()
+    .subscribe(()=>{
+      this.rotas.navigate(['/feed'])
+    })
+  }
+
   resolveRecaptcha(response : string){
     this.captcha = response;
     this.nTry = 0;
