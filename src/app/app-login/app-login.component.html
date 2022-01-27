@@ -8,19 +8,28 @@
     <img mat-card-image src="../../assets/imagens/4.png" alt="Banner de Login">
     <mat-card-content>
       <form [formGroup]="formularioLogin" (ngSubmit)="loginFirebase()">
-        <mat-form-field>
-          <input matInput placeholder="Email de Login" formControlName="email">
-          <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
-          <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Entre coma senha" formControlName="senha" type="password">
-          <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
-        </mat-form-field>
-        <mat-card-footer>
-          <button mat-raised-button color="accent" type="submit">Entrar</button>
-          <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
-        </mat-card-footer>
+        <div class="formContainer">
+          <mat-form-field>
+            <input matInput placeholder="Email de Login" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Entre coma senha" formControlName="senha" type="password">
+            <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
+          </mat-form-field>
+          <mat-card-footer>
+            <button mat-raised-button color="accent" type="submit">Entrar</button>
+            <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
+          </mat-card-footer>
+        </div>
+        <div class="loginGoogle">
+          <span>Ou entre com sua conta Google:</span>
+          <button (click)="abrirLoginGoogle()" mat-raised-button>
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/imagem-google-logo-com-fundo-transparente-1.png" alt="">
+            Logar com o Google
+          </button>
+        </div>
       </form>
     </mat-card-content>
     <span>Você ainda <strong>não tem cadastro</strong> clique <a routerLink="/app-app-cadastro">aqui</a>

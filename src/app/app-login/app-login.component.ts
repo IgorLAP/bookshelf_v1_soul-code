@@ -50,4 +50,11 @@ export class AppLoginComponent {
         this.rotas.navigate(['/cdd'])
       })
   }
+
+  abrirLoginGoogle(){
+    this.autenticacaoFirebaseService.loginGoogle()
+    .subscribe(()=>{
+      this.rotas.navigate(['/feed'])
+    })
+  }
 }
