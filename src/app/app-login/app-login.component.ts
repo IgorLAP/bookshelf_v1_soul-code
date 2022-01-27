@@ -42,6 +42,7 @@ export class AppLoginComponent {
         return;
       }
       const {email, senha} = this.formularioLogin.value;
+
       this.autenticacaoFirebaseService.loginUsuario(email, senha)
       .pipe(
         this.toast.observe({
@@ -50,7 +51,8 @@ export class AppLoginComponent {
           error: 'Algo deu errado, confira as informações'
         })
       ).subscribe(()=>{
-        this.nTry =0
+        this.formularioLogin.reset({email: '', senha: ''})
+        this.nTry = 0
         this.rotas.navigate(['/cdd'])
         console.log(this.nTry)
         this.telaLogin.closeAll();
