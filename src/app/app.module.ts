@@ -17,21 +17,24 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 import { environment } from '../environments/environment';
+import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { AppMaterialModule } from './app-compartilhado/app-material/app-material.module';
 import { AppLoginComponent } from './app-login/app-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
-import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
-import { RecaptchaModule } from 'ng-recaptcha';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.compo
     FeedComponent,
     AppLoginComponent,
     AppCadastroComponent,
+    EspecialMesComponent,
     RecuperarSenhaComponent,
   ],
   imports: [
@@ -67,7 +71,8 @@ import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.compo
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
     HotToastModule.forRoot(),
-    RecaptchaModule
+    RecaptchaModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
