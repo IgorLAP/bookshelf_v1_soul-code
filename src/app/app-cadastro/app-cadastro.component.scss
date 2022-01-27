@@ -10,3 +10,35 @@ mat-grid-list{
 mat-form-field{
   margin: 1%;
 }
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.card-cadastro{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+}
+
+p{
+  text-align: center;
+}
+
+.jc-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button{
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
