@@ -14,14 +14,14 @@
       </button>
       <a routerLink="/"><img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral"></a>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
-        <button mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
+        <button class="button" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
           <mat-icon class="mat-18">local_library</mat-icon>
-          {{usuario.displayName}}
+          {{usuario.displayName|| usuario.email}}
           <mat-icon>expand_more</mat-icon>
         </button>
       </ng-container>
       <ng-template #botaoLogin>
-        <button mat-raised-button color="primary" (click)="abrirLogin('Tela de Login')">
+        <button  class="button" mat-raised-button color="primary" (click)="abrirLogin('Tela de Login')">
           <mat-icon class="mat-18">login</mat-icon>
           LOGIN
         </button>
