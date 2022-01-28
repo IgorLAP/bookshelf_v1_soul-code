@@ -36,6 +36,9 @@ import { FeedComponent } from './feed/feed.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+
+
 
 
 @NgModule({
@@ -47,6 +50,7 @@ import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.compo
     AppCadastroComponent,
     EspecialMesComponent,
     RecuperarSenhaComponent,
+    RotasDesconhecidasComponent,
     IsbnComponent,
   ],
   imports: [
