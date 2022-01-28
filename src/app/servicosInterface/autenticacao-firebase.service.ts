@@ -63,4 +63,21 @@ export class AutenticacaoFirebaseService {
     recuperarSenha(emailAddress: string){
       return from(sendPasswordResetEmail(this.usuarioFb, emailAddress))
     }
+
+    errorMessages(error: string){
+      switch (error) {
+        case 'auth/invalid-email':
+          return 'Email inválido'
+          break;
+        case 'auth/weak-password':
+          return 'Senha deve conter no mínimo 6 caracteres'
+          break;
+        case 'auth/email-already-in-use':
+          return 'Email já registrado em nosso sistema'
+          break;
+        default:
+          return 'Ocorreu um erro'
+          break;
+      }
+    }
 }
