@@ -55,6 +55,19 @@ form{
   justify-content: center;
 }
 
+.helpers {
+  span{
+    display: block;
+    margin: 10px 0;
+  }
+  a{
+    color: #7e56c2;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+
 .loginGoogle{
   margin: 20px auto;
 

@@ -5,7 +5,7 @@
   margin-right: auto;
 }
 
-.dashboard-card {
+.special-card {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -19,14 +19,21 @@
   right: 10px;
 }
 
-.dashboard-card-content {
-  text-align: center;
+.special-card-titles {
+  text-align: left;
+  line-height: 1.9em;
+}
+
+.special-card-content {
+  text-align: justify;
+  line-height: 1.8em;
 }
 
 .mat-h1{
   font-weight: bold;
   font-size: 1.8em;
   color: #7E56C2;
+  text-align: center;
 }
 
 //Imagem Logo avatar-card
@@ -45,4 +52,3 @@
   border-top-style: solid;
   border-top-color: #c0a7ec;
 }
-

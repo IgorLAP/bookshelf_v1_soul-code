@@ -29,7 +29,7 @@
         </div>
         <div class="loginGoogle">
           <span>Ou entre com sua conta Google:</span>
-          <button (click)="abrirLoginGoogle()" mat-raised-button>
+          <button type="button" (click)="abrirLoginGoogle()" mat-raised-button>
             <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/imagem-google-logo-com-fundo-transparente-1.png" alt="">
             Logar com o Google
           </button>
@@ -37,10 +37,12 @@
       </form>
       <small *ngIf="nTry > 0">Numero de tentativas de login: {{ nTry }}</small>
     </mat-card-content>
-    <span
-      >Você ainda <strong>não tem cadastro</strong> clique
-      <a routerLink="/app-app-cadastro">aqui</a> e venha fazer parte desta
-      comunidade de leitores</span>
+    <div class="helpers">
+      <span><strong>Esqueceu</strong> sua senha? Vá em <a (click)="fecharDialog('/recuperar')">Recuperar Senha</a></span>
+      <span>Se você ainda <strong>não tem cadastro</strong> clique
+        <a (click)="fecharDialog('/app-app-cadastro')" >aqui</a> e venha fazer parte desta
+        comunidade de leitores</span>
+    </div>
   </mat-card>
 </div>
 

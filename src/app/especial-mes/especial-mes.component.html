@@ -1,0 +1,27 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Reportagens do Mês</h1>
+  <mat-grid-list cols="2" rowHeight="410px">
+    <mat-grid-tile *ngFor="let cardReportagem of cardsReportagens$ | async" [colspan]="cardReportagem.cols" [rowspan]="cardReportagem.rows">
+      <mat-card class="special-card">
+        <mat-card-header class="special-card-titles">
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{cardReportagem.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{cardReportagem.subtitulo}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="cardReportagem.img" [alt]="cardReportagem.titulo">
+        <mat-card-content class="special-card-content">
+          <div>{{cardReportagem.reportagem}}</div>
+        </mat-card-content>
+        <mat-nav-list>
+          <mat-list-item *ngFor="let link of cardReportagem.links">
+            <a matLine [href]="link.ref" target="_blank">{{ link.texto }}</a>
+            <button mat-icon-button>
+              <mat-icon>info</mat-icon>
+            </button>
+            <mat-divider inset></mat-divider>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
