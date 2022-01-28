@@ -2,6 +2,11 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <a routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
+    <ng-container class="text-center" *ngIf="usuario$ | async as usuario; else botaoLogin">
+      <span class="user-name">
+        {{usuario.email! | userNameFromEmail | titlecase }}
+      </span>
+    </ng-container>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
     </mat-nav-list>
