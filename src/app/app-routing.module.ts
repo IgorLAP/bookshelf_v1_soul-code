@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
+import { IsbnComponent } from './isbn/isbn.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 
 
@@ -32,6 +33,10 @@ const routes: Routes = [
   },
   {
     path: 'especial-mes', component: EspecialMesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'isbn', component: IsbnComponent,
     ...canActivate(enviarSemLogin)
   }
 ];
