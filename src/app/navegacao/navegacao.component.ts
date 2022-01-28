@@ -9,7 +9,7 @@ import { AppLoginComponent } from './../app-login/app-login.component';
 import { MenuNavegador } from './../modelosInterface/menuNavegador';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 import { NavegacaoService } from './../servicosInterface/navegacao.service';
-
+import { HotToastService } from '@ngneat/hot-toast';
 @Component({
   selector: 'app-navegacao',
   templateUrl: './navegacao.component.html',
@@ -34,6 +34,7 @@ export class NavegacaoComponent {
     private breakpointObserver: BreakpointObserver,
     private telaLogin: MatDialog,
     private rotas: Router,
+    private toast: HotToastService,
     private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     private navegadorService: NavegacaoService
     ) {
@@ -52,9 +53,17 @@ export class NavegacaoComponent {
     }
 
     sairUsuario(){
-      this.autenticacaoFirebaseService.sairLogin().subscribe(() =>{
-        this.rotas.navigate([''])
-      })
+      this.autenticacaoFirebaseService
+        .sairLogin()
+        .pipe(
+          this.toast.observe({
+            success: 'Deslogando... obrigado pela visita',
+            loading: 'Redirecionando...',
+          })
+        )
+        .subscribe(() => {
+          this.rotas.navigate(['']);
+        });
     }
 
     voltarTelaInicial(){
