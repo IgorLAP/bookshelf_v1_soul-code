@@ -42,7 +42,7 @@
   left: 0;
   width: 5px;
   height: 100%;
-  background: linear-gradient(90deg, #5E17EB 0%, #ba52ff 100%);
+  background: linear-gradient(90deg, #5e17eb 0%, #ba52ff 100%);
   z-index: -1;
   transition: all 0.5s;
 }
@@ -59,7 +59,7 @@
   background: #b9b9b9;
 }
 
-.user-name{
+.user-name {
   font-weight: bold;
   border-radius: 7px;
   display: flex;
@@ -70,12 +70,72 @@
   background: #ba52ff8e;
   text-align: center;
   color: #424242;
+  margin-bottom: 15px;
 }
 
-.text-center{
+.text-center {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
 
+/* From cssbuttons.io by @alexmaracinaru */
+.cta {
+  position: relative;
+  // margin: auto;
+  margin: 5px 0;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 30px;
+  background: #ba52ff8e;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  // font-family: "Ubuntu", sans-serif;
+  // font-size: 18px;
+  // font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
 }
