@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
-  FormControl,
   ValidationErrors,
   ValidatorFn,
   Validators,
@@ -40,15 +39,6 @@ export function passwordMatchValidator(): ValidatorFn {
   ],
 })
 export class AppCadastroComponent implements OnInit {
-/*   formularioCadastro = this.loginBuilder.group(
-    {
-      nome: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      senha: new FormControl('', Validators.required),
-      confirmaSenha: new FormControl('', Validators.required),
-    },
-    { validators: passwordMatchValidator() }
-  ); */
   clientName!: string;
   clientEmail!: string;
   clienteSenha!: string;
@@ -63,28 +53,13 @@ export class AppCadastroComponent implements OnInit {
     private rotas: Router
   ) {}
 
-/*   get nome() {
-    return this.formularioCadastro.get('nome');
-  }
-
-  get email() {
-    return this.formularioCadastro.get('email');
-  }
-
-  get senha() {
-    return this.formularioCadastro.get('senha');
-  }
-
-  get confirmaSenha() {
-    return this.formularioCadastro.get('confirmaSenha');
-  } */
-
   mostrar() {
     console.log('Nome => ', this.clientName);
     console.log('Email => ', this.clientEmail);
     console.log('Senha => ', this.clienteSenha);
     console.log('Confirma Senha => ', this.clienteConfirmSenha);
   }
+
   enviaCadastro() {
     if(!this.clientName || !this.clientEmail || !this.clienteSenha || !this.clienteConfirmSenha){
       this.toast.error('Preencha todos os campos corretamente!')
@@ -94,18 +69,13 @@ export class AppCadastroComponent implements OnInit {
       return
     }
 
-    /* if (!this.formularioCadastro.valid) {
-      console.log('nao foi')
-      return;
-    } */
-    // const { nome, email, senha } = this.formularioCadastro.value;
     this.autenticacaoFirebaseService
       .cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha)
       .pipe(
         this.toast.observe({
           success: 'Cadatro executado, bem vindo ao BookShelf',
           loading: 'Enviando informações...',
-          error: ({ message }) => `Houve um problema: #BS${message}`,
+          error: ({message}) => this.autenticacaoFirebaseService.errorMessages((message.split('(')[1].split(')')[0]))
         })
       )
       .subscribe(() => {
