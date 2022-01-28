@@ -37,12 +37,12 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
-    path: '**',
-    component: RotasDesconhecidasComponent
-  },
-  {
     path: 'isbn', component: IsbnComponent,
     ...canActivate(enviarSemLogin)
+  },
+  {
+    path: '**',
+    component: RotasDesconhecidasComponent
   }
 ];
 
