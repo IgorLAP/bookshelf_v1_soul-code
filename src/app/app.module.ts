@@ -34,6 +34,7 @@ import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+import { IsbnComponent } from './isbn/isbn.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.compo
     AppCadastroComponent,
     EspecialMesComponent,
     RecuperarSenhaComponent,
+    IsbnComponent,
   ],
   imports: [
     BrowserModule,
