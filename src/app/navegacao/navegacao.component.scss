@@ -58,3 +58,24 @@
 .button:active:before {
   background: #b9b9b9;
 }
+
+.user-name{
+  font-weight: bold;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 17px;
+  background: #ba52ff8e;
+  text-align: center;
+  color: #424242;
+}
+
+.text-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
