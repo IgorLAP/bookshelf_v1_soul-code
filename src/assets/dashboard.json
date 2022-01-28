@@ -32,10 +32,11 @@
       {"ref":"https://www.prolivro.org.br/2021/01/20/ciclo-de-debates-da-retratos-da-leitura/", "texto":"Pró-Livro"},
       {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"},
       {"ref":"https://teoriaedebate.org.br/estante/a-ditadura-envergonhada-v-1-a-ditadura-escancarada-v-2/","texto":"Teoria e Debate"},
-      {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"}
+      {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"},
+      {"ref":"","texto":""}
     ],
     "cols": 1,
-    "rows": 2
+    "rows": 4
   },
   {
     "titulo": "Educação e Leitura: Fundação Victor Civita",

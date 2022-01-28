@@ -1,0 +1,76 @@
+h1{
+  text-align: center;
+  margin: 25px auto;
+}
+
+.infoCards {
+  margin: 20px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2{
+    text-align: center;
+  }
+  p, ol li{
+    font-size: 17px;
+  }
+}
+
+.floatDiv{
+  mat-card-content{
+    position: relative;
+  }
+
+  .floatedTxt{
+    width: 65%;
+    float: left;
+  }
+  img{
+    width: 34%;
+    height: 17%;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.isbnImg{
+  width: 70%;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+  .floatDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .floatedTxt{
+      width: 100%;
+      float: unset;
+    }
+    img{
+      width: 60%;
+      height: 18%;
+      float: unset;
+      position: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .floatDiv{
+
+    img{
+      width: 100%;
+    }
+  }
+}
