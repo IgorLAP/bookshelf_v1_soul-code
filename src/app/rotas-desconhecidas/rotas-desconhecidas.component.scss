@@ -1,0 +1,77 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 0px 20px 20px;
+  max-width: 650px;
+  margin: 10% auto;
+  height: 48%;
+  animation: change1 4s infinite;
+
+  .reduce {
+    animation: reduce 4s infinite;
+  }
+}
+
+@keyframes change1 {
+  from {
+    background-color: rgb(69, 67, 72);
+  }
+
+  to {
+    background-color: rgb(105, 55, 187);
+  }
+}
+
+@keyframes reduce {
+  from {
+    width: 200px;
+  }
+
+  to {
+    width: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+a {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  animation: change2 4s infinite;
+}
+
+@keyframes change2 {
+  from {
+    background-color: rgb(105, 55, 187);
+  }
+
+  to {
+    background-color: rgb(69, 67, 72);
+  }
+}
+
+.position {
+  text-align: center;
+  position: absolute;
+  left: 234px;
+  top: 128px;
+  border-radius: 20px 20px 0px 0px;
+  width: 662px;
+  padding: 10px;
+  color: white;
+  background-color: rgb(69, 67, 72);
+}
+
+h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.img {
+  max-width: 50px;
+}
+
