@@ -1,12 +1,14 @@
 <div class="form">
-  <form>
+  <form [formGroup]="formularioLogin" (ngSubmit)="enviarRecuperacao()">
     <img src="../../assets/imagens/logoBS4.png" alt="logo BookShelf">
     <h2>Recuperação de Senha</h2>
     <p>Insira seu email cadastrado para recuperar senha</p>
     <div class="form-container">
       <mat-form-field appearance="fill">
         <mat-label>Insira seu email</mat-label>
-        <input matInput type="email" name="email" placeholder="pat@example.com" required>
+        <input matInput type="email" formControlName="email" placeholder="pat@example.com" required>
+        <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
       </mat-form-field>
     </div>
     <button mat-raised-button color="accent">Enviar</button>

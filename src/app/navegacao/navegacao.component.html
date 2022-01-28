@@ -2,6 +2,11 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <a routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
+    <ng-container class="text-center" *ngIf="usuario$ | async as usuario; else botaoLogin">
+      <span class="user-name">
+        {{usuario.email! | userNameFromEmail | titlecase }}
+      </span>
+    </ng-container>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
     </mat-nav-list>
@@ -14,14 +19,14 @@
       </button>
       <a routerLink="/"><img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral"></a>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
-        <button mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
+        <button class="button" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
           <mat-icon class="mat-18">local_library</mat-icon>
-          {{usuario.displayName}}
+          {{usuario.displayName|| usuario.email}}
           <mat-icon>expand_more</mat-icon>
         </button>
       </ng-container>
       <ng-template #botaoLogin>
-        <button mat-raised-button color="primary" (click)="abrirLogin('Tela de Login')">
+        <button  class="button" mat-raised-button color="primary" (click)="abrirLogin('Tela de Login')">
           <mat-icon class="mat-18">login</mat-icon>
           LOGIN
         </button>

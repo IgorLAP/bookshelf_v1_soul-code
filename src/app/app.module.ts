@@ -23,7 +23,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { RecaptchaModule } from 'ng-recaptcha';
-
+import { AppCompartilhadoModule } from './app-compartilhado/app-compartilhado.module';
 import { environment } from '../environments/environment';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { AppMaterialModule } from './app-compartilhado/app-material/app-material.module';
@@ -35,6 +35,8 @@ import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+import { IsbnComponent } from './isbn/isbn.component';
+
 
 
 @NgModule({
@@ -47,6 +49,7 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
     EspecialMesComponent,
     RecuperarSenhaComponent,
     RotasDesconhecidasComponent,
+    IsbnComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +78,7 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
     HotToastModule.forRoot(),
     RecaptchaModule,
     MatStepperModule,
+    AppCompartilhadoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,13 +4,13 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   updateProfile,
-  signOut
 } from 'firebase/auth';
 import { authState } from 'rxfire/auth';
-import { from, switchMap } from 'rxjs';
+import { from, of, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -58,5 +58,26 @@ export class AutenticacaoFirebaseService {
           const credential = GoogleAuthProvider.credentialFromError(error);
           // ...
         }))
+    }
+
+    recuperarSenha(emailAddress: string){
+      return from(sendPasswordResetEmail(this.usuarioFb, emailAddress))
+    }
+
+    errorMessages(error: string){
+      switch (error) {
+        case 'auth/invalid-email':
+          return 'Email inválido'
+          break;
+        case 'auth/weak-password':
+          return 'Senha deve conter no mínimo 6 caracteres'
+          break;
+        case 'auth/email-already-in-use':
+          return 'Email já registrado em nosso sistema'
+          break;
+        default:
+          return 'Ocorreu um erro'
+          break;
+      }
     }
 }
