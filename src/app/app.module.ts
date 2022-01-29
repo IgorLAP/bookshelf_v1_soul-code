@@ -40,6 +40,7 @@ import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.compo
 import { VestibularComponent } from './vestibular/vestibular.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
+import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 
 
 
@@ -57,6 +58,7 @@ import { SugestoesComponent } from './sugestoes/sugestoes.component';
     RotasDesconhecidasComponent,
     IsbnComponent,
     SugestoesComponent,
+    MaisVendidosComponent,
   ],
   imports: [
     BrowserModule,
