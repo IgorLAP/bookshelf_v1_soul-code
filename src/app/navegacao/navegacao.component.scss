@@ -10,11 +10,32 @@
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
+.mat-toolbar.mat-primary,
+.mat-toolbar.mat-accent {
   position: sticky;
   top: 0;
   z-index: 1;
   justify-content: space-between;
+}
+
+
+.change-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  // border: none;
+  border-radius: 7px;
+  padding: 5px 10px;
+  // outline: none;
+  background: transparent;
+  color: white;
+}
+.change-color:hover {
+  // background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  // font-size: 1.1rem;
 }
 /* From cssbuttons.io by @meermubashar */
 .button {
@@ -89,7 +110,6 @@
   transition: all 0.2s ease;
   border: none;
   background: none;
-
 }
 
 .cta:before {
