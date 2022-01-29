@@ -1,0 +1,82 @@
+[
+  {
+    "titulo":"Dom Quixote",
+    "autor": "Miguel De Cervantes",
+    "categoria": "Ficção",
+    "dataPublicacao":"1612",
+    "isbn": "978-07-44525-02-1",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-dom-quixote-20210223153828.jpg"
+  },
+  {
+    "titulo":"Um Conto de Duas Cidades",
+    "autor": "Charles Dickens",
+    "categoria": "Ficção",
+    "dataPublicacao":"1859",
+    "isbn": "978-01-40430-54-7",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-um-conto-de-duas-cidades-20210223154023.jpg"
+  },
+  {
+    "titulo":"O Senhor dos Anéis",
+    "autor": "J. R. R. Tolkien",
+    "categoria": "Não ficção",
+    "dataPublicacao":"1954",
+    "isbn": "978-88-45292-61-3",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-o-senhor-dos-aneis-20210223154001.jpg"
+  },
+  {
+    "titulo":"O Pequeno Príncipe",
+    "autor": "Antoine de Saint-Exupéry",
+    "categoria": "Ficção",
+    "dataPublicacao":"1943",
+    "isbn": "978-38-33733-21-5",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-o-pequeno-principe-20210223153947.jpg"
+  },
+  {
+    "titulo":"Harry Potter e a Pedra Filosofal",
+    "autor": "J.K. Rowling",
+    "categoria": "Ficção",
+    "dataPublicacao":"1997",
+    "isbn": "978-04-39362-13-9",
+    "capa":"https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-harry-potter-e-a-pedra-filosofal-20210223153910.jpg"
+  },
+  {
+    "titulo":"E Não Sobrou Nenhum",
+    "autor": "Agatha Christie",
+    "categoria": "Ficção",
+    "dataPublicacao":"1939",
+    "isbn": "978-85-25057-01-3",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-e-nao-sobrou-nenhum-20210223153857.jpg"
+  },
+  {
+    "titulo":"O Sonho da Câmara Vermelha",
+    "autor": "Cao Xueqin",
+    "categoria": "Negócios",
+    "dataPublicacao":"1754",
+    "isbn": "978-16-16120-35-1",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-o-sonho-da-camara-vermelha-20210223154012.jpg"
+  },
+  {
+    "titulo":"Ela, a Feiticeira",
+    "autor": "H. Rider Haggard",
+    "categoria": "Ficção",
+    "dataPublicacao":"1886",
+    "isbn": "978-01-99536-42-9",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-ela-a-feiticeira-20210223153845.jpg"
+  },
+  {
+    "titulo":"O Leão, a Feiticeira e o Guarda-Roupa",
+    "autor": "C.S. Lewis",
+    "categoria": "Ficção",
+    "dataPublicacao":"1950",
+    "isbn": "978-00-60276-36-2",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-o-leao-a-feiticeira-e-o-guarda-roupa-20210223153934.jpg"
+  },
+  {
+    "titulo":"O Código de Vinci",
+    "autor": "Dan Brown",
+    "categoria": "Ficção",
+    "dataPublicacao":"2003",
+    "isbn": "978-03-07474-27-8",
+    "capa": "https://static.stealthelook.com.br/wp-content/uploads/2021/02/livros-mais-vendidos-do-mundo-o-codigo-da-vinci-20210223153922.jpg"
+  }
+]
