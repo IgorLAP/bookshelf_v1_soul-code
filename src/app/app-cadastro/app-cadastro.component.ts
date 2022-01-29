@@ -53,13 +53,6 @@ export class AppCadastroComponent implements OnInit {
     private rotas: Router
   ) {}
 
-  mostrar() {
-    console.log('Nome => ', this.clientName);
-    console.log('Email => ', this.clientEmail);
-    console.log('Senha => ', this.clienteSenha);
-    console.log('Confirma Senha => ', this.clienteConfirmSenha);
-  }
-
   enviaCadastro() {
     if(!this.clientName || !this.clientEmail || !this.clienteSenha || !this.clienteConfirmSenha){
       this.toast.error('Preencha todos os campos corretamente!')

@@ -26,6 +26,17 @@
 .max-img{
   max-width: 100%;
 }
+
+.linksToolbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    margin-top: 10px;
+  }
+}
+
 .change-color {
   display: flex;
   justify-content: center;
@@ -44,6 +55,13 @@
   font-weight: bold;
   // font-size: 1.1rem;
 }
+
+.change-color{
+  .text{
+    margin-left: 5px;
+  }
+}
+
 /* From cssbuttons.io by @meermubashar */
 .button {
   // width: 140px;
@@ -150,4 +168,21 @@
   background: linear-gradient(90deg, #5e17eb 0%, #ba52ff 100%);
   color: white;
   font-weight: bold;
+}
+
+@media only screen and(max-width: 600px){
+
+  .dropdownMenu{
+    width: 85px;
+    .userIcon{
+      display: none;
+    }
+  }
+  .change-color{
+    margin-right: 20px;
+
+    .text{
+      display: none;
+    }
+  }
 }

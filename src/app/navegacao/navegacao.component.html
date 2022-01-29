@@ -1,7 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <a routerLink="/"><img class="max-img"mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
+    <a class="logoMenu" routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
     <ng-container class="text-center" *ngIf="usuario$ | async as usuario; ">
       <span class="user-name">
         {{usuario.displayName || usuario.email! | userNameFromEmail | titlecase }}
@@ -21,19 +21,21 @@
 
   <mat-sidenav-content>
     <mat-toolbar color="{{toolbarColor}}">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+      <div class="linksToolbar">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Menu BookShelf Lateral">menu</mat-icon>
-      </button>
-      <a routerLink="/"><img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral"></a>
-      <button (click)="changeColor()" class="change-color" >
+        </button>
+        <a routerLink="/"><img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral"></a>
+      </div>
+      <button mat-button (click)="changeColor()" class="change-color" >
         <span class="material-icons">cached</span>
-        Alterar cor
+        <span class="text">Alterar cor</span>
       </button>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
-        <button class="button" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
-          <mat-icon class="mat-18">local_library</mat-icon>
-          {{usuario.displayName|| usuario.email}}
+        <button class="button dropdownMenu" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
+          <mat-icon class="mat-18 userIcon">local_library</mat-icon>
+          <span class="username">{{usuario.displayName|| usuario.email}}</span>
           <mat-icon>expand_more</mat-icon>
         </button>
       </ng-container>
