@@ -48,6 +48,7 @@
   margin-bottom: 16px;
 }
 
+
 //Formulario de Pesquisa
 form{
   display: flex;
@@ -99,7 +100,11 @@ form{
       width: 100%;
     }
   }
-}
+
+.expandable-content{
+  overflow: hidden;
+  }
+
 
 
 
