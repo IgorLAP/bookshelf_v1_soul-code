@@ -7,6 +7,7 @@ import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'isbn', component: IsbnComponent,
     ...canActivate(enviarSemLogin)
+  },
+  {
+    path: '**',
+    component: RotasDesconhecidasComponent
   }
 ];
 

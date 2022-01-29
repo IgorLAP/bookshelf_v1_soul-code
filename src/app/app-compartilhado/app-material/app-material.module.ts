@@ -11,9 +11,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
-  exports:[
+  exports: [
     MatButtonModule,
     MatCardModule,
     MatIconModule,
@@ -26,6 +27,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule
-  ]
+    MatDividerModule,
+  ],
+
 })
-export class AppMaterialModule { }
+export class AppMaterialModule {}

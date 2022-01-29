@@ -26,15 +26,19 @@ import { RecaptchaModule } from 'ng-recaptcha';
 
 import { environment } from '../environments/environment';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
+import { AppCompartilhadoModule } from './app-compartilhado/app-compartilhado.module';
 import { AppMaterialModule } from './app-compartilhado/app-material/app-material.module';
 import { AppLoginComponent } from './app-login/app-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
+import { IsbnComponent } from './isbn/isbn.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
-import { IsbnComponent } from './isbn/isbn.component';
+import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+
+
 
 
 @NgModule({
@@ -46,6 +50,7 @@ import { IsbnComponent } from './isbn/isbn.component';
     AppCadastroComponent,
     EspecialMesComponent,
     RecuperarSenhaComponent,
+    RotasDesconhecidasComponent,
     IsbnComponent,
   ],
   imports: [
@@ -75,6 +80,7 @@ import { IsbnComponent } from './isbn/isbn.component';
     HotToastModule.forRoot(),
     RecaptchaModule,
     MatStepperModule,
+    AppCompartilhadoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
