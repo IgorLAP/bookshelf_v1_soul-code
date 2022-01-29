@@ -1,10 +1,9 @@
+import { MainCardService } from './../servicosInterface/main-card.service';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 import { DashboardService } from './../servicosInterface/dashboard.service';
 import { Dashboard } from './../modelosInterface/dashboard';
 import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, of, delay } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dialogos.component';
 
@@ -16,22 +15,22 @@ import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dial
 export class FeedComponent {
 
   cards$: Observable<Dashboard[]>;
+  main$: Observable<Dashboard[]>
   usuario$= this.autenticacaoFirebaseService.usuarioLogado$;
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return this.cards$;
-      }
-      return this.cards$;
-    })
-  );
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
     private dashboardService: DashboardService,
+    private mainCardService: MainCardService,
     private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     private dialogo: MatDialog
     ) {
+      this.main$ = mainCardService.mostrarCard()
+      .pipe(
+        catchError(error =>{
+          this.abrirDialogoErro("Erro ao carregar as notícias: #BS -"+error.status)
+          return of([])
+        })
+      )
       this.cards$ = dashboardService.listagemCards()
       .pipe(
         catchError(error =>{

@@ -1,0 +1,12 @@
+[
+  {
+    "titulo": "O melhor Livro de Janeiro",
+    "subtitulo":"Os melhores livros do início do ano.",
+    "img": "../../assets/imagens/cover1.png",
+    "conteudo":"Vamos listar o que de melhor foi lançado no mês de janeiro de 2022, também vamos tratar do detaque para The Witcher e sua coleção de livros.",
+    "link":[
+      {"ref":"https://www.theenemy.com.br/social/criticas/review-the-witcher-temporada-2#:~:text=Honestamente%2C%20a%20breve%20apari%C3%A7%C3%A3o%20da,Ciri%20em%20termos%20de%20magia.", "texto":"The Enemy"},
+      {"ref":"https://jovemnerd.com.br/nerdbunker/the-witcher-vale-a-pena-os-livros/","texto":"Jovem Nerd"}
+    ]
+  }
+]
