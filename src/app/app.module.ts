@@ -37,6 +37,7 @@ import { IsbnComponent } from './isbn/isbn.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
 
 
@@ -52,6 +53,7 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
     RecuperarSenhaComponent,
     RotasDesconhecidasComponent,
     IsbnComponent,
+    SugestoesComponent,
   ],
   imports: [
     BrowserModule,
