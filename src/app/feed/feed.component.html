@@ -1,37 +1,72 @@
-
-<div class="grid-container">
-  <div *ngIf=" cards$ | async as card; else loading;">
-
-  <h1 class="mat-h1" *ngIf="usuario$ | async as usuario ;else loading;">Olá, {{usuario.displayName}} seja bem-vindo(a)!</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards$ | async" [colspan]="card.cols" [rowspan]="card.rows ">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{card.titulo}}</mat-card-title>
-          <mat-card-subtitle>{{card.subtitulo}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image [src]="card.img" [alt]="card.titulo">
-        <mat-card-content class="dashboard-card-content">
-          <div>{{card.conteudo}}</div>
-        </mat-card-content>
-        <mat-nav-list>
-          <mat-list-item *ngFor="let link of card.link">
-            <a matLine [href]="link.ref">{{ link.texto }}</a>
-            <button mat-icon-button>
-              <mat-icon>info</mat-icon>
-            </button>
-            <mat-divider inset></mat-divider>
-          </mat-list-item>
-        </mat-nav-list>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-    </div>
-    <ng-template #loading>
-      <div class="loading-spinner">
-        <mat-spinner></mat-spinner>
+<div class="content2">
+  <div *ngIf=" main$ | async as main; else loading;">
+    <h1 class="mat-h1" *ngIf="usuario$ | async as usuario ;else loading;">Olá, {{usuario.displayName}} seja bem-vindo(a)!</h1>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let unique of main$ | async">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <div class="titles">
+              <mat-card-title>{{unique.titulo}}</mat-card-title>
+              <mat-card-subtitle>{{unique.subtitulo}}</mat-card-subtitle>
+            </div>
+          </mat-card-header>
+          <img mat-card-image [src]="unique.img" [alt]="unique.titulo">
+          <mat-card-content class="dashboard-card-content">
+            <div>{{unique.conteudo}}</div>
+          </mat-card-content>
+          <mat-nav-list>
+            <mat-list-item *ngFor="let link of unique.link">
+              <a matLine [href]="link.ref">{{ link.texto }}</a>
+              <button mat-icon-button>
+                  <mat-icon>info</mat-icon>
+              </button>
+              <mat-divider inset></mat-divider>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-card>
       </div>
-    </ng-template>
-
+    </div>
+  </div>
 </div>
+
+<div class="content">
+  <div *ngIf=" cards$ | async as card">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let card of cards$ | async">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <div class="titles">
+              <mat-card-title>{{card.titulo}}</mat-card-title>
+              <mat-card-subtitle>{{card.subtitulo}}</mat-card-subtitle>
+            </div>
+          </mat-card-header>
+          <img mat-card-image [src]="card.img" [alt]="card.titulo">
+          <mat-card-content class="dashboard-card-content">
+            <div>{{card.conteudo}}</div>
+          </mat-card-content>
+          <mat-nav-list>
+            <mat-list-item *ngFor="let link of card.link">
+              <a matLine [href]="link.ref">{{ link.texto }}</a>
+              <button mat-icon-button>
+                  <mat-icon>info</mat-icon>
+              </button>
+              <mat-divider inset></mat-divider>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+
+
+
+
