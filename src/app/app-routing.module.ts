@@ -6,6 +6,7 @@ import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+import { VestibularComponent } from './vestibular/vestibular.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -32,6 +33,10 @@ const routes: Routes = [
   },
   {
     path: 'especial-mes', component: EspecialMesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'vestibular', component: VestibularComponent,
     ...canActivate(enviarSemLogin)
   }
 ];
