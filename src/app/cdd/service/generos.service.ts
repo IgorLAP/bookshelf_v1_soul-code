@@ -1,3 +1,4 @@
+import { map } from 'rxjs/operators';
 import { Generos } from './../modelos/generos';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -18,6 +19,15 @@ export class GenerosService {
       first(),
       delay(500),
       tap(apiGeneros => console.log(apiGeneros))
+    )
+  }
+
+  pesquisar(query: string){
+    return this.clienteDados.get<Generos[]>(this.urlAPI)
+    .pipe(
+      first(),
+      delay(200),
+      map(res => res.find(i => (i.nomeGenero.toLowerCase()).startsWith(query.toLowerCase())))
     )
   }
 }
