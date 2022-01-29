@@ -36,7 +36,9 @@ import { FeedComponent } from './feed/feed.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+import { VestibularComponent } from './vestibular/vestibular.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
 
 
@@ -50,8 +52,10 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
     AppCadastroComponent,
     EspecialMesComponent,
     RecuperarSenhaComponent,
+    VestibularComponent,
     RotasDesconhecidasComponent,
     IsbnComponent,
+    SugestoesComponent,
   ],
   imports: [
     BrowserModule,

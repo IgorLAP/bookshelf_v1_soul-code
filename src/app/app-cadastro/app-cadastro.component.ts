@@ -79,6 +79,10 @@ export class AppCadastroComponent implements OnInit {
         })
       )
       .subscribe(() => {
+        this.clientName = '';
+        this.clientEmail = '';
+        this.clienteSenha = '';
+        this.clienteConfirmSenha = '';
         this.rotas.navigate(['/']);
       });
   }
