@@ -16,13 +16,16 @@
             <div>{{unique.conteudo}}</div>
           </mat-card-content>
           <mat-nav-list>
-            <mat-list-item *ngFor="let link of unique.link">
+            <mat-list-item *ngFor="let link of unique.link" [@alternando]="state" class="expandable-content">
               <a matLine [href]="link.ref">{{ link.texto }}</a>
               <button mat-icon-button>
                   <mat-icon>info</mat-icon>
               </button>
               <mat-divider inset></mat-divider>
             </mat-list-item>
+            <button mat-icon-button (click)="alternar()">
+              <mat-icon>keyboard_double_arrow_up</mat-icon>
+          </button>
           </mat-nav-list>
         </mat-card>
       </div>
@@ -47,13 +50,16 @@
             <div>{{card.conteudo}}</div>
           </mat-card-content>
           <mat-nav-list>
-            <mat-list-item *ngFor="let link of card.link">
+            <mat-list-item *ngFor="let link of card.link" [@alternando]="state" class="expandable-content">
               <a matLine [href]="link.ref">{{ link.texto }}</a>
               <button mat-icon-button>
                   <mat-icon>info</mat-icon>
               </button>
               <mat-divider inset></mat-divider>
             </mat-list-item>
+            <button mat-icon-button (click)="alternar()">
+              <mat-icon>keyboard_double_arrow_up</mat-icon>
+          </button>
           </mat-nav-list>
         </mat-card>
       </div>
