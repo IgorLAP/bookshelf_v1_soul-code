@@ -1,3 +1,4 @@
+import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -64,6 +65,7 @@ import { SugestoesComponent } from './sugestoes/sugestoes.component';
     FlexLayoutModule,
     HttpClientModule,
     AppMaterialModule,
+    LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
