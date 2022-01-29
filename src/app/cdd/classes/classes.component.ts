@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { catchError, Observable, of } from 'rxjs';
+import { catchError, Observable, of, tap } from 'rxjs';
 
 import { AppDialogosComponent } from './../../app-compartilhado/app-dialogos/app-dialogos.component';
 import { Generos } from './../modelos/generos';
@@ -15,6 +16,9 @@ export class ClassesComponent implements OnInit {
 
   livrosGeneros$: Observable <Generos[]>;
   visaoColunas=['_idGenero','nomeGenero','decimalGenero'];
+  formulario!: FormGroup
+  result$!: Observable<Generos | undefined>;
+  hide = false;
 
   constructor(
     private generosService: GenerosService,
@@ -35,6 +39,21 @@ export class ClassesComponent implements OnInit {
     })
   }
 
+  hider(){
+    this.hide = !this.hide;
+  }
+
+  pesquisar(){
+    const {query} = this.formulario.value;
+    this.result$ = this.generosService.pesquisar(query)
+    if(this.hide){
+      this.hider();
+    }
+  }
+
   ngOnInit(): void {
+    this.formulario = new FormGroup({
+      query: new FormControl('')
+    });
   }
 }
