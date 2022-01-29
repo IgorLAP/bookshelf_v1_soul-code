@@ -1,19 +1,19 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <a routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
+    <a routerLink="/"><img class="max-img"mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
     <ng-container class="text-center" *ngIf="usuario$ | async as usuario; ">
       <span class="user-name">
         {{usuario.displayName || usuario.email! | userNameFromEmail | titlecase }}
       </span>
     </ng-container>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i" class="btn-area">
-      <a class="cta" mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">
+      <a class="menu-button" mat-list-item *ngIf="itemMenu.hab === true" routerLink="{{itemMenu.linkMenu}}" routerLinkActive="selected">
         <span>{{itemMenu.labelMenu}}</span>
-        <svg width="15px" height="10px" viewBox="0 0 13 10">
+        <!-- <svg width="15px" height="10px" viewBox="0 0 13 10">
     <path d="M1,5 L11,5"></path>
     <polyline points="8 1 12 5 8 9"></polyline>
-  </svg>
+  </svg> -->
       </a>
       <!-- <mat-divider></mat-divider> -->
     </mat-nav-list>
