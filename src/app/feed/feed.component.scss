@@ -46,3 +46,12 @@
   border-top-color: #c0a7ec;
 }
 
+//Spinner
+.loading-spinner{
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+

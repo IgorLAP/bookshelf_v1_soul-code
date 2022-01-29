@@ -5,8 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
+import { IsbnComponent } from './isbn/isbn.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
+import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -38,6 +41,18 @@ const routes: Routes = [
   {
     path: 'vestibular', component: VestibularComponent,
     ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'isbn', component: IsbnComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'sugestoes', component: SugestoesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: '**',
+    component: RotasDesconhecidasComponent
   }
 ];
 
