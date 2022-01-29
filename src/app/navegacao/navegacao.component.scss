@@ -18,6 +18,15 @@
   justify-content: space-between;
 }
 
+.linksToolbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    margin-top: 10px;
+  }
+}
 
 .change-color {
   display: flex;
@@ -37,6 +46,13 @@
   font-weight: bold;
   // font-size: 1.1rem;
 }
+
+.change-color{
+  .text{
+    margin-left: 5px;
+  }
+}
+
 /* From cssbuttons.io by @meermubashar */
 .button {
   // width: 140px;
@@ -158,4 +174,21 @@
 
 .cta:active {
   transform: scale(0.95);
+}
+
+@media only screen and(max-width: 600px){
+
+  .dropdownMenu{
+    width: 85px;
+    .userIcon{
+      display: none;
+    }
+  }
+  .change-color{
+    margin-right: 20px;
+
+    .text{
+      display: none;
+    }
+  }
 }
