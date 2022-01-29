@@ -7,6 +7,7 @@ import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
+import { VestibularComponent } from './vestibular/vestibular.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
@@ -35,6 +36,10 @@ const routes: Routes = [
   },
   {
     path: 'especial-mes', component: EspecialMesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'vestibular', component: VestibularComponent,
     ...canActivate(enviarSemLogin)
   },
   {
