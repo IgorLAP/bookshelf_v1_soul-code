@@ -1,11 +1,13 @@
-import { MainCardService } from './../servicosInterface/main-card.service';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
+
+import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dialogos.component';
+import { Dashboard } from './../modelosInterface/dashboard';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 import { DashboardService } from './../servicosInterface/dashboard.service';
-import { Dashboard } from './../modelosInterface/dashboard';
-import { Component } from '@angular/core';
-import { Observable, catchError, of, delay } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
-import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dialogos.component';
+import { MainCardService } from './../servicosInterface/main-card.service';
 
 @Component({
   selector: 'app-feed',
@@ -17,6 +19,9 @@ export class FeedComponent {
   cards$: Observable<Dashboard[]>;
   main$: Observable<Dashboard[]>
   usuario$= this.autenticacaoFirebaseService.usuarioLogado$;
+  formulario!: FormGroup
+  result$!: Observable<Dashboard | undefined>;
+  hide = false;
 
   constructor(
     private dashboardService: DashboardService,
@@ -44,5 +49,23 @@ export class FeedComponent {
     this.dialogo.open(AppDialogosComponent,{
       data: erroMsg
     })
+  }
+
+  hider(){
+    this.hide = !this.hide;
+  }
+
+  pesquisar(){
+    const {query} = this.formulario.value;
+    this.result$ = this.dashboardService.pesquisar(query)
+    if(this.hide){
+      this.hider();
+    }
+  }
+
+  ngOnInit(): void {
+    this.formulario = new FormGroup({
+      query: new FormControl('')
+    });
   }
 }

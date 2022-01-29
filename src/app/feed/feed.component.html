@@ -1,4 +1,56 @@
 <div class="content2">
+<!--Form Pesquisar-->
+<form (ngSubmit)="pesquisar()" [formGroup]="formulario">
+  <mat-form-field class="search-field" appearance="fill">
+    <mat-label>Pesquisar</mat-label>
+    <input matInput type="text" formControlName="query">
+    <button type="submit" matSuffix mat-icon-button aria-label="Clear">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</form>
+<div [class.hide]="hide" class="resultSearch" *ngIf="result$ | async as result">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Resultado</mat-card-title>
+      <div class="example-button-container">
+        <button (click)="hider()" mat-mini-fab>
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </mat-card-header>
+    <div class="resultado">
+      <div class="content">
+        <div *ngIf=" result$ | async as result">
+          <mat-card>
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <div class="titles">
+                <mat-card-title>{{result.titulo}}</mat-card-title>
+                <mat-card-subtitle>{{result.subtitulo}}</mat-card-subtitle>
+              </div>
+            </mat-card-header>
+            <img mat-card-image [src]="result.img" [alt]="result.titulo">
+            <mat-card-content class="dashboard-card-content">
+              <div>{{result.conteudo}}</div>
+            </mat-card-content>
+            <mat-nav-list>
+              <mat-list-item *ngFor="let link of result.link">
+                <a matLine [href]="link.ref">{{ link.texto }}</a>
+                <button mat-icon-button>
+                    <mat-icon>info</mat-icon>
+                </button>
+                <mat-divider inset></mat-divider>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<!--Fim Forms Pesquisar-->
+
   <div *ngIf=" main$ | async as main; else loading;">
     <h1 class="mat-h1" *ngIf="usuario$ | async as usuario ;else loading;">Olá, {{usuario.displayName}} seja bem-vindo(a)!</h1>
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
