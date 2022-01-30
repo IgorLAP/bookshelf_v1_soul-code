@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
+import { AjudaComponent } from './ajuda/ajuda.component';
 
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
@@ -10,6 +11,7 @@ import { IsbnComponent } from './isbn/isbn.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
+import { SagasComponent } from './sagas/sagas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TeatroComponent } from './teatro/teatro.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
@@ -51,6 +53,10 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
+    path: 'sagas', component: SagasComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
     path: 'vestibular', component: VestibularComponent,
     ...canActivate(enviarSemLogin)
   },
@@ -68,6 +74,10 @@ const routes: Routes = [
   },
   {
     path: 'teatro', component: TeatroComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'ajuda', component: AjudaComponent,
     ...canActivate(enviarSemLogin)
   },
   {

@@ -8,8 +8,11 @@
   {"linkMenu": "/mais-vendidos", "labelMenu":"Mais Vendidos", "hab": true},
   {"linkMenu": "/biblioteconomia", "labelMenu":"Biblioteconomia", "hab": true},
   {"linkMenu": "/teatro", "labelMenu":"Teatro", "hab": true},
+  {"linkMenu": "/ajuda", "labelMenu":"Ajuda", "hab": true},
+  {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false}
+
 
 ]

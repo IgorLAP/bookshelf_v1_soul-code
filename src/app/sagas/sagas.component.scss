@@ -27,6 +27,7 @@
 .special-card-content {
   text-align: justify;
   line-height: 1.8em;
+  margin-left: 30px;
 }
 
 .mat-h1{
@@ -41,6 +42,7 @@
   height: 90px;
   background-image: url('../../assets/imagens/logoBS4.png');
   background-size: cover;
+  margin-bottom: 1em;
 
 }
 
@@ -51,14 +53,31 @@
   border-top-color: #c0a7ec;
 }
 
+.mat-card-title{
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
 .mat-card-image {
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 120px;
   background-size: cover;
 }
 
 #img{
-  margin-top: 0.5em;
+  margin: 0.5em;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+ }
+
+ #listaSaga {
+  margin: 1em;
+  display: flex;
+  justify-content: right;
+ }
+
+ img {
+  border: 2px;
+  border-style: hidden;
+  border-color: #c0a7ec;
  }

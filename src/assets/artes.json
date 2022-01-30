@@ -1,0 +1,92 @@
+[
+  {
+    "titulo": "A História da Arte",
+    "autor": "Ernst Gombrich",
+    "publicação": "1950",
+    "categoria": "História da arte",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/bc9089076d74bcce34f5f26987538533.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=4104fe5183ed78d1a186e4a4307cc94c",
+    "resumo": "A História da Arte é um clássico publicado em 1950 por Ernst Gombrich. Esse livro propõe uma leitura dos movimentos artísticos em suas conexões com o passado e com o futuro, conectando a antiguidade da arte às escolas modernas. É o melhor livro de arte para se aprofundar no assunto.",
+    "isbn": "978-8521611851"
+  },
+  {
+    "titulo": "A Obra De Arte na Era de Sua Reprodutibilidade Técnica",
+    "autor": "Walter Benjamin",
+    "publicação": "1936",
+    "categoria": "Crítica da arte",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/6401a5827c882d41865261b37cc1dd12.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=2b2f9e114ac4e45d5e8db578b1ca23b7",
+    "resumo": "Esse é um dos livros mais importantes de Walter Benjamin. Filósofo e sociólogo, o autor se debruçou sobre o papel das técnicas modernas de fotografia e cinema e de seus efeitos no status das obras de arte. Suas ideias de 'aura' e dos impactos da réplica são contribuições imprescindíveis à crítica da arte.",
+    "isbn": "978-8525437167"
+  },
+  {
+    "titulo": "A Psicologia das Cores: Como as Cores Afetam a Emoção e a Razão",
+    "autor": "Eva Heller",
+    "publicação":"Não informado",
+    "categoria": "Técnico",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/d05776643aa12b9e02d5bc02b677df34.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=f721b5c87d117fc62aabcba888b8e88d",
+    "resumo": "Com capítulos organizados de acordo com 13 cores, Eva Heller explora as relações entre cores e sentimentos enraizados culturalmente. Os diversos painéis ilustrativos mostram como as cores foram usadas pela indústria propagandística, pelo cinema, pelo design e vários outros segmentos.",
+    "isbn": "978-6588280058"
+  },
+  {
+    "titulo": "Frida: a Biografia",
+    "autor": "Hayden Herrera",
+    "publicação": "2011",
+    "categoria": "Biografia",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/bf2c390141b479ec3804f321babe3116.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=e22ff7ea710659ee6d54bfa450ec1347",
+    "resumo": "Escrita pela grande historiadora da arte, Hayden Herrera, essa biografia traz detalhes sobre a vida e obra de Frida Kahlo, ícone da arte latino-americana. Para isso, a autora mescla eventos da vida da pintora e de suas relações com descrições e interpretações fascinantes de suas obras.",
+    "isbn": "978-8525049506"
+  },
+  {
+    "titulo": "Van Gogh: a Vida",
+    "autor": "teven Naifeh e Gregory Smith",
+    "publicação": "2012",
+    "categoria": "Biografia",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/c9711f9be490ca7cb39770c8edb3bf07.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=c958c5d30d72c7e6efed46a5103a8e93",
+    "resumo": "Nessa obra são 1128 páginas sobre a vida e a arte de Vincent Willem Van Gogh. Esse é um dos mais importantes pintores de arte moderna do século XIX, sendo conhecido por suas técnicas de pincelada e pelo efeito impressionista que sua obra produz. ",
+    "isbn": "978-8535921977"
+  },
+  {
+    "titulo": "Universos da Arte",
+    "autor": "Fayga Ostrower",
+    "publicação": "2013",
+    "categoria": "História da arte",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/6c4414ad4fb19dacc9dbd1e969a290b6.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=ce664ab61313ffab1c74030ef888e4e7",
+    "resumo": "Fayga Ostrower é formada em artes gráficas, foi professora no MAM do Rio de Janeiro e recebeu diversos prêmios em bienais de arte do mundo todo! Em seu livro, a autora mistura a história da arte com as experiências vividas dos próprios artistas, entendendo a arte como um efeito de seu tempo histórico.",
+    "isbn": "978-8526810181"
+  },
+  {
+    "titulo": "História da Beleza",
+    "autor": "Umberto Eco",
+    "publicação": "2004",
+    "categoria": "Crítica da arte",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/a3f3d941d707a9781a8a6418465614fa.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=24afc026417d10eb6970a4f29d13e578",
+    "resumo": "Afinal, beleza se põe na mesa? Para Umberto Eco sim, a beleza é mutável e assume diferentes contornos a depender não apenas de seu contexto, mas também de seu oposto: o feio, o demoníaco e o indesejável. Trata-se de uma recuperação das percepções de Belo em diferentes momentos históricos.",
+    "isbn": "978-8501090881"
+  },
+  {
+    "titulo": "O Que é Arte?",
+    "autor": "Leon Tolstói",
+    "publicação": "1898",
+    "categoria": "Crítica da arte",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/6f26ef325321a8562755a22eb7aea45e.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=942203a0bc2557568e247759c6bc7dbe",
+    "resumo": "Tolstói, um dos maiores escritores russos de todos os tempos, discute o conceito de arte nessa jornada que passa pelos gregos, romanos, alemães, ingleses e franceses. Além da relação com o belo, Tolstói discute as relações da arte com o bem e com a ética.",
+    "isbn": "978-8520944301"
+  },
+  {
+    "titulo": "Isso É Arte?: 150 Anos de Arte Moderna do Impressionismo Até Hoje",
+    "autor": "Will Gompertz",
+    "publicação": "2013",
+    "categoria": "História da arte",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/c46041f1634f00f60188a6ed16514c54.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=b8061e27fc1d48e5bbf66f46f26ae307",
+    "resumo": "Esse livro de história da arte é um pouco diferente dos demais. Ele é escrito por Will Gompertz, que foi editor de artes da BBC, mas que é um jornalista de formação. A obra conta os bastidores das artes com uma linguagem mais irreverente e com menos rigor do que os historiadores da arte.",
+    "isbn": "978-8537810866"
+  },
+  {
+    "titulo": "Técnicas de Pintura Artística",
+    "autor": "Dorling Kindersley",
+    "publicação": "2017",
+    "categoria": "Técnico",
+    "img": "https://img.mybest-brazil.com.br/press_component/item_part_images/c1ada1cb2ed54601dd2cd4ac58d42f67.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=c30151a15ce88e13dcfff6f3eca33525",
+    "resumo": "Esse livro de arte sobre técnicas de pintura é direcionado ao público que deseja se desenvolver em aquarela, tinta à óleo ou tinta acrílica. Ele apresenta técnicas e conceitos, que vão da escolha do pincel a exercícios práticos de composição. Trata-se de um manual para pintores iniciantes ou amadores.",
+    "isbn": "978-8568684931"
+  }
+]

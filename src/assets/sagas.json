@@ -3,68 +3,186 @@
     "titulo": "Crônicas do Gelo e Fogo",
     "autor": "George R. R. Martin",
     "livros": [
-      {"ref1":"A Guerra dos Tronos (1996)"},
-      {"ref2":"A Tormenta de Espadas (2000)"},
-      {"ref3":"O Festim dos Corvos (2005)"},
-      {"ref4":"A Dança dos Dragões (2011)"},
-      {"ref5":"The Winds of Winter (a publicar)"},
-      {"ref6":"A Dream of Spring (a publicar)"}
+      {"ref":"A Guerra dos Tronos (1996)"},
+      {"ref":"A Tormenta de Espadas (2000)"},
+      {"ref":"O Festim dos Corvos (2005)"},
+      {"ref":"A Dança dos Dragões (2011)"},
+      {"ref":"The Winds of Winter (a publicar)"},
+      {"ref":"A Dream of Spring (a publicar)"}
     ],
     "img": "../assets/imagens/saga1.jpg",
     "resumo": "Uma das sagas literárias mais ricas e completas da atualidade, sem sombras de dúvidas! As Crônicas do Gelo e Fogo é de autoria do roteirista e romancista norte-americano George R. R. Martin, que vem publicando os livros da série desde 1996.",
-    "links": [{"ref": "https://www.geloefogo.com/livros", "texto":"Saiba mais"}],
+    "links": [{"ref": "https://www.geloefogo.com/livros", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
     "cols": 1,
-    "rows": 2
+    "rows": 1
   },
   {
     "titulo": "O senhor dos Aneis",
     "autor": "J.R.R. Tolkien",
     "livros": [
-      {"ref1":"Sociedade do Anel (1954"},
-      {"ref2":"As Duas Torres (1954)"},
-      {"ref3":"O Retorno do Rei (1955)"}
+      {"ref":"Sociedade do Anel (1954"},
+      {"ref":"As Duas Torres (1954)"},
+      {"ref":"O Retorno do Rei (1955)"}
     ],
     "img": "../assets/imagens/saga2.jpeg",
     "resumo": "A história gira em torno de Frodo Bolseiro, um hobbit com a missão de destruir um misterioso Anel, um artefato mágico forjado por Sauron, o Senhor do Escuro, e que representa um grande perigo para quem o utiliza.",
-    "links": [{"ref": "https://pt.wikipedia.org/wiki/O_Senhor_dos_An%C3%A9is", "texto":"Saiba mais"}],
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/O_Senhor_dos_An%C3%A9is", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
     "cols": 1,
-    "rows": 2
+    "rows": 1
   },
   {
     "titulo": "Harry Potter",
     "autor": "J.K. Rowling",
     "livros": [
-      {"ref1":"Harry Potter e A Pedra Filosofal (1997)"},
-      {"ref2":"Harry Potter e a Câmara Secreta (1998)"},
-      {"ref3":"Harry Potter e o Prisioneiro de Azkaban (1999)"},
-      {"ref4":"Harry Potter e o Calice de Fogo (2000)"},
-      {"ref5":"Harry Potter e a Ordem da Fênix (2003)"},
-      {"ref6":"Harry Potter e o Enigma do Príncipe (2005)"},
-      {"ref7":"Harry Potter e as Relíquias da Morte (2007)"}
+      {"ref":"Harry Potter e A Pedra Filosofal (1997)"},
+      {"ref":"Harry Potter e a Câmara Secreta (1998)"},
+      {"ref":"Harry Potter e o Prisioneiro de Azkaban (1999)"},
+      {"ref":"Harry Potter e o Calice de Fogo (2000)"},
+      {"ref":"Harry Potter e a Ordem da Fênix (2003)"},
+      {"ref":"Harry Potter e o Enigma do Príncipe (2005)"},
+      {"ref":"Harry Potter e as Relíquias da Morte (2007)"}
     ],
     "img": "../assets/imagens/saga3.jpg",
     "resumo": "Para o extraterrestre que não conhece a sinopse da história, Harry Potter narra as aventuras de Harry Potter, um famoso bruxo que sobreviveu ao ataque do Lord Voldemort quando ainda era um bebê. O jovem feiticeiro entra para a Escola de Magia e Bruxaria de Hogwarts e conhece seus melhores amigos, Ronald Weasley e Hermione Granger.",
-    "links": [{"ref": "https://pt.wikipedia.org/wiki/Harry_Potter", "texto":"Saiba mais"}],
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/Harry_Potter", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
     "cols": 1,
-    "rows": 2
+    "rows": 1
   },
   {
     "titulo": " As Crônicas de Nárnia",
     "autor": "C.S. Lewis",
     "livros": [
-      {"ref1":"O Leão, A Feiticeira e o Guarda-Roupa (1950)"},
-      {"ref2":"Príncipe Caspian (1951)"},
-      {"ref3":"A Viagem do Peregrino da Alvorada (1952)"},
-      {"ref4":"A Cadeira de Prata (1953)"},
-      {"ref5":"O Cavalo e Seu Menino (1954)"},
-      {"ref6":"O Sobrinho do Mago (1955)"},
-      {"ref7":"A Última Batalha (1956)"}
+      {"ref":"O Leão, A Feiticeira e o Guarda-Roupa (1950)"},
+      {"ref":"Príncipe Caspian (1951)"},
+      {"ref":"A Viagem do Peregrino da Alvorada (1952)"},
+      {"ref":"A Cadeira de Prata (1953)"},
+      {"ref":"O Cavalo e Seu Menino (1954)"},
+      {"ref":"O Sobrinho do Mago (1955)"},
+      {"ref":"A Última Batalha (1956)"}
     ],
     "img": "../assets/imagens/saga4.jpg",
     "resumo": "As personagens principais são crianças do 'nosso mundo' que foram transportadas para o mágico Reino de Nárnia, um lugar especial e muito bem construído por Lewis. Além de magia, animais falantes, temas cristãos e elementos da mitologia grega e nórdica, As Crônicas de Nárnia também é feito com base nos tradicionais contos de fadas.",
-    "links": [{"ref": "https://pt.wikipedia.org/wiki/The_Chronicles_of_Narnia", "texto":"Saiba mais"}],
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/The_Chronicles_of_Narnia","texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
     "cols": 1,
-    "rows": 2
+    "rows": 1
+  },
+  {
+    "titulo": "O Guia do Mochileiro das Galáxias",
+    "autor": "Douglas Adams",
+    "livros": [
+      {"ref":"O Guia do Mochileiro das Galáxias (1979)"},
+      {"ref":"O Restaurante no Fim do Universo (1980)"},
+      {"ref":"A Vida, o Universo e Tudo Mais (1982)"},
+      {"ref":"Até mais, e Obrigado pelos Peixes! (1984)"},
+      {"ref":"Praticamente Inofensiva (1992)"},
+      {"ref":"And Another Thing (2009)"}
+    ],
+    "img": "../assets/imagens/sagas5.jpg",
+    "resumo": "Fã que é fã de literatura sci-fi não pode deixar de ler O Guia do Mochileiro das Galáxias, um marco simbólico da cultura geek! A obra de Douglas Adams gerou dezenas de ícones para a cultura pop, como o Dia da Toalha, por exemplo.",
+    "links": [{"ref": "https://muraldoslivros.com/ordem-dos-livros-do-guia-do-mochileiro-das-galaxias/", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
+    "cols": 1,
+    "rows": 1
+  },
+  {
+    "titulo": "Desventuras em Série",
+    "autor": "Lemony Snicket",
+    "livros": [
+      {"ref":"Mau Começo (1999)"},
+      {"ref":"A Sala dos Répteis (1999)"},
+      {"ref":"O Lago das Sanguessugas (2000)"},
+      {"ref":"Serraria Baixo-Astral (2000)"},
+      {"ref":"Inferno no Colégio Interno (2000)"},
+      {"ref":"O Elevador Ersatz (2001)"},
+      {"ref":"A Cidade Sinistra dos Corvos (2001)"},
+      {"ref":"O Hospital Hostil (2001)"},
+      {"ref":"O Espetáculo Carnívoro (2002)"},
+      {"ref":"O Escorregador de Gelo (2003)"},
+      {"ref":"A Gruta Gorgônea (2004)"},
+      {"ref":"O Penúltimo Perigo (2005)"},
+      {"ref":"O Fim (2006)"}
+    ],
+    "img": "../assets/imagens/saga6.jpg",
+    "resumo": "Ao longo dos livros, acompanhamos as aventuras dos irmãos Baudelaire sob a tutela do terrível Conde Olaf, após os jovens perderem os seus pais num incêndio. Em cada livro o ambicioso Olaf surge com um novo e inusitado disfarce na tentativa de roubar as crianças e a enorme fortuna que seus pais lhes deixaram.",
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/A_Series_of_Unfortunate_Events", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
+    "cols": 1,
+    "rows": 1
+  },
+  {
+    "titulo": "As Brumas de Avalon",
+    "autor": "Marion Zimmer Bradley",
+    "livros": [
+      {"ref":"A Senhora da Magia (1988)"},
+      {"ref":"A Grande Rainha (1989"},
+      {"ref":"O Gamo-Rei (1989)"},
+      {"ref":" O Prisioneiro da Árvore (1989)"}
+    ],
+    "img": "../assets/imagens/saga7.jpg",
+    "resumo": "As Brumas de Avalon narra as lutas de Artur para unificar a Bretanha contra a invasão saxônica pelos olhos das mulheres, as heroínas da história, e ‘A senhora da magia’ vai tratar desde o início dos conflitos, um pouco antes de Artur nascer e até este se tornar rei, sendo o início narrado pelos olhos de Igraine, futura mãe de Artur.",
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/As_Brumas_de_Avalon", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
+    "cols": 1,
+    "rows": 1
+  },
+  {
+    "titulo": "Ciclo da Herança",
+    "autor": "Christopher Paolini",
+    "livros": [
+      {"ref":"Eragon (2002)"},
+      {"ref":"Eldest (2005)"},
+      {"ref":"Brisingr (2008)"},
+      {"ref":"Herança (2011)"}
+    ],
+    "img": "../assets/imagens/saga8.jpg",
+    "resumo": "A história se passa na terra de Alagaesia, onde conhecemos Eragon e sua companheira dragão, Saphira. Ambos precisam enfrentar o tirano Imperador Galbatorix e restaurar a Ordem dos Cavaleiro de Dragões.",
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/Ciclo_da_Heran%C3%A7a", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
+    "cols": 1,
+    "rows": 1
+  },
+  {
+    "titulo": "Percy Jackson",
+    "autor": "Rick Riordan",
+    "livros": [
+      {"ref":"Percy Jackson e o Ladrão de Raios (2005)"},
+      {"ref":"O Mar de Monstros (2006)"},
+      {"ref":"A Maldição do Titã (2007)"},
+      {"ref":"A Batalha do Labirinto (2008)"},
+      {"ref":"O Último Olimpiano (2009)"}
+    ],
+    "img": "../assets/imagens/saga9.jpg",
+    "resumo": "A vida do adolescente Percy Jackson, que está sempre pronto para entrar em uma confusão, torna-se bem mais complicada quando ele descobre que é filho do deus grego Poseidon.",
+    "links": [{"ref": "https://muraldoslivros.com/ordem-dos-livros-percy-jackson/", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
+    "cols": 1,
+    "rows": 1
+  },
+  {
+    "titulo": "Outlander: a viajante do tempo",
+    "autor": "Diana Gabaldon",
+    "livros": [
+      {"ref":"A viajante do tempo (1991)"},
+      {"ref":"A libélula no âmbar (1992)"},
+      {"ref":"O resgate no mar (1991)"},
+      {"ref":"Os tambores do outono (1996)"},
+      {"ref":"A cruz de fogo (2001)"},
+      {"ref":"Um sopro de neve e cinzas (2005)"},
+      {"ref":"Ecos do futuro (2009)"},
+      {"ref":"Escrito com o sangue do meu coração (2014)"}
+    ],
+    "img": "../assets/imagens/saga10.jpeg",
+    "resumo": "Outlander conta a história de Claire Randall (Caitriona Balfe), uma enfermeira em combate no ano de 1945. Ela é misteriosamente transportada através do tempo e mandada para 1743, e sua vida passa a correr riscos que ela desconhece. Forçada a se casar com Jamie Fraser (Sam Heughan), um cortês e nobre guerreiro escocês..",
+    "links": [{"ref": "https://muraldoslivros.com/ordem-dos-livros-outlander/", "texto":"Saiba mais sobre a história"}],
+    "saga": [{"texto":"Conheça Toda Saga"}],
+    "cols": 1,
+    "rows": 1
   }
+
+
 
 ]
