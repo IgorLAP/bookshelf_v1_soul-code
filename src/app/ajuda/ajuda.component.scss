@@ -5,10 +5,12 @@ h2{
   text-align: center;
   margin: 20px 0;
 }
+
 .card-mv{
   margin: 30px auto;
-  max-width: 920px;
+  max-width: 995;
 }
+
 .mat-card>div{
   overflow-x: auto;
 }
@@ -17,37 +19,34 @@ table {
   width: 100%;
   th{
     color: white;
-    background-color: #7e56c2;
+    background-color: #7E56C2;
     font-size: 15px;
+    align-items: center;
   }
-  img{
-    border: 1px solid black;
-    margin-right: 10px;
-  }
-}
 
-.capas{
-  margin-top: 6px;
-  width: 55px;
-  height: 80px;
+  td{
+    font-size: 17px;
+  }
 }
 
 .mat-cell{
   padding: 0 10px;
 }
 
-.mat-column-categoria{
-  width: 108px;
+.mat-column-descricao{
+  width: 150px;
 }
 
-.mat-column-dataPublicacao{
-  width: 50px;
-  padding-right: 20px;
+.mat-column-comCadastro{
+  padding: 20px;
 }
 
+.iconeAjuda{
+  margin: 0.5rem;
+}
 
 .loading-spinner{
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(221,221,221);
   display: flex;
   align-items: center;
   justify-content: center;
