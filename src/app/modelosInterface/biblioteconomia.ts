@@ -3,7 +3,8 @@ export interface Biblioteconomia {
   autor: string;
   data: string;
   img: string;
-  links: [{ref: string}]
+  resumo: string;
+  links: [{ref: string, texto: string}];
   cols: number;
   rows: number;
 }

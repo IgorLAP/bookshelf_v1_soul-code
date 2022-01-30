@@ -10,10 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { catchError, Observable, of } from 'rxjs';
 
 import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dialogos.component';
-import { Dashboard } from './../modelosInterface/dashboard';
-import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
-import { DashboardService } from './../servicosInterface/dashboard.service';
-import { MainCardService } from './../servicosInterface/main-card.service';
+
 
 @Component({
   selector: 'app-feed',
@@ -87,5 +84,6 @@ export class FeedComponent {
       query: new FormControl('')
     });
 
-  
+
+}
 }
