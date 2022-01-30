@@ -11,6 +11,7 @@ import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
+import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
 
 
@@ -28,12 +29,16 @@ const routes: Routes = [
     component: RecuperarSenhaComponent
   },
   {
-    path: 'feed', component: FeedComponent,
+    path: 'tela-usuario', component: TelaUsuarioComponent,
     ...canActivate(enviarSemLogin)
   },
   {
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'feed', component: FeedComponent,
     ...canActivate(enviarSemLogin)
   },
   {

@@ -40,10 +40,9 @@ import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.compo
 import { VestibularComponent } from './vestibular/vestibular.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
+import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
-
-
 
 
 @NgModule({
@@ -59,6 +58,7 @@ import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.comp
     RotasDesconhecidasComponent,
     IsbnComponent,
     SugestoesComponent,
+    TelaUsuarioComponent,
     MaisVendidosComponent,
     BiblioteconomiaComponent,
   ],
