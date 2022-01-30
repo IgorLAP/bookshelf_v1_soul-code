@@ -63,6 +63,21 @@
         </div>
       </form>
     </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Foto de Perfil" >
+      <form class='jc-center'>
+        <div>
+          <div>
+            <label for="image"></label>
+            <input type="file" (change)="upload($event)" name="image" accept=".png, .jpg, .jpeg" id="image">
+            <button (click)="uploadImage()">enviar</button>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
       <p>Deseja realizar o cadastro ?</p>
