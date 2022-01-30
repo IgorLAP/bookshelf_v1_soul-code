@@ -11,6 +11,7 @@ import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
+import { TeatroComponent } from './teatro/teatro.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
 
@@ -63,6 +64,10 @@ const routes: Routes = [
   },
   {
     path: 'mais-vendidos', component: MaisVendidosComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'teatro', component: TeatroComponent,
     ...canActivate(enviarSemLogin)
   },
   {

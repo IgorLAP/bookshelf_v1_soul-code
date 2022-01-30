@@ -43,6 +43,7 @@ import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
+import { TeatroComponent } from './teatro/teatro.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.comp
     TelaUsuarioComponent,
     MaisVendidosComponent,
     BiblioteconomiaComponent,
+    TeatroComponent,
   ],
   imports: [
     BrowserModule,
