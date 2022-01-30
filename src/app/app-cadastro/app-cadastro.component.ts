@@ -1,16 +1,9 @@
 import { catchError, of } from 'rxjs';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  ValidationErrors,
-  ValidatorFn,
-  Validators,
-  FormGroup,
-} from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
-import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
@@ -43,24 +36,31 @@ export class AppCadastroComponent implements OnInit {
   clientName!: string;
   clientEmail!: string;
   clienteSenha!: string;
-  clienteConfirmSenha!:string
+  clienteConfirmSenha!: string;
   isLinear = false;
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
+  thirdFormGroup!: FormGroup;
+
   constructor(
     private loginBuilder: FormBuilder,
     private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     private toast: HotToastService,
-    private rotas: Router
+    private rotas: Router,
   ) {}
 
   enviaCadastro() {
-    if(!this.clientName || !this.clientEmail || !this.clienteSenha || !this.clienteConfirmSenha){
-      this.toast.error('Preencha todos os campos corretamente!')
-      return
-    } else if(this.clienteSenha !== this.clienteConfirmSenha){
-      this.toast.error('As senhas não conferem!')
-      return
+    if (
+      !this.clientName ||
+      !this.clientEmail ||
+      !this.clienteSenha ||
+      !this.clienteConfirmSenha
+    ) {
+      this.toast.error('Preencha todos os campos corretamente!');
+      return;
+    } else if (this.clienteSenha !== this.clienteConfirmSenha) {
+      this.toast.error('As senhas não conferem!');
+      return;
     }
 
     this.autenticacaoFirebaseService
@@ -72,7 +72,10 @@ export class AppCadastroComponent implements OnInit {
         this.toast.observe({
           success: 'Cadatro executado, bem vindo ao BookShelf',
           loading: 'Enviando informações...',
-          error: ({message}) => this.autenticacaoFirebaseService.errorMessages((message.split('(')[1].split(')')[0]))
+          error: ({ message }) =>
+            this.autenticacaoFirebaseService.errorMessages(
+              message.split('(')[1].split(')')[0]
+            ),
         })
       )
       .subscribe(() => {
@@ -82,6 +85,23 @@ export class AppCadastroComponent implements OnInit {
         this.clienteConfirmSenha = '';
         this.rotas.navigate(['/']);
       });
+  }
+
+  upload(e: any): void {
+    let file = e.target.files[0];
+    let read = new FileReader();
+    read.readAsDataURL(file);
+
+    read.onloadend = () => {
+      console.log(read.result);
+      console.log('Type=> ',file.type)
+      this.autenticacaoFirebaseService.subirImagem(`${this.clientName}_${Date.now()}`, read.result);
+
+    }
+  }
+
+  uploadImage() {
+    console.log('upload');
   }
   ngOnInit() {
     this.firstFormGroup = this.loginBuilder.group({

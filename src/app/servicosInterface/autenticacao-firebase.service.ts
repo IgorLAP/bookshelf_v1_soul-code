@@ -1,3 +1,5 @@
+import 'firebase/compat/storage';
+
 import { Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import {
@@ -10,37 +12,42 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import { authState } from 'rxfire/auth';
-import { from, of, switchMap } from 'rxjs';
+import { from, switchMap } from 'rxjs';
 
+
+// firebase.initializeApp(environment.firebase)
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AutenticacaoFirebaseService {
+  /* firebaseApp = getApp();
+  storage = getStorage(this.firebaseApp, environment.firebase.storageBucket); */
 
   usuarioLogado$ = authState(this.usuarioFb);
   auth = getAuth();
 
-  constructor(
-    private usuarioFb: Auth
-    ) { }
+  constructor(private usuarioFb: Auth) {}
 
-    loginUsuario(usuarioEmail: string, usuarioSenha: string){
-      return from(signInWithEmailAndPassword(this.usuarioFb, usuarioEmail, usuarioSenha));
-    }
+  loginUsuario(usuarioEmail: string, usuarioSenha: string) {
+    return from(
+      signInWithEmailAndPassword(this.usuarioFb, usuarioEmail, usuarioSenha)
+    );
+  }
 
-    sairLogin(){
-      return from(this.usuarioFb.signOut());
-    }
+  sairLogin() {
+    return from(this.usuarioFb.signOut());
+  }
 
-    cadastrarUsuario(nome: string, email: string, senha: string){
-      return from(createUserWithEmailAndPassword(this.usuarioFb, email, senha)).pipe(
-        switchMap(({user}) => updateProfile(user, {displayName: nome}))
-      )
-    }
+  cadastrarUsuario(nome: string, email: string, senha: string) {
+    return from(
+      createUserWithEmailAndPassword(this.usuarioFb, email, senha)
+    ).pipe(switchMap(({ user }) => updateProfile(user, { displayName: nome })));
+  }
 
-    loginGoogle(){
-      const provider = new GoogleAuthProvider();
-      return from(signInWithPopup(this.auth, provider)
+  loginGoogle() {
+    const provider = new GoogleAuthProvider();
+    return from(
+      signInWithPopup(this.auth, provider)
         .then((result) => {
           // This gives you a Google Access Token. You can use it to access the Google API.
           const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -48,7 +55,8 @@ export class AutenticacaoFirebaseService {
           // The signed-in user info.
           const user = result.user;
           // ...
-        }).catch((error) => {
+        })
+        .catch((error) => {
           // Handle Errors here.
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -57,27 +65,40 @@ export class AutenticacaoFirebaseService {
           // The AuthCredential type that was used.
           const credential = GoogleAuthProvider.credentialFromError(error);
           // ...
-        }))
-    }
+        })
+    );
+  }
 
-    recuperarSenha(emailAddress: string){
-      return from(sendPasswordResetEmail(this.usuarioFb, emailAddress))
-    }
+  recuperarSenha(emailAddress: string) {
+    return from(sendPasswordResetEmail(this.usuarioFb, emailAddress));
+  }
 
-    errorMessages(error: string){
-      switch (error) {
-        case 'auth/invalid-email':
-          return 'Email inválido'
-          break;
-        case 'auth/weak-password':
-          return 'Senha deve conter no mínimo 6 caracteres'
-          break;
-        case 'auth/email-already-in-use':
-          return 'Email já registrado em nosso sistema'
-          break;
-        default:
-          return 'Ocorreu um erro'
-          break;
-      }
+  async subirImagem(nome: string, imgBase64: any) {
+    /*    if (!imgBase64) return;
+
+    try {
+      let res = await this.storageRef.child("user/" + nome).putString(imgBase64, 'data_url');
+
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    } */
+  }
+
+  errorMessages(error: string) {
+    switch (error) {
+      case 'auth/invalid-email':
+        return 'Email inválido';
+        break;
+      case 'auth/weak-password':
+        return 'Senha deve conter no mínimo 6 caracteres';
+        break;
+      case 'auth/email-already-in-use':
+        return 'Email já registrado em nosso sistema';
+        break;
+      default:
+        return 'Ocorreu um erro';
+        break;
     }
+  }
 }
