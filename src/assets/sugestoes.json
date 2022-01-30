@@ -1,0 +1,26 @@
+[
+  {
+    "sugestao":"Naruto",
+    "autor": "Masashi Kishimoto",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/912xRMMra4L.jpg",
+    "sinopse": "Naruto é um jovem órfão habitante da Vila da Folha que sonha se tornar o quinto Hokage, o maior guerreiro e governante da vila. ... Agora Naruto vai contar com a ajuda dos colegas Sakura e Sasuke e do professor dos três, Kakashi Hatake, para perseguir seu sonho e deter os ninjas que planejam fazer mal á sua cidade."
+  },
+  {
+    "sugestao":"A revolução dos bichos",
+    "autor": "George Orwell",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61owA5ey3iL._SX324_BO1,204,203,200_.jpg",
+    "sinopse": "Verdadeiro clássico moderno, concebido por um dos mais influentes escritores do século XX, A revolução dos bichos é uma fábula sobre o poder. Narra a insurreição dos animais de uma granja contra seus donos. Progressivamente, porém, a revolução degenera numa tirania ainda mais opressiva que a dos humanos."
+  },
+  {
+    "sugestao":"Morte no Nilo",
+    "autor":"Agatha Christie",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71Jt2eJxI6L.jpg",
+    "sinopse": "A tranquilidade de um cruzeiro de luxo pelo Nilo chega ao fim quando o corpo de Linnet Doyle, uma bela e jovem milionária, é descoberto em sua cabine. Porém, para azar do autor do crime, o brilhante detetive Hercule Poirot está a bordo. Ele logo descobre que cada passageiro é suspeito, pois todos tinham motivos para tirar a vida de Linnet. Em um rio de mentiras, Poirot precisa descobrir a verdade sobre esse estranho assassinato."
+  },
+  {
+    "sugestao":"Crepúsculo",
+    "autor": "Stephenie Meyer",
+    "image": "https://lojasaraiva.vteximg.com.br/arquivos/ids/12101115/1006788625.jpg?v=637142218757700000",
+    "sinopse": "Crepúsculo poderia ser uma história comum, não fosse um elemento irresistível: o objeto da paixão da protagonista é um vampiro. Assim, soma-se à paixão um perigo sobrenatural temperado com muito suspense, e o resultado é uma leitura de tirar o fôlego. Um romance repleto das angústias e incertezas da juventude - o arrebatamento, a atração, a ansiedade que antecede cada palavra, cada gesto, e todos os medos."
+  }
+]
