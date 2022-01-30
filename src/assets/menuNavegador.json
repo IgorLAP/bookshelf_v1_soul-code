@@ -1,5 +1,4 @@
 [
-  {"linkMenu": "/tela-usuario", "labelMenu":"Tela do Usuário", "hab": true},
   {"linkMenu": "/cdd", "labelMenu":"Classes Dewey", "hab": true},
   {"linkMenu": "/feed", "labelMenu":"Feed Notícias", "hab": true},
   {"linkMenu": "/especial-mes", "labelMenu":"Especiais do Mês", "hab": true},

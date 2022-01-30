@@ -27,8 +27,6 @@ import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dial
 })
 export class FeedComponent {
 
-  state = 'expanded';
-
   cards$: Observable<Dashboard[]>;
   main$: Observable<Dashboard[]>
   usuario$= this.autenticacaoFirebaseService.usuarioLogado$;
@@ -52,6 +50,7 @@ export class FeedComponent {
       this.cards$ = dashboardService.listagemCards()
       .pipe(
         catchError(error =>{
+          console.log(error);
           this.abrirDialogoErro("Erro ao carregar as notícias: #BS -"+error.status)
           return of([])
         })
@@ -76,9 +75,7 @@ export class FeedComponent {
       this.hider();
     }
   }
-  alternar(){
-    this.state = this.state === 'expanded' ? 'collapsed': 'expanded';
-  }
+
   ngOnInit(): void {
     this.formulario = new FormGroup({
       query: new FormControl('')

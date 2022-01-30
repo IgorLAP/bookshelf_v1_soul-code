@@ -1,3 +1,4 @@
+import { catchError, of } from 'rxjs';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
@@ -65,6 +66,9 @@ export class AppCadastroComponent implements OnInit {
     this.autenticacaoFirebaseService
       .cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha)
       .pipe(
+        catchError(error => {
+          return of([])
+        }),
         this.toast.observe({
           success: 'Cadatro executado, bem vindo ao BookShelf',
           loading: 'Enviando informações...',
