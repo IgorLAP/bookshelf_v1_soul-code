@@ -1,0 +1,82 @@
+[
+  {
+    "titulo":"Mais Esperto Que o Diabo",
+    "autor": "Napoleon Hill",
+    "categoria": "Autoajuda",
+    "dataPublicacao":"1938",
+    "isbn": "978-85-68014-00-4",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2021/07/Vgzr5F4Gh4Y0HTGeYaoSimsdVz8uJPebAWx397qktmYwr00d2YDOElgtMJ9QoFAT9LtGKTA3keBzzTDd.jpg"
+  },
+  {
+    "titulo":"Torto arado",
+    "autor": "Itamar Vieira Junior",
+    "categoria": "Ficção",
+    "dataPublicacao":"2019",
+    "isbn": "978-65-80309-31-3",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2020/12/mAfckVkdsHEvlztqX5ThJBoeY5EpIQ8yhfh9Vfk3amwg7OxAwHgHT7hSUDvgtIOWiRDU7QYJwcnKAplz.jpg"
+  },
+  {
+    "titulo":"Mulheres que correm com os lobos",
+    "autor": "Clarissa Pinkola Estes",
+    "categoria": "Não ficção",
+    "dataPublicacao":"1992",
+    "isbn": "978-85-32529-78-7",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2018/12/nCxf8cyh2k3HhDeb2nFf52XRbR5AJ4WRr6FaZ4XIELrSr0kEGpwxoc2YCbdYRlLp1t7OvWBQiSXbrZnm.jpg"
+  },
+  {
+    "titulo":"Amor & gelato",
+    "autor": "Jenna Evans Welch",
+    "categoria": "Ficção",
+    "dataPublicacao":"2016",
+    "isbn": "978-85-51002-34-6",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2021/04/7UAARrPReZ5vPtZZ0Qt3taq5HPZyfTCJBQsnxc0x7R3lPSQHdocPPoLDRhoWIqglf9grbBfXL6xgo25d.jpg"
+  },
+  {
+    "titulo":"Nas pegadas da alemoa",
+    "autor": "Ilko Minev",
+    "categoria": "Ficção",
+    "dataPublicacao":"2021",
+    "isbn": "978-65-86077-89-6",
+    "capa":"https://www.publishnews.com.br/estaticos/uploads/2021/12/oxPbUniy9OY7iqE8eJzaZe2lwEqJSWQ7rgfrB0dtxR1PsflR8aNxgDnRfyLB3k5hPLGNphEVz5btx569.jpg"
+  },
+  {
+    "titulo":"É assim que acaba",
+    "autor": "Colleen Hoover",
+    "categoria": "Ficção",
+    "dataPublicacao":"2016",
+    "isbn": "978-85-01112-51-4",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2021/08/AYH42hiujusD1xdeJuMBfd0xKA2pdPZwK9hCt024trgI1r7mwU2LYHR9PcIQQAmtfAUG6BwIpkvjvOXj.jpg"
+  },
+  {
+    "titulo":"Do mil ao milhão",
+    "autor": "Thiago Nigro",
+    "categoria": "Negócios",
+    "dataPublicacao":"2018",
+    "isbn": "978-85-95083-27-1",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2018/12/r45liYDuqOHQRJlKyhGi8KtfeXhwsr60hzkrN1xIHmnI8hyJUJfziDKooYi22JQfFTdopHRumlqknJIq.jpg"
+  },
+  {
+    "titulo":"A garota do lago",
+    "autor": "Charlie Donlea",
+    "categoria": "Ficção",
+    "dataPublicacao":"2016",
+    "isbn": "978-85-62409-88-2",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2019/04/o8HmV2jl1OLFJlkjT6qkTFADkYMEeZQ6gxYqaotYVj3B0QJ10S619PZtq6rs9pB9qvqs5Dv2yDwltjlJ.jpg"
+  },
+  {
+    "titulo":"Os sete maridos de Evelyn Hugo",
+    "autor": "Taylor Jenkins Reid",
+    "categoria": "Ficção",
+    "dataPublicacao":"2017",
+    "isbn": "978-85-84391-50-9",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2020/09/2bPJukvai2GX2aFutD1qWP1OmwFX6v98fhUXOn7wylKXPceFoQxt55tzYhfQFaitjflpGkSSaQzVZ18k.jpg"
+  },
+  {
+    "titulo":"Os segredos da mente milionária",
+    "autor": "T. Harv Eker",
+    "categoria": "Negócios",
+    "dataPublicacao":"2005",
+    "isbn": "978-85-75422-39-7",
+    "capa": "https://www.publishnews.com.br/estaticos/uploads/2015/08/flQqYuiyxm1OThx3kMyaVlegJFP98SPiBIeASQRjroLrR6Sh47nP2JAYg05VAjpOHBktd85lsxQf6PvK.jpg"
+  }
+]

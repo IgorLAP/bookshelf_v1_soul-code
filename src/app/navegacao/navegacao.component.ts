@@ -2,7 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { catchError, Observable, of } from 'rxjs';
+import { catchError, fromEvent, Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 import { AppLoginComponent } from './../app-login/app-login.component';
@@ -77,6 +77,4 @@ export class NavegacaoComponent {
     voltarTelaInicial(){
       this.rotas.navigate(['']);
     }
-
-
 }

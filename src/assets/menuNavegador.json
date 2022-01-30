@@ -6,7 +6,10 @@
   {"linkMenu":"/vestibular", "labelMenu":"Livros para Vestibular", "hab":true},
   {"linkMenu": "/isbn", "labelMenu":"ISBN", "hab": true},
   {"linkMenu": "/sugestoes", "labelMenu":"Sugestões", "hab": true},
+  {"linkMenu": "/mais-vendidos", "labelMenu":"Mais Vendidos", "hab": true},
+  {"linkMenu": "/biblioteconomia", "labelMenu":"Biblioteconomia", "hab": true},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false}
+
 ]

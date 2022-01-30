@@ -1,0 +1,70 @@
+[
+  {
+    "titulo": "Crônicas do Gelo e Fogo",
+    "autor": "George R. R. Martin",
+    "livros": [
+      {"ref1":"A Guerra dos Tronos (1996)"},
+      {"ref2":"A Tormenta de Espadas (2000)"},
+      {"ref3":"O Festim dos Corvos (2005)"},
+      {"ref4":"A Dança dos Dragões (2011)"},
+      {"ref5":"The Winds of Winter (a publicar)"},
+      {"ref6":"A Dream of Spring (a publicar)"}
+    ],
+    "img": "../assets/imagens/saga1.jpg",
+    "resumo": "Uma das sagas literárias mais ricas e completas da atualidade, sem sombras de dúvidas! As Crônicas do Gelo e Fogo é de autoria do roteirista e romancista norte-americano George R. R. Martin, que vem publicando os livros da série desde 1996.",
+    "links": [{"ref": "https://www.geloefogo.com/livros", "texto":"Saiba mais"}],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "O senhor dos Aneis",
+    "autor": "J.R.R. Tolkien",
+    "livros": [
+      {"ref1":"Sociedade do Anel (1954"},
+      {"ref2":"As Duas Torres (1954)"},
+      {"ref3":"O Retorno do Rei (1955)"}
+    ],
+    "img": "../assets/imagens/saga2.jpeg",
+    "resumo": "A história gira em torno de Frodo Bolseiro, um hobbit com a missão de destruir um misterioso Anel, um artefato mágico forjado por Sauron, o Senhor do Escuro, e que representa um grande perigo para quem o utiliza.",
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/O_Senhor_dos_An%C3%A9is", "texto":"Saiba mais"}],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "Harry Potter",
+    "autor": "J.K. Rowling",
+    "livros": [
+      {"ref1":"Harry Potter e A Pedra Filosofal (1997)"},
+      {"ref2":"Harry Potter e a Câmara Secreta (1998)"},
+      {"ref3":"Harry Potter e o Prisioneiro de Azkaban (1999)"},
+      {"ref4":"Harry Potter e o Calice de Fogo (2000)"},
+      {"ref5":"Harry Potter e a Ordem da Fênix (2003)"},
+      {"ref6":"Harry Potter e o Enigma do Príncipe (2005)"},
+      {"ref7":"Harry Potter e as Relíquias da Morte (2007)"}
+    ],
+    "img": "../assets/imagens/saga3.jpg",
+    "resumo": "Para o extraterrestre que não conhece a sinopse da história, Harry Potter narra as aventuras de Harry Potter, um famoso bruxo que sobreviveu ao ataque do Lord Voldemort quando ainda era um bebê. O jovem feiticeiro entra para a Escola de Magia e Bruxaria de Hogwarts e conhece seus melhores amigos, Ronald Weasley e Hermione Granger.",
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/Harry_Potter", "texto":"Saiba mais"}],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": " As Crônicas de Nárnia",
+    "autor": "C.S. Lewis",
+    "livros": [
+      {"ref1":"O Leão, A Feiticeira e o Guarda-Roupa (1950)"},
+      {"ref2":"Príncipe Caspian (1951)"},
+      {"ref3":"A Viagem do Peregrino da Alvorada (1952)"},
+      {"ref4":"A Cadeira de Prata (1953)"},
+      {"ref5":"O Cavalo e Seu Menino (1954)"},
+      {"ref6":"O Sobrinho do Mago (1955)"},
+      {"ref7":"A Última Batalha (1956)"}
+    ],
+    "img": "../assets/imagens/saga4.jpg",
+    "resumo": "As personagens principais são crianças do 'nosso mundo' que foram transportadas para o mágico Reino de Nárnia, um lugar especial e muito bem construído por Lewis. Além de magia, animais falantes, temas cristãos e elementos da mitologia grega e nórdica, As Crônicas de Nárnia também é feito com base nos tradicionais contos de fadas.",
+    "links": [{"ref": "https://pt.wikipedia.org/wiki/The_Chronicles_of_Narnia", "texto":"Saiba mais"}],
+    "cols": 1,
+    "rows": 2
+  }
+
+]

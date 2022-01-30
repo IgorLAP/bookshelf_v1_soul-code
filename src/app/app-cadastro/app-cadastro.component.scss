@@ -26,6 +26,20 @@ mat-form-field{
   max-width: 920px;
 }
 
+.mat-card:first-child{
+  width: 90%;
+
+  .mat-card-header{
+    flex-direction: column;
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+
+
 p{
   text-align: center;
 }

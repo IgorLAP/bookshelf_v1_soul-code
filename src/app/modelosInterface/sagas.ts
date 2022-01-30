@@ -1,7 +1,6 @@
-export interface Biblioteconomia {
+export interface Sagas {
   titulo: string;
   autor: string;
-  data: string;
   img: string;
   resumo: string;
   links: [{ref: string, texto: string}];

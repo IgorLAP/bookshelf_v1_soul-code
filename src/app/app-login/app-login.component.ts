@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
+import { catchError, of } from 'rxjs';
 
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
@@ -49,12 +50,16 @@ export class AppLoginComponent {
           success: 'Login valido, obrigado',
           loading: 'Redirecionando...',
           error: 'Algo deu errado, confira as informações'
+        }),
+        catchError((err)=>{
+          this.toast.error(err.message)
+          return of(err)
         })
-      ).subscribe(()=>{
+      )
+      .subscribe(()=>{
         this.formularioLogin.reset({email: '', senha: ''})
         this.nTry = 0
         this.rotas.navigate(['/cdd'])
-        console.log(this.nTry)
         this.telaLogin.closeAll();
       })
       setTimeout(() => {

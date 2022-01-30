@@ -1,7 +1,7 @@
 import { Dashboard } from './../modelosInterface/dashboard';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first, tap } from 'rxjs';
+import { delay, first, map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,15 @@ export class DashboardService {
       first(),
       delay(500),
       tap(apiDashboard => console.log(apiDashboard))
+    )
+  }
+
+  pesquisar(query: string){
+    return this.cardsDashboard.get<Dashboard[]>(this.uriAPI)
+    .pipe(
+      first(),
+      delay(200),
+      map(res => res.find(i => (i.titulo.toLowerCase()).startsWith(query.toLocaleLowerCase())))
     )
   }
 }
