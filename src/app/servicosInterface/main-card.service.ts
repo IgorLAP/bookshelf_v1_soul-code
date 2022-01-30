@@ -17,7 +17,9 @@ export class MainCardService {
     .pipe(
       first(),
       delay(500),
-      tap(apiDashboard => console.log(apiDashboard))
+      tap(apiDashboard => apiDashboard.forEach(i=>{
+        i.state = "expanded"
+      }))
     )
   }
 }

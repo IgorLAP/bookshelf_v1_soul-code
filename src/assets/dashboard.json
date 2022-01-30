@@ -18,8 +18,7 @@
       {"ref":"https://www.prolivro.org.br/2021/01/20/ciclo-de-debates-da-retratos-da-leitura/", "texto":"Pró-Livro"},
       {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"},
       {"ref":"https://teoriaedebate.org.br/estante/a-ditadura-envergonhada-v-1-a-ditadura-escancarada-v-2/","texto":"Teoria e Debate"},
-      {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"},
-      {"ref":"","texto":""}
+      {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"}
     ]
   },
   {
@@ -34,14 +33,12 @@
     ]
   },
   {
-    "titulo": "Educação e Leitura: Fundação Victor Civita",
-    "subtitulo":"Carlos Leite e os 50 livros da história",
-    "img": "../../assets/imagens/cover4.png",
-    "conteudo":"Aqui você vai encontrar os livros que serão as melhores fontes de debates e construção de retórica para o mês de janeiro.",
+    "titulo": "Back to the 00's",
+    "subtitulo":"Uma lista dos melhores livros que marcaram o a virada do milênio",
+    "img": "../../assets/imagens/anos00.jpg",
+    "conteudo":"Seção nostalgia com os livros e sagas que mais maracam época nos anos 2000",
     "link":[
-      {"ref":"https://fvc.org.br/", "texto":"Biblioteca FVC"},
-      {"ref":"https://www.revistabula.com/7802-os-melhores-livros-da-historia-da-literatura/","texto":"Revista Bula"},
-      {"ref":"https://www.amazon.com.br/b?ie=UTF8&node=6311441011","texto":"Anazon Livros Gratuitos"}
+      {"ref":"https://entretetizei.com.br/tbt-livros-dos-anos-2000-que-marcaram-a-nossa-adolescencia/", "texto":"Entretetizei"}
     ]
   }
 ]

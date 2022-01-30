@@ -19,10 +19,11 @@ export class ClassesComponent implements OnInit {
   formulario!: FormGroup
   result$!: Observable<Generos | undefined>;
   hide = false;
+  likesCounter = 1;
 
   constructor(
     private generosService: GenerosService,
-    public dialogo: MatDialog
+    public dialogo: MatDialog,
     ) {
     this.livrosGeneros$ = generosService.listagemGeneros()
     .pipe(
@@ -51,7 +52,15 @@ export class ClassesComponent implements OnInit {
     }
   }
 
+  liked(){
+    this.likesCounter++;
+    localStorage['likesCounter'] = this.likesCounter;
+  }
+
   ngOnInit(): void {
+    if(localStorage['likesCounter']){
+      this.likesCounter = Number(localStorage['likesCounter'])
+    }
     this.formulario = new FormGroup({
       query: new FormControl('')
     });
