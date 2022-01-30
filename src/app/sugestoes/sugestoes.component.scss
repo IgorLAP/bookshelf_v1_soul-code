@@ -1,4 +1,63 @@
-.example-card {
+.mat-h1{
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #7E56C2;
+  text-align: center;
+  margin: 20px auto;
+}
+form{
+  display: flex;
+  justify-content: end;
+  max-width: 1080px;
+}
+.mat-grid{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sugestoes-card {
   max-width: 400px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+  .mat-card-title-group{
+    align-items: center;
+  }
+  img{
+    border-radius: 15px;
+    border: 5px groove violet;
+  }
+  .mat-card-title{
+    margin-bottom: 15px;
+    margin-right: 35px;
+  }
+}
+
+.sugestoes-card:hover{
+  transform: scale(1);
+}
+.mat-card-sinopsis{
+  text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+}
+.loading-spinner{
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+@media only screen and (max-width: 425px){
+  .sugestoes-card{
+    img{
+      width: 50%;
+      height: 180px;
+      margin-left: 5px;
+    }
+  }
 }

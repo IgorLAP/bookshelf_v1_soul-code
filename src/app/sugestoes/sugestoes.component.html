@@ -1,46 +1,28 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>
-    <mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Extra large</mat-card-subtitle>
-    <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-  </mat-card-content>
-</mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Extra large</mat-card-subtitle>
-    <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-  </mat-card-content>
-</mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Extra large</mat-card-subtitle>
-    <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-  </mat-card-content>
-</mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Extra large</mat-card-subtitle>
-    <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-  </mat-card-content>
-</mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<div *ngIf="sugestoes$ | async as sugestoes; else loading">
+  <h1 class="mat-h1">Sugestões</h1>
+  <form (ngSubmit)="pesquisar()" [formGroup]="formulario">
+    <mat-form-field class="search-field" appearance="fill">
+      <mat-label>Procurar</mat-label>
+      <input matInput type="text" formControlName="query" >
+      <button type="submit" matSuffix mat-icon-button aria-label="Clear" >
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <div class="mat-grid">
+    <div *ngFor="let i of sugestoes">
+    <mat-card class="sugestoes-card">
+      <mat-card-title-group>
+        <mat-card-title>{{ i.titulo }}, {{ i.autor }}</mat-card-title>
+        <mat-card-subtitle>{{ i.sinopse }}</mat-card-subtitle>
+        <img mat-card-xl-image [src]="i.image" >
+      </mat-card-title-group>
+    </mat-card>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
