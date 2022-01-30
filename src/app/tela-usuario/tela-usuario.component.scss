@@ -1,0 +1,45 @@
+.card {
+  border-radius: 0px 0px 20px 20px;
+  max-width: 450px;
+  margin: 140px auto;
+  height: 48%;
+  background-image: url("../../assets/imagens/logoBS3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-color: rgb(69, 67, 72);
+}
+
+.position {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: -52px;
+  left: 0px;
+  border-radius: 20px 20px 0px 0px;
+  width: 95.9%;
+  padding: 10px;
+  color: white;
+  background-color: rgb(105, 55, 187);
+}
+
+.content {
+  padding: 15px;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.border {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 10px 1.3px 10px;
+}
+
+.mt {
+  margin-top: 10px;
+}
+
+span {
+  color: rgb(100, 60, 165);
+}
+

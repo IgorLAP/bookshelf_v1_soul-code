@@ -1,0 +1,72 @@
+[
+  {
+    "titulo":"Exercícios de Ser Criança",
+    "autor": "Manoel de Barros",
+    "dataPublicacao":"1999",
+    "isbn": "978-85-28103-50-2",
+    "capa": "https://www.macunaima.com.br/blog/wp-content/uploads/2018/01/9-livros-que-todo-bom-estudante-de-teatro-precisa-ler-5-768x1012.jpg"
+  },
+  {
+    "titulo":"Tao-Te King",
+    "autor": "Lao-Tzu",
+    "dataPublicacao":"2013",
+    "isbn": "978-85-31506-54-3",
+    "capa": "https://www.macunaima.com.br/blog/wp-content/uploads/2018/01/9-livros-que-todo-bom-estudante-de-teatro-precisa-ler-4-768x1110.jpg"
+  },
+  {
+    "titulo":"O Herói de Mil Faces",
+    "autor": "Joseph Campbell",
+    "dataPublicacao":"1949",
+    "isbn": "978-85-31502-94-1",
+    "capa": "https://www.macunaima.com.br/blog/wp-content/uploads/2018/01/9-livros-que-todo-bom-estudante-de-teatro-precisa-ler-9.jpg"
+  },
+  {
+    "titulo":"Hamlet",
+    "autor": "William Shakespeare",
+    "dataPublicacao":"1609",
+    "isbn": "978-65-58883-87-6",
+    "capa": "https://www.macunaima.com.br/blog/wp-content/uploads/2018/01/9-livros-que-todo-bom-estudante-de-teatro-precisa-ler.jpg"
+  },
+  {
+    "titulo":"40 Questões para um Papel",
+    "autor": "Jurij Alschitz",
+    "dataPublicacao":"2012",
+    "isbn": "978-85-27309-66-0",
+    "capa":"https://images-na.ssl-images-amazon.com/images/I/31zE2+PhGYL._SY344_BO1,204,203,200_.jpg"
+  },
+  {
+    "titulo":"A Preparação do Ator",
+    "autor": "Constantin Stanislavski",
+    "dataPublicacao":"1936",
+    "isbn": "978-85-20012-95-6",
+    "capa": "https://www.macunaima.com.br/blog/wp-content/uploads/2018/01/9-livros-que-todo-bom-estudante-de-teatro-precisa-ler-8.jpg"
+  },
+  {
+    "titulo":"Stanislávski - Vida, Obra e Sistema",
+    "autor": "Elena Vássina e Aimar Labaki",
+    "dataPublicacao":"2015",
+    "isbn": "978-85-75071-72-4",
+    "capa": "https://antigo.funarte.gov.br/wp-content/uploads/2016/08/Capa-Stanisl%C3%A1vski-vida-obra-e-Sistema-e1471464830921.jpg"
+  },
+  {
+    "titulo":"Stanislávski em Processo",
+    "autor": "Simone Shuba",
+    "dataPublicacao":"2016",
+    "isbn": "978-85-27310-46-8",
+    "capa": "https://www.macunaima.com.br/blog/wp-content/uploads/2018/01/9-livros-que-todo-bom-estudante-de-teatro-precisa-ler-6.jpg"
+  },
+  {
+    "titulo":"Nissim Castiel: Do Teatro da Vida para o Teatro da Escola",
+    "autor": "Luciano Castiel e Débora Hummel",
+    "dataPublicacao":"2014",
+    "isbn": "978-85-27310-26-0",
+    "capa": "https://images-na.ssl-images-amazon.com/images/I/41gVakzHh+L._SX331_BO1,204,203,200_.jpg"
+  },
+  {
+    "titulo":"História Mundial do Teatro",
+    "autor": "Margot Berthold",
+    "dataPublicacao":"2010",
+    "isbn": "978-85-27302-28-9",
+    "capa": "https://wolfmaya.com.br/wp-content/uploads/2020/12/hist_ria-mundial-do-teatro-lsc1-ae3e19bf747a6412e815226732469179-640-0.jpg"
+  }
+]

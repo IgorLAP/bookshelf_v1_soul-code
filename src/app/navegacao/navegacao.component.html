@@ -46,8 +46,16 @@
         </button>
       </ng-template>
     </mat-toolbar>
-    <mat-menu #usuarioMenu="matMenu">
-      <button mat-menu-item (click)="sairUsuario()">LOGOUT</button>
+    <mat-menu  #usuarioMenu="matMenu">
+      <a style="display: flex; justify-content: space-between; align-items: center; color: black;" mat-menu-item routerLink="/tela-usuario">
+        Perfil<mat-icon class="mat-18">account_circle</mat-icon>
+      </a>
+      <a style="display: flex; justify-content: space-between; align-items: center; color: black;" mat-menu-item routerLink="/faq">
+        Ajuda<mat-icon class="mat-18">help</mat-icon>
+      </a>
+      <button style="display: flex; justify-content: space-between; align-items: center; color: black;" mat-menu-item (click)="sairUsuario()">
+        Sair<mat-icon class="mat-18">logout</mat-icon>
+      </button>
     </mat-menu>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

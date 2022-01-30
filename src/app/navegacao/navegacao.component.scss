@@ -1,3 +1,12 @@
+.logoMenu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.logoMenu img{
+  width: 100%;
+}
 .sidenav-container {
   height: 100%;
 }
@@ -5,7 +14,9 @@
 .sidenav {
   width: 200px;
 }
-
+.sidenav::-webkit-scrollbar-track{
+  background: orange;
+}
 .sidenav .mat-toolbar {
   background: inherit;
 }
