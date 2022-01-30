@@ -42,6 +42,8 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
+import { SagasComponent } from './sagas/sagas.component';
+import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.component';
 
 
 
@@ -61,6 +63,8 @@ import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.comp
     SugestoesComponent,
     MaisVendidosComponent,
     BiblioteconomiaComponent,
+    SagasComponent,
+    AppListaSagasComponent,
   ],
   imports: [
     BrowserModule,
