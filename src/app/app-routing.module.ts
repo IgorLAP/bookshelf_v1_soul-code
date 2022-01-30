@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
+import { AjudaComponent } from './ajuda/ajuda.component';
 
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
@@ -68,6 +69,10 @@ const routes: Routes = [
   },
   {
     path: 'mais-vendidos', component: MaisVendidosComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'ajuda', component: AjudaComponent,
     ...canActivate(enviarSemLogin)
   },
   {

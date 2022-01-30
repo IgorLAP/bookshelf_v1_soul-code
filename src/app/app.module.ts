@@ -43,6 +43,9 @@ import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
+
+
 import { SagasComponent } from './sagas/sagas.component';
 import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.component';
 
@@ -63,6 +66,7 @@ import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.compon
     TelaUsuarioComponent,
     MaisVendidosComponent,
     BiblioteconomiaComponent,
+    AjudaComponent,
     SagasComponent,
     AppListaSagasComponent,
   ],
