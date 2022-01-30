@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <h2 class="position">Informações do Usuário</h2>
+  <mat-card-content class="content" *ngIf="usuario$ | async as usuario">
+    <div class="border">
+      <div>
+        <p><span>Nome:</span> {{usuario.displayName}}</p>
+      </div>
+
+      <div class="mt">
+        <p><span>Chave:</span> {{usuario.uid}}</p>
+      </div>
+
+      <div class="mt">
+        <p><span>E-mail:</span> {{usuario.email}}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
