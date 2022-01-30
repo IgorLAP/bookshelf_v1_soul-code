@@ -5,7 +5,9 @@
 .sidenav {
   width: 200px;
 }
-
+.sidenav::-webkit-scrollbar-track{
+  background: orange;
+}
 .sidenav .mat-toolbar {
   background: inherit;
 }
