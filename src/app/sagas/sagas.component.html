@@ -1,0 +1,36 @@
+<div class="grid-container">
+  <h1 class="mat-h1">As 10 melhores Sagas da Literatura</h1>
+  <mat-grid-list cols="1" rowHeight="450px">
+    <mat-grid-tile *ngFor="let cardSagas of cardsSagas$ | async" [colspan]="cardSagas.cols" [rowspan]="cardSagas.rows">
+      <mat-card class="special-card">
+        <mat-card-header class="special-card-titles">
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{cardSagas.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{cardSagas.autor}} </mat-card-subtitle>
+        </mat-card-header>
+        <div id="img"><img mat-card-image [src]="cardSagas.img" [alt]="cardSagas.titulo">
+          <mat-card-content class="special-card-content">
+            <div>{{cardSagas.resumo}}</div>
+          </mat-card-content>
+        </div>
+        <mat-nav-list>
+          <mat-list-item *ngFor="let link of cardSagas.links">
+            <a matLine [href]="link.ref" target="_blank">{{ link.texto }}</a>
+            <button mat-icon-button>
+              <mat-icon>info</mat-icon>
+            </button>
+            <mat-divider inset></mat-divider>
+          </mat-list-item>
+          <mat-list-item *ngFor="let sagas of cardSagas.saga">
+            <p matLine >{{ sagas.texto }}</p>
+            <button (click)="abrirDialogoListagemLivros(cardSagas.titulo)" mat-icon-button>
+              <mat-icon>open_in_new</mat-icon>
+            </button>
+            <mat-divider inset></mat-divider>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

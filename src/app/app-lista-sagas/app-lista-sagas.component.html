@@ -1,0 +1,9 @@
+<div *ngIf="cardsSagas$ | async as sagas;">
+  <h1 mat-dialog-title>{{sagas.titulo}}</h1>
+    <mat-nav-list *ngFor="let livrosSagas of sagas.livros ">
+      <mat-list-item>{{livrosSagas.ref}}</mat-list-item>
+    </mat-nav-list>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="accent">Fechar</button>
+</div>

@@ -43,6 +43,10 @@ import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
+import { TeatroComponent } from './teatro/teatro.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
+import { SagasComponent } from './sagas/sagas.component';
+import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.component';
 
 
 @NgModule({
@@ -61,6 +65,10 @@ import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.comp
     TelaUsuarioComponent,
     MaisVendidosComponent,
     BiblioteconomiaComponent,
+    TeatroComponent,
+    AjudaComponent,
+    SagasComponent,
+    AppListaSagasComponent,
   ],
   imports: [
     BrowserModule,
