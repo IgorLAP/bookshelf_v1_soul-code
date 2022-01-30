@@ -3,6 +3,7 @@ import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
+import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { IsbnComponent } from './isbn/isbn.component';
@@ -37,6 +38,10 @@ const routes: Routes = [
   },
   {
     path: 'especial-mes', component: EspecialMesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'biblioteconomia', component: BiblioteconomiaComponent,
     ...canActivate(enviarSemLogin)
   },
   {
