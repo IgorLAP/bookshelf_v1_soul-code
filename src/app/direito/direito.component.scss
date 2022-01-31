@@ -5,36 +5,30 @@ h1 {
   text-align: center;
   margin: 20px auto;
 }
-
-.card {
-  margin: auto;
-  margin-bottom: 15px;
-  width: 90%;
-  display: flex;
+img{
+  height: 75px;
+  margin: 5px 0;
 }
-.left-container{
+table {
+  width: 100%;
+  th{
+    color: white;
+    background-color: #7e56c2;
+    font-size: 15px;
+  }
+  img{
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+}
+.loading-spinner{
+  background-color: rgb(221, 221, 221);
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-img {
-  margin-left: 5px;
-  width: 150px;
-  height: 200px;
-}
-.d-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.justify-content-center {
   justify-content: center;
+  padding: 5rem;
 }
-
-.align-items-center {
-  align-items: center;
-}
-
-.right-container {
-  margin-left: 50px;
+.card-mv{
+  margin: 30px auto;
+  max-width: 920px;
 }
