@@ -1,0 +1,72 @@
+[
+  {
+    "titulo":"Desenvolvimento Humano",
+    "autor": "Diane Papalia e Ruth Feldman",
+    "dataPublicacao":"2006",
+    "isbn": "978-85-80552-16-4",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Desenvolvimento-Humano.jpg.webp"
+  },
+  {
+    "titulo":"Incógnito: As Vidas Secretas do Cérebro",
+    "autor": "David Eagleman",
+    "dataPublicacao":"2011",
+    "isbn": "978-85-32527-12-7",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Incognito.jpg"
+  },
+  {
+    "titulo":"Rápido e Devagar: Duas Formas de Pensar",
+    "autor": "Daniel Kahneman",
+    "dataPublicacao":"2011",
+    "isbn": "978-85-39003-83-9",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Rapido-e-Devagar.jpg.webp"
+  },
+  {
+    "titulo":"Princípios Básicos de Análise do Comportamento",
+    "autor": "Carlos Augusto e Márcio Borges",
+    "dataPublicacao":"2000",
+    "isbn": "978-85-82715-15-4",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Principios-Basicos.jpg.webp"
+  },
+  {
+    "titulo":"Psicopatologia e Semiologia dos Transtornos Mentais",
+    "autor": "Paulo Dalgalarrondo",
+    "dataPublicacao":"2000",
+    "isbn": "978-85-82715-05-5",
+    "capa":"https://www.revistabula.com/wp/wp-content/uploads/2019/10/Psicopatologia-e-Semiologia.jpg.webp"
+  },
+  {
+    "titulo":"Inteligência Emocional",
+    "autor": "Daniel Goleman",
+    "dataPublicacao":"1995",
+    "isbn": "978-85-73020-80-9",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Inteligencia-Emocional.jpg.webp"
+  },
+  {
+    "titulo":"O Homem que Confundiu sua Esposa com um Chapéu",
+    "autor": "Oliver Sacks",
+    "dataPublicacao":"1985",
+    "isbn": "978-85-71646-89-6",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/O-Homem-que-Confundiu-sua-Esposa.jpg.webp"
+  },
+  {
+    "titulo":"História da Psicologia Moderna ",
+    "autor": "Sydney e Duane Schultz",
+    "dataPublicacao":"1969",
+    "isbn": "978-85-22127-95-5",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Historia-da-Psicologia-Moderna.jpg.webp"
+  },
+  {
+    "titulo":"Gestalt-terapia",
+    "autor": "Frederick Perls, Ralph Hefferline e Paul Goodman",
+    "dataPublicacao":"1951",
+    "isbn": "978-85-32306-25-8",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Gestaltterapia.jpg.webp"
+  },
+  {
+    "titulo":"Ser e Tempo",
+    "autor": "Margot Berthold",
+    "dataPublicacao":"1927",
+    "isbn": "978-85-26809-63-5",
+    "capa": "https://www.revistabula.com/wp/wp-content/uploads/2019/10/Ser-e-Tempo.png.webp"
+  }
+]
