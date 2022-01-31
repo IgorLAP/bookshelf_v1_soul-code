@@ -1,7 +1,14 @@
 import { catchError, of } from 'rxjs';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 
@@ -46,7 +53,7 @@ export class AppCadastroComponent implements OnInit {
     private loginBuilder: FormBuilder,
     private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     private toast: HotToastService,
-    private rotas: Router,
+    private rotas: Router
   ) {}
 
   enviaCadastro() {
@@ -58,16 +65,33 @@ export class AppCadastroComponent implements OnInit {
     ) {
       this.toast.error('Preencha todos os campos corretamente!');
       return;
-    } else if (this.clienteSenha !== this.clienteConfirmSenha) {
+    } else if (
+      this.clienteSenha !== this.clienteConfirmSenha ||
+      this.clienteSenha.length < 6
+    ) {
       this.toast.error('As senhas não conferem!');
       return;
+    } else if (this.clientEmail) {
+      if (this.clientEmail.indexOf('@') === -1) {
+        this.toast.error('Email inválido!');
+        return;
+      }
+    }
+
+    if (!this.clientEmail.includes('gmail.com') ||
+      !this.clientEmail.includes('hotmail.com') ||
+      !this.clientEmail.includes('outlook.com') ||
+      !this.clientEmail.includes('yahoo.com')
+      ) {
+      this.toast.error('provedor não cadastrado!');
+      return
     }
 
     this.autenticacaoFirebaseService
       .cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha)
       .pipe(
-        catchError(error => {
-          return of([])
+        catchError((error) => {
+          return of([]);
         }),
         this.toast.observe({
           success: 'Cadatro executado, bem vindo ao BookShelf',
@@ -94,10 +118,12 @@ export class AppCadastroComponent implements OnInit {
 
     read.onloadend = () => {
       console.log(read.result);
-      console.log('Type=> ',file.type)
-      this.autenticacaoFirebaseService.subirImagem(`${this.clientName}_${Date.now()}`, read.result);
-
-    }
+      console.log('Type=> ', file.type);
+      this.autenticacaoFirebaseService.subirImagem(
+        `${this.clientName}_${Date.now()}`,
+        read.result
+      );
+    };
   }
 
   uploadImage() {
