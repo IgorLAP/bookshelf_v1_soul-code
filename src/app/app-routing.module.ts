@@ -18,6 +18,7 @@ import { TeatroComponent } from './teatro/teatro.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
+import { DireitoComponent } from './direito/direito.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -84,6 +85,10 @@ const routes: Routes = [
   },
   {
     path: 'ajuda', component: AjudaComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'direito', component: DireitoComponent,
     ...canActivate(enviarSemLogin)
   },
   {

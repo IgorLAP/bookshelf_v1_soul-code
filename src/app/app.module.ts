@@ -48,6 +48,7 @@ import { AjudaComponent } from './ajuda/ajuda.component';
 import { SagasComponent } from './sagas/sagas.component';
 import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.component';
 import { ArtesComponent } from './artes/artes.component';
+import { DireitoComponent } from './direito/direito.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 
 
@@ -72,6 +73,7 @@ import { TecnologiaComponent } from './tecnologia/tecnologia.component';
     SagasComponent,
     AppListaSagasComponent,
     ArtesComponent,
+    DireitoComponent,
     TecnologiaComponent,
   ],
   imports: [

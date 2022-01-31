@@ -1,0 +1,25 @@
+<div>
+  <h1>Seção de Direito</h1>
+</div>
+<div class="section">
+  <div *ngFor="let livro of livros$ | async">
+    <mat-card class="card">
+      <div class="left-container">
+          <img
+          mat-card-image
+          src="{{ livro.img }}"
+          alt="capa do livro {{ livro.titulo }}"
+          />
+      </div>
+      <div class="right-container">
+        <mat-card-title>{{ livro.id }} - {{ livro.titulo }}</mat-card-title>
+        <mat-card-content>
+          <p><b>Autor: </b>{{ livro.autor }}</p>
+          <p><b>ISBN-10: </b>{{ livro.isbn }}</p>
+          <p><b>Ano de Publicação: </b>{{ livro.yearPub }}</p>
+          <p><b>Resumo: </b>{{ livro.resumo }}</p>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+</div>
