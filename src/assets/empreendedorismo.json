@@ -1,0 +1,92 @@
+[
+  {
+    "titulo": " Startup",
+    "autor": "Chris Guillebeau ",
+    "publicacao": "2013",
+    "categoria": "Gestão e Organização",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/startup-1-207x300.jpg",
+    "resumo": "Esse é um dos livros que está entre os primeiros que sempre recomendo, se não “O Primeiro”, pois é uma leitura bem descontraída e muito rica de conhecimentos. Ele aborda o ganho com conhecimento, mas principalmente o início de pequenos negócios. As dicas são maravilhosas, práticas e de muito fácil compreensão.",
+    "isbn": "978-9899828834"
+  },
+  {
+    "titulo": "Empreendedorismo",
+    "autor": "Nakagawa Marcelo Hiroshi ",
+    "publicacao": "2019",
+    "categoria": "Gestão e Organização",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/Marcelo-Nakagawa.jpg",
+    "resumo": "Esse livro é uma caixa de ferramentas sobre técnicas e conceitos de empreendedorismo. Ótimo para quem gosta de passo-a-passo e metodologias.",
+    "isbn": ""
+  },
+  {
+    "titulo": "Startup Weekend",
+    "autor": "Marc Nager, Franck Nouyrigat e Clint Nelsen",
+    "publicacao": "2011",
+    "categoria": "Gestão e Organização",
+    "img": "https://img.wook.pt/images/startup-weekend-marc-nager/MXwxMTAzMDgxNHw2NjAxNTMyfDEzODM1MjMyMDAwMDB8d2VicA==/502x",
+    "resumo": "Esse é um dos eventos sobre startups mais famoso do mundo e o livro trata um pouco dessa história. Mas, o forte são as lições valiosas aprendidas nos eventos. As dicas são muito atuais para o novo momento. E tem um forte apelo de “vai logo e faz”.",
+    "isbn": "978-1118105092"
+  },
+  {
+    "titulo": "A startup enxuta",
+    "autor": "Eric Ries",
+    "publicacao": "2019",
+    "categoria": "Gestão e Organização",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/502x-1-196x300.jpg",
+    "resumo": "https://www.empreendedor.com/wp-content/uploads/2020/08/502x-1-196x300.jpg",
+    "isbn": "978-8543108636"
+  },
+  {
+    "titulo": "Sem Dinheiro",
+    "autor": "Bruno Perin",
+    "publicacao": "2017",
+    "categoria": "Administração",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/74831605485c5f7dd8fe06ffe6bb79db-198x300.jpg",
+    "resumo": "É um livro de empreendedorismo puro, sem enrolação. Apenas dicas praticas para você conseguir empreender. Não tem história, é dica atrás de dica. Empreendedorismo raiz.",
+    "isbn": "978-8516031220"
+  },
+  {
+    "titulo": "Se Eu Soubesse Aos 20",
+    "autor": " Tina Seelig",
+    "publicacao": "2007",
+    "categoria": "Negócios e Economia",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/se-eu-soubesse-aso-20-190x300.jpg",
+    "resumo": "Tina Seeling é a melhor professora de empreendedorismo de todos os tempos e as suas melhores lições estão neste livro magistral. O livro é muito bom para quem está a começar a empreender. Com ele aprende o que ela ensina na sala de aula (em Standford).",
+    "isbn": "978-8564684003"
+  },
+  {
+    "titulo": "Avalie o Que Importa",
+    "autor": "John Doerr",
+    "publicacao": "2019",
+    "categoria": "Administração",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/502x-1-1-200x300.jpg",
+    "resumo": "Esse livro é vital hoje em dia. É do assunto que tenho mais comentado atualmente: o OKR. Este é o livro mais famoso sobre o assunto e ajuda a montar um plano e estratégia para fazer o que importa. Esse conhecimento causou uma das mudanças mais significativas da minha vida.",
+    "isbn": "978-8550804552"
+  },
+  {
+    "titulo": "Organizações exponenciais",
+    "autor": " Michael S. Malone, Salim Ismail e Yuri Van Geest",
+    "publicacao": "2019",
+    "categoria": "Técnico",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/Organiza%C3%A7%C3%B5es-exponenciais-1-206x300.jpg",
+    "resumo": "Assim como o Startup Weekend é um livro com foco nas novas lições do empreendedorismo. Este é ainda mais rico pela diversificação de fontes e ideias. A leitura é muito boa e a profundidade das orientações que o livro traz é incrível.",
+    "isbn": "978-8550807140"
+  },
+  {
+    "titulo": "Decoding Silicon Valley",
+    "autor": "Jonathan C. Baer e Michelle E Messina ",
+    "publicacao": "2016",
+    "categoria": "Historia",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/41P0axgbKRL._SX312_BO1204203200_-189x300.jpg",
+    "resumo": "Mostra como é o estilo de pensamento das pessoas no Vale do Silício com várias dicas para empreendedores. É um livro curto e rápido de ler. Bem focado no que importa e sem grandes enrolações. Você consegue perceber com mais clareza as razões das empresas de Silicon Valley serem tão impressionantes e como usar isso na sua realidade.",
+    "isbn": "978-0997362404"
+  },
+  {
+    "titulo": "The Founder's Dilemmas",
+    "autor": "Noam Wasserman",
+    "publicacao": "2013",
+    "categoria": "Gerenciamento e Liderança",
+    "img": "https://www.empreendedor.com/wp-content/uploads/2020/08/images-199x300.jpg",
+    "resumo": "O foco do livro é mostrar a fundo as decisões mais difíceis que os empreendedores passam e as alternativas para lidar com elas. É um verdadeiro salva-vidas. Eu diria mais: esse livro parece um curso.",
+    "isbn": "978-0691158303"
+  }
+]
