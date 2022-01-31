@@ -50,6 +50,8 @@ import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.compon
 import { ArtesComponent } from './artes/artes.component';
 import { DireitoComponent } from './direito/direito.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -75,6 +77,7 @@ import { TecnologiaComponent } from './tecnologia/tecnologia.component';
     ArtesComponent,
     DireitoComponent,
     TecnologiaComponent,
+    EmpreendedorismoComponent,
   ],
   imports: [
     BrowserModule,
@@ -105,6 +108,7 @@ import { TecnologiaComponent } from './tecnologia/tecnologia.component';
     RecaptchaModule,
     MatStepperModule,
     AppCompartilhadoModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

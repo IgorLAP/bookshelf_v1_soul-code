@@ -48,10 +48,10 @@
         </button>
         <span>Menu [CDD]</span>
         <span class="example-spacer"></span>
-        <button (click)="liked()" mat-icon-button>
+        <button (click)="liked()" mat-icon-button matTooltip="Deixe seu Like">
           <mat-icon [matBadge]="likesCounter" matBadgeColor="warn">favorite</mat-icon>
         </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" matTooltip="Compartilhe">
           <mat-icon>share</mat-icon>
         </button>
       </mat-toolbar>

@@ -1,9 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <a class="logoMenu" routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
+    <a class="logoMenu" matTooltip="Redirecionamento para pagina raiz" matTooltipPosition="right" routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
     <ng-container class="text-center" *ngIf="usuario$ | async as usuario; ">
-      <a routerLink="/tela-usuario" class="user-name" color="primary" matBadge="8" matBadgeColor="accent">
+      <a routerLink="/tela-usuario" class="user-name" color="primary" matBadge="8" matBadgeColor="accent" matTooltip="Acesso a pagina de perfil usuário" matTooltipPosition="right">
         {{usuario.displayName || usuario.email! | userNameFromEmail | titlecase }}
       </a>
     </ng-container>
@@ -28,12 +28,12 @@
         </button>
         <a routerLink="/"><img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral"></a>
       </div>
-      <button mat-button (click)="changeColor()" class="change-color" >
+      <button mat-button (click)="changeColor()" class="change-color"  matTooltip="Alterar a cor da barra superior" matTooltipPosition="right">
         <span class="material-icons">cached</span>
         <span class="text">Alterar cor</span>
       </button>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
-        <button class="button dropdownMenu" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
+        <button class="button dropdownMenu" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu" matTooltip="Menu de navegação do usuário">
           <mat-icon class="mat-18 userIcon">local_library</mat-icon>
           <span class="username">{{usuario.displayName|| usuario.email}}</span>
           <mat-icon>expand_more</mat-icon>
