@@ -3,9 +3,9 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <a class="logoMenu" routerLink="/"><img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu" ></a>
     <ng-container class="text-center" *ngIf="usuario$ | async as usuario; ">
-      <span class="user-name">
+      <a routerLink="/tela-usuario" class="user-name" color="primary" matBadge="8" matBadgeColor="accent">
         {{usuario.displayName || usuario.email! | userNameFromEmail | titlecase }}
-      </span>
+      </a>
     </ng-container>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i" class="btn-area">
       <a class="menu-button" mat-list-item *ngIf="itemMenu.hab === true" routerLink="{{itemMenu.linkMenu}}" routerLinkActive="selected">
