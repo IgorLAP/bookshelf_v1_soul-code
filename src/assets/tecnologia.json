@@ -1,0 +1,92 @@
+[
+  {
+    "titulo": "21 lições para o século 21",
+    "autor": "Yuval Noah Harari",
+    "publicacao": "2018",
+    "categoria": "Historia",
+    "img": "https://t.ctcdn.com.br/gxMzYHJr1L0yoeKg6FFIqdtyv-I=/i444364.jpeg",
+    "resumo": "Em 21 Lições para o Século 21, o autor Yuval Noah Harari (que também escreveu o best-seller Sapiens) aborda assuntos como compartilhamento de notícias falsas, inteligência artificial e crises ambientais para tentar trazer respostas sobre nossa vida no século atual",
+    "isbn": "978-8535930917"
+  },
+  {
+    "titulo": "A Quarta Revolução Industrial",
+    "autor": "Klaus Schwab",
+    "publicacao": "2018",
+    "categoria": "Indústria e Profissões",
+    "img": "https://t.ctcdn.com.br/jyNRXYTgCwoMDbr4gDgefzHuHR4=/i444375.jpeg",
+    "resumo": "Escrito por Klaus Schwab, engenheiro e economista fundador do Fórum Econômico Mundial, este livro é destrincha a revolução industrial pela qual estamos passando atualmente. De forma resumida, ela é definida pelo conjunto de novas tecnologias que surgem em velocidade crescente e, quase sempre, utilizando as revoluções anteriores como base para a transformação.",
+    "isbn": "978-8572839785"
+  },
+  {
+    "titulo": "Os Meios de Comunicação Como Extensões do Homem: Understanding Media",
+    "autor": "Marshall McLuhan",
+    "publicacao": "1969",
+    "categoria": "Ciências Sociais",
+    "img": "https://t.ctcdn.com.br/XZRzdsX4jsfwb2uVpEiDKSDHg1A=/i444376.jpeg",
+    "resumo": "Um dos livros mais importantes já escritos para quem deseja entender os meios de comunicação, a obra de Marshall Mcluhan é um clássico absoluto e que deveria ser lido por qualquer pessoa interessada em entender as mudanças nas formas de nos comunicar e em como os meios de massa afetam nossas vidas.",
+    "isbn": "978-8531602580"
+  },
+  {
+    "titulo": "De Zero a Um",
+    "autor": "Peter Thiel",
+    "publicacao": "2014",
+    "categoria": "Empreendedorismo",
+    "img": "https://t.ctcdn.com.br/O0ClEBvdu_wtAZrD8l0XmQez_UE=/i444378.jpeg",
+    "resumo": "Peter Thiel, cofundador do PayPal, quer mostrar como as ideias que criam negócios de sucesso não surgiram ao tentar copiar modelos bem-sucedidos que já estavam no mercado. Para ser um bom empreendedor, é preciso entender que copiar é muito mais fácil que criar algo novo e usar isso ao seu favor.",
+    "isbn": "978-8539006205"
+  },
+  {
+    "titulo": "Inteligência Artificial",
+    "autor": "Kai-Fu Lee",
+    "publicacao": "2019",
+    "categoria": "Computação",
+    "img": "https://t.ctcdn.com.br/-kd9msvX5fPBTzGqXQ39H6RRXPk=/i444379.jpeg",
+    "resumo": "Escrito por uma das mentes por trás das inteligências artificiais atuais, este livro é essencial para quem deseja se aprofundar especificamente nesse assunto. Para o autor Kai-Fu Lee, essas novas tecnologias devem apenas mudar a forma como trabalhamos, trazendo uma perspectiva mais otimista da nossa futura relação com o trabalho.",
+    "isbn": "978-6580634323"
+  },
+  {
+    "titulo": "Futuro Presente",
+    "autor": "Guy Perelmuter",
+    "publicacao": "2019",
+    "categoria": "Engenharia",
+    "img": "https://t.ctcdn.com.br/Wxi7_fmWSU_6p-Lrv1-NfNay4uE=/i444381.jpeg",
+    "resumo": "Vencedor do Prêmio Jabuti, este livro escrito pelo pesquisador brasileiro Guy Perelmuter aborda os últimos avanços tecnológicos que mais estão impactando a sociedade e traz uma abordagem leve e informal para mostrar também quais mudanças podemos esperar durante os próximos anos, quando estas inovações continuarão a ser desenvolvidas.",
+    "isbn": "978-8504021318"
+  },
+  {
+    "titulo": "A Regra é Não Ter Regras",
+    "autor": "Reed Hastings",
+    "publicacao": "2020",
+    "categoria": "Gestão e Liderança",
+    "img": "https://t.ctcdn.com.br/VBkfjQOxESVXkiB8-F1mHMA8jt0=/i444382.jpeg",
+    "resumo": "Escrito pelo próprio CEO da Netflix, este livro é obrigatório para entender a ascensão meteórica da empresa de streaming e os conceitos utilizados por seus executivos para criar uma marca global, presente hoje em praticamente todos os países do mundo e acumulando centenas de milhões de assinantes.",
+    "isbn": "978-6555600315"
+  },
+  {
+    "titulo": "Como Chegamos Até Aqui",
+    "autor": "Steven Johnson",
+    "publicacao": "2015",
+    "categoria": "Técnico",
+    "img": "https://t.ctcdn.com.br/l0M_tvVeZ2s6urRlyyr5n0ZUqYA=/i444383.jpeg",
+    "resumo": "O escritor Steven Johnson utiliza sua habilidade de contar histórias para nos levar por uma narrativa que passa por algumas das maiores invenções e inovações da humanidade com o objetivo de responder à pergunta que dá título ao livro: como chegamos até aqui?",
+    "isbn": "978-8537814123"
+  },
+  {
+    "titulo": "O Que a Google Faria?",
+    "autor": "Jeff Jarvis",
+    "publicacao": "2009",
+    "categoria": "Técnico",
+    "img": "https://t.ctcdn.com.br/V_Z8tLhC2StnqOIh3GCxc637SXs=/i444396.jpeg",
+    "resumo": "Escrito pelo jornalista criador da Entertainment Weekly e importante pensador Jeff Jarvis, esta obra destrincha a empresa de buscas mais famosa do mundo e um dos símbolos mais óbvios da transformação digital que aconteceu durante as últimas décadas.",
+    "isbn": "978-8520429426"
+  },
+  {
+    "titulo": "Transformação Digital",
+    "autor": "David L. Rogers",
+    "publicacao": "2017",
+    "categoria": "Negócios",
+    "img": "https://t.ctcdn.com.br/aRZZL8R3F6mxlFyX5h95rPBxpqY=/i444398.jpeg",
+    "resumo": "David L. Rogers é o responsável por este que é um dos livros essenciais para CEOs, empresários ou até mesmo entusiastas da área que estão tentando entender como as novas tecnologias afetam os seus negócios e o que eles podem fazer para não serem passados para trás durante esse período de mudanças.",
+    "isbn": "978-8551302729"
+  }
+]

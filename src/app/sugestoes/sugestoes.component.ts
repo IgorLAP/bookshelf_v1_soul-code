@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { catchError, Observable, of } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { catchError, debounceTime, distinctUntilChanged, filter, fromEvent, Observable, of, tap } from 'rxjs';
 
 import { SugestoesService } from '../servicosInterface/sugestoes.service';
 import { Sugestoes } from './modelos/sugestoes';
@@ -10,9 +9,11 @@ import { Sugestoes } from './modelos/sugestoes';
   templateUrl: './sugestoes.component.html',
   styleUrls: ['./sugestoes.component.scss']
 })
-export class SugestoesComponent implements OnInit {
-  formulario!: FormGroup
+export class SugestoesComponent implements OnInit, AfterViewInit {
+
   sugestoes$!: Observable<Sugestoes[]>;
+  result$?: Observable<Sugestoes[]>;
+  @ViewChild('searchInput') searchInput!: ElementRef
 
   constructor(
     private sugestoesService: SugestoesService
@@ -26,13 +27,24 @@ export class SugestoesComponent implements OnInit {
         return of([])
       })
     )
-    this.formulario = new FormGroup({
-      query: new FormControl('')
-    });
   }
 
-  pesquisar(){
+  ngAfterViewInit(): void {
 
+    fromEvent(this.searchInput.nativeElement, 'keyup')
+      .pipe(
+        filter(Boolean),
+        debounceTime(500),
+        distinctUntilChanged(),
+        tap(()=>{
+          const query = this.searchInput.nativeElement.value;
+          if(query){
+            this.result$ = this.sugestoesService.search(query)
+          } else {
+            this.result$ = undefined;
+          }
+        })
+      ).subscribe();
   }
 
 }

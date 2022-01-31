@@ -1,0 +1,51 @@
+<h1 class="mat-h1">Críticas</h1>
+<div class="searchField">
+  <mat-form-field class="search-field" appearance="fill">
+    <mat-label>Procurar</mat-label>
+    <input #searchInput matInput >
+    <button matSuffix mat-icon-button >
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<div *ngIf="result$ | async as result;" class="container">
+  <mat-card *ngFor="let i of result" class="critica-card">
+    <mat-card-title-group>
+      <mat-card-title>{{ i.titulo }}</mat-card-title>
+      <mat-card-subtitle>por {{ i.autor }}</mat-card-subtitle>
+      <img mat-card-sm-image [src]="i.image" >
+    </mat-card-title-group>
+    <mat-card-content>
+      {{ i.critica }}
+    </mat-card-content>
+    <button [routerLink]="i.id" mat-icon-button>
+      Confira a crítica completa <mat-icon>open_in_new</mat-icon>
+    </button>
+  </mat-card>
+</div>
+
+<div *ngIf="!result$">
+  <div *ngIf="criticas$ | async as criticas; else loading" class="container">
+    <mat-card *ngFor="let i of criticas" class="critica-card">
+      <mat-card-title-group>
+        <mat-card-title>{{ i.titulo }}</mat-card-title>
+        <mat-card-subtitle>por {{ i.autor }}</mat-card-subtitle>
+        <img mat-card-sm-image [src]="i.image" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{ i.critica }}
+      </mat-card-content>
+      <button [routerLink]="i.id" mat-icon-button>
+        Confira a crítica completa <mat-icon>open_in_new</mat-icon>
+      </button>
+    </mat-card>
+  </div>
+</div>
+
+
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

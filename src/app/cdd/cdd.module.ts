@@ -6,7 +6,7 @@ import { AppMaterialModule } from '../app-compartilhado/app-material/app-materia
 import { AppCompartilhadoModule } from './../app-compartilhado/app-compartilhado.module';
 import { CddRoutingModule } from './cdd-routing.module';
 import { ClassesComponent } from './classes/classes.component';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { ClassesComponent } from './classes/classes.component';
     CddRoutingModule,
     AppMaterialModule,
     AppCompartilhadoModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTooltipModule
   ]
 })
 export class CddModule { }
