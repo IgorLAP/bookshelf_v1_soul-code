@@ -2,7 +2,7 @@ export interface Artes {
   titulo: string;
   autor: string;
   categoria: string;
-  publicação: string;
+  publicacao: string;
   img: string;
   resumo: string;
   isbn: string;
