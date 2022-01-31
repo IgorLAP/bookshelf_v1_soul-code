@@ -51,6 +51,7 @@ import { ArtesComponent } from './artes/artes.component';
 import { DireitoComponent } from './direito/direito.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -107,6 +108,7 @@ import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.c
     RecaptchaModule,
     MatStepperModule,
     AppCompartilhadoModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
