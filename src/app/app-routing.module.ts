@@ -19,6 +19,7 @@ import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
 import { DireitoComponent } from './direito/direito.component';
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -93,6 +94,10 @@ const routes: Routes = [
   },
   {
     path: 'artes', component: ArtesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'empreendedorismo', component: EmpreendedorismoComponent,
     ...canActivate(enviarSemLogin)
   },
   {

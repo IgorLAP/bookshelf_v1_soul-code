@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { first, delay } from 'rxjs';
+import { delay, first } from 'rxjs';
+
 import { Empreendedorismo } from '../modelosInterface/empreendedorismo';
 
 @Injectable({
