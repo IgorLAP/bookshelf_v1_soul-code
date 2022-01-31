@@ -1,0 +1,16 @@
+<h1 class="mat-h1">BookShelf - Crítica </h1>
+<div *ngIf="critica$ | async as critica; else loading">
+<mat-card class="criticaCard">
+  <h2>{{ critica.titulo }}</h2>
+  <h3>por {{ critica.autor }}</h3>
+  <img mat-card-image [src]="critica.image">
+  <mat-card-content>
+    {{ critica.critica }}
+  </mat-card-content>
+</mat-card>
+</div>
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

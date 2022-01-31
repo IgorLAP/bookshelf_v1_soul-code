@@ -1,0 +1,54 @@
+.mat-h1{
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #7E56C2;
+  text-align: center;
+}
+.searchField{
+  display: flex;
+  justify-content: end;
+  max-width: 920px;
+}
+.container{
+  margin: 0 auto;
+  max-width: 860px;
+}
+.critica-card{
+  margin: 20px;
+  img{
+    width: 70px;
+    height: 95px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+}
+.mat-card-content{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+button:hover{
+  color: #7e56c2;
+}
+.loading-spinner{
+  background-color: rgb(221,221,221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+@media only screen and(max-width: 1120px) {
+  .mat-form-field{
+    margin: 0 20px;
+  }
+}
+
+@media only screen and(max-width: 680px) {
+  .mat-form-field{
+    width: 100%;
+  }
+}

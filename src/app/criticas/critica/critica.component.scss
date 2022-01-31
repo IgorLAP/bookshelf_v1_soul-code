@@ -1,0 +1,43 @@
+.criticaCard {
+  margin: 20px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img{
+    width: 190px;
+    height: 240px;
+  }
+
+  h2{
+    text-align: center;
+  }
+  mat-card-content{
+    text-indent: 15px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  mat-card-content::first-letter{
+    color: #7E56C2;
+    font-size: 45px;
+  }
+}
+
+.mat-h1{
+  margin: 25px auto;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #7E56C2;
+  text-align: center;
+}
+
+
+.loading-spinner{
+  background-color: rgb(221,221,221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
