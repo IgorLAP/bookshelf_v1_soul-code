@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { first, map, tap } from 'rxjs';
+import { first, map, tap, delay } from 'rxjs';
 
 import { Sagas } from '../modelosInterface/sagas';
 
@@ -30,5 +30,13 @@ export class SagasService {
     )
   }
 
-
+  //Método para pesquisar uma saga pelo título
+  pesquisar(query: string){
+    return this.cardsSagas.get<Sagas[]>(this.uriAPI)
+    .pipe(
+      first(),
+      delay(200),
+      map(res => res.find(i => (i.titulo.toLowerCase()).startsWith(query.toLocaleLowerCase())))
+    )
+  }
 }
