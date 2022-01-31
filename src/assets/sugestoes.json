@@ -22,5 +22,29 @@
     "autor": "Stephenie Meyer",
     "image": "https://lojasaraiva.vteximg.com.br/arquivos/ids/12101115/1006788625.jpg?v=637142218757700000",
     "sinopse": "Crepúsculo poderia ser uma história comum, não fosse um elemento irresistível: o objeto da paixão da protagonista é um vampiro. Assim, soma-se à paixão um perigo sobrenatural temperado com muito suspense."
+  },
+  {
+    "titulo":"Mulheres que correm com os lobos",
+    "autor": "Clarissa Pinkola Estés",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41ogXvQ5WYL._SX341_BO1,204,203,200_.jpg",
+    "sinopse": "Os lobos foram pintados com um pincel negro nos contos de fada e até hoje assustam meninas indefesas. Mas nem sempre eles foram vistos como criaturas terríveis e violentas."
+  },
+  {
+    "titulo":"Torto Arado",
+    "autor": "Itamar Vieira Junior",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41zcXQ5OMWL._SX327_BO1,204,203,200_.jpg",
+    "sinopse": "Nas profundezas do sertão baiano, as irmãs Bibiana e Belonísia encontram uma velha e misteriosa faca na mala guardada sob a cama da avó. Ocorre então um acidente. E para sempre suas vidas estarão ligadas ― a ponto de uma precisar ser a voz da outra."
+  },
+  {
+    "titulo":"As Crônicas de Gelo e Fogo",
+    "autor": "George R. R. Martin",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41UKpOWrZVL._SX346_BO1,204,203,200_.jpg",
+    "sinopse": "O verão pode durar décadas. O inverno, toda uma vida. E a guerra dos tronos começou. Como Guardião do Norte, lorde Eddard Stark não fica feliz quando o rei Robert o proclama a nova Mão do Rei."
+  },
+  {
+    "titulo":"A História da Arte",
+    "autor": "Ernst Gombrich",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51mfQRh+dTL._SX344_BO1,204,203,200_.jpg",
+    "sinopse": "Um dos mais famosos e populares livros sobre arte já publicados. Durante 45 anos, permaneceu incomparável como uma introdução a todo o assunto, das mais antigas pinturas em cavernas à arte experimental de hoje."
   }
 ]
