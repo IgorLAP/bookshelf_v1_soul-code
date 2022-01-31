@@ -15,6 +15,7 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
 import { SagasComponent } from './sagas/sagas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TeatroComponent } from './teatro/teatro.component';
+import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
 
@@ -58,7 +59,7 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
-    path: 'artes', component: ArtesComponent,
+    path: 'tecnologia', component: TecnologiaComponent,
     ...canActivate(enviarSemLogin)
   },
   {
