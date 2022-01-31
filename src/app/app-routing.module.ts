@@ -92,6 +92,10 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
+    path: 'artes', component: ArtesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
     path: '**',
     component: RotasDesconhecidasComponent
   }
