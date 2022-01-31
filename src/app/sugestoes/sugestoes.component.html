@@ -1,23 +1,35 @@
+<h1 class="mat-h1">Sugestões</h1>
+<div class="searchField">
+  <mat-form-field class="search-field" appearance="fill">
+    <mat-label>Procurar</mat-label>
+    <input #searchInput matInput >
+    <button matSuffix mat-icon-button >
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
 <div *ngIf="sugestoes$ | async as sugestoes; else loading">
-  <h1 class="mat-h1">Sugestões</h1>
-  <form (ngSubmit)="pesquisar()" [formGroup]="formulario">
-    <mat-form-field class="search-field" appearance="fill">
-      <mat-label>Procurar</mat-label>
-      <input matInput type="text" formControlName="query" >
-      <button type="submit" matSuffix mat-icon-button aria-label="Clear" >
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field>
-  </form>
-  <div class="mat-grid">
+  <div *ngIf="!result$" class="mat-grid">
     <div *ngFor="let i of sugestoes">
-    <mat-card class="sugestoes-card">
-      <mat-card-title-group>
-        <mat-card-title>{{ i.titulo }}, {{ i.autor }}</mat-card-title>
-        <mat-card-subtitle>{{ i.sinopse }}</mat-card-subtitle>
-        <img mat-card-xl-image [src]="i.image" >
-      </mat-card-title-group>
-    </mat-card>
+      <mat-card *ngIf="!result$" class="sugestoes-card">
+        <mat-card-title-group>
+          <mat-card-title>{{ i.titulo }}, {{ i.autor }}</mat-card-title>
+          <mat-card-subtitle>{{ i.sinopse }}</mat-card-subtitle>
+          <img mat-card-xl-image [src]="i.image" >
+        </mat-card-title-group>
+      </mat-card>
+    </div>
+  </div>
+  <div class="mat-grid" *ngIf="result$ | async as result">
+    <div *ngFor="let i of result">
+      <mat-card class="sugestoes-card">
+        <mat-card-title-group>
+          <mat-card-title>{{ i.titulo }}, {{ i.autor }}</mat-card-title>
+          <mat-card-subtitle>{{ i.sinopse }}</mat-card-subtitle>
+          <img mat-card-xl-image [src]="i.image" >
+        </mat-card-title-group>
+      </mat-card>
     </div>
   </div>
 </div>
