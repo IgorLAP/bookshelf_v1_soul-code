@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first } from 'rxjs';
+import { delay, first, map } from 'rxjs';
 
 import { Artes } from '../modelosInterface/artes';
 

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AjudaComponent } from './ajuda/ajuda.component';
 
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
+import { ArtesComponent } from './artes/artes.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
@@ -54,6 +55,10 @@ const routes: Routes = [
   },
   {
     path: 'sagas', component: SagasComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'artes', component: ArtesComponent,
     ...canActivate(enviarSemLogin)
   },
   {

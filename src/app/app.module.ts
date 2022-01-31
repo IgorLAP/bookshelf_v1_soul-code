@@ -47,6 +47,7 @@ import { TeatroComponent } from './teatro/teatro.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { SagasComponent } from './sagas/sagas.component';
 import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.component';
+import { ArtesComponent } from './artes/artes.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { AppListaSagasComponent } from './app-lista-sagas/app-lista-sagas.compon
     AjudaComponent,
     SagasComponent,
     AppListaSagasComponent,
+    ArtesComponent,
   ],
   imports: [
     BrowserModule,
