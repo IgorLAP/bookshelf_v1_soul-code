@@ -15,8 +15,11 @@ import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconh
 import { SagasComponent } from './sagas/sagas.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TeatroComponent } from './teatro/teatro.component';
+import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
+import { DireitoComponent } from './direito/direito.component';
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -63,7 +66,7 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
-    path: 'artes', component: ArtesComponent,
+    path: 'tecnologia', component: TecnologiaComponent,
     ...canActivate(enviarSemLogin)
   },
   {
@@ -88,6 +91,18 @@ const routes: Routes = [
   },
   {
     path: 'ajuda', component: AjudaComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'direito', component: DireitoComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'artes', component: ArtesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'empreendedorismo', component: EmpreendedorismoComponent,
     ...canActivate(enviarSemLogin)
   },
   {

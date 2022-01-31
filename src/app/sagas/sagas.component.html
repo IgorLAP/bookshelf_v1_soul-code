@@ -1,36 +1,88 @@
-<div class="grid-container">
+<div class="container">
   <h1 class="mat-h1">As 10 melhores Sagas da Literatura</h1>
-  <mat-grid-list cols="1" rowHeight="450px">
-    <mat-grid-tile *ngFor="let cardSagas of cardsSagas$ | async" [colspan]="cardSagas.cols" [rowspan]="cardSagas.rows">
-      <mat-card class="special-card">
-        <mat-card-header class="special-card-titles">
+
+  <form (ngSubmit)="pesquisar()" [formGroup]="formulario">
+    <mat-form-field class="search-field" appearance="fill">
+      <mat-label>Pesquisar</mat-label>
+      <input matInput type="text" formControlName="query">
+      <button type="submit" matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+
+  <div [class.hide]="hide" *ngIf="result$ | async as result" class="resultSearch">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Resultado</mat-card-title>
+        <div class="example-button-container">
+          <button (click)="hider()" mat-mini-fab>
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+    </mat-card>
+    <div *ngIf=" result$ | async as result">
+      <mat-card>
+        <mat-card-header class="card-titles">
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{cardSagas.titulo}}</mat-card-title>
-          <mat-card-subtitle>{{cardSagas.autor}} </mat-card-subtitle>
+          <mat-card-title>{{result.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{result.autor}} </mat-card-subtitle>
         </mat-card-header>
-        <div id="img"><img mat-card-image [src]="cardSagas.img" [alt]="cardSagas.titulo">
-          <mat-card-content class="special-card-content">
-            <div>{{cardSagas.resumo}}</div>
+        <div id="img"><img mat-card-image [src]="result.img" [alt]="result.titulo">
+          <mat-card-content class="card-content">
+            <div>{{result.resumo}}</div>
           </mat-card-content>
         </div>
         <mat-nav-list>
-          <mat-list-item *ngFor="let link of cardSagas.links">
+          <mat-list-item *ngFor="let link of result.links">
             <a matLine [href]="link.ref" target="_blank">{{ link.texto }}</a>
             <button mat-icon-button>
               <mat-icon>info</mat-icon>
             </button>
             <mat-divider inset></mat-divider>
           </mat-list-item>
-          <mat-list-item *ngFor="let sagas of cardSagas.saga">
+          <mat-list-item *ngFor="let sagas of result.saga" class="mat-list">
             <p matLine >{{ sagas.texto }}</p>
-            <button (click)="abrirDialogoListagemLivros(cardSagas.titulo)" mat-icon-button>
+            <button (click)="abrirDialogoListagemLivros(result.titulo)" mat-icon-button>
               <mat-icon>open_in_new</mat-icon>
             </button>
             <mat-divider inset></mat-divider>
           </mat-list-item>
         </mat-nav-list>
       </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+  </div>
+
+  <div *ngFor="let cardSagas of cardsSagas$ | async">
+    <mat-card>
+      <mat-card-header class="card-titles">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{cardSagas.titulo}}</mat-card-title>
+        <mat-card-subtitle>{{cardSagas.autor}} </mat-card-subtitle>
+      </mat-card-header>
+      <div id="img"><img mat-card-image [src]="cardSagas.img" [alt]="cardSagas.titulo">
+        <mat-card-content class="card-content">
+          <div>{{cardSagas.resumo}}</div>
+        </mat-card-content>
+      </div>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let link of cardSagas.links">
+          <a matLine [href]="link.ref" target="_blank">{{ link.texto }}</a>
+          <button mat-icon-button>
+            <mat-icon>info</mat-icon>
+          </button>
+          <mat-divider inset></mat-divider>
+        </mat-list-item>
+        <mat-list-item *ngFor="let sagas of cardSagas.saga" class="mat-list">
+          <p matLine >{{ sagas.texto }}</p>
+          <button (click)="abrirDialogoListagemLivros(cardSagas.titulo)" mat-icon-button>
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+          <mat-divider inset></mat-divider>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-card>
+  </div>
 </div>
 

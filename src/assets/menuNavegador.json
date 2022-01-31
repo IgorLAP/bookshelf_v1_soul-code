@@ -12,8 +12,10 @@
   {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true},
   {"linkMenu": "/artes", "labelMenu":"Artes", "hab": true},
   {"linkMenu": "criticas", "labelMenu": "Criticas", "hab": true},
+  {"linkMenu": "/direito", "labelMenu":"Direito", "hab": true},
+  {"linkMenu": "/tecnologia", "labelMenu":"Tecnologia", "hab": true},
+  {"linkMenu": "/empreendedorismo", "labelMenu":"Empreendedorismo", "hab": true},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false}
-
 ]

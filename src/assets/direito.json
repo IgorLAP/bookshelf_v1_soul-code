@@ -3,90 +3,90 @@
     "id": 1,
     "titulo": "O primeiro ano: como se faz um advogado",
     "autor": "Scott Turow",
-    "ano de publicação": 1977,
+    "yearPub": 1977,
     "img": "https://megaleitores.com.br/images/livros/scott-turow/record/o-primeiro-ano-como-se-faz-um-advogado/5263/8501034878-scott-turow-record-o-primeiro-ano-como-se-faz-um-advogado-0-540x728.jpg",
     "resumo": "Nessa obra, Scott Turow compartilha as experiências de um estudante do primeiro ano da famosa Faculdade de Direito de Harvard, considerada uma das mais prestigiadas instituições do mundo jurídico. O livro retrata as principais dúvidas do estudante e como é a sua preparação durante o primeiro ano do curso. Trata-se de um retrato bem detalhado do ambiente competitivo das faculdades de Direito norte-americanas de primeira linha.",
-    "ISBN": "8501034878"
+    "isbn": "8501034878"
   },
   {
     "id": 2,
     "titulo": "O caso dos exploradores de cavernas",
     "autor": "Lon Fuller",
-    "ano de publicação": 1949,
+    "yearPub": 1949,
     "img": "https://lojasaraiva.vteximg.com.br/arquivos/ids/12099762/1004439089.jpg",
     "resumo": "Esse é um dos livros de Direito mais divulgados entre os acadêmicos e que permite ao leitor conhecer melhor a área. O texto escrito pelo jurista e professor Lon L. Fuller, que é formado em Economia e em Direito, virou um clássico. Por meio dessa obra, publicada originalmente na revista da Faculdade de Direito de Harvard, o autor busca promover um debate moral sobre a situação vivida pelos personagens centrais (sobreviventes de um grave acidente em uma caverna).",
-    "ISBN": "8581303951"
+    "isbn": "8581303951"
   },
   {
     "id": 3,
     "titulo": "O auto da Compadecida",
     "autor": "Ariano Suassuna",
-    "ano de publicação": 1955,
+    "yearPub": 1955,
     "img": "https://images-na.ssl-images-amazon.com/images/I/51YvS9gEVrL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
     "resumo": "Não poderíamos deixar de fora da lista essa peça brasileira em forma de auto, escrita por Ariano Suassuna. Os personagens principais passam toda a trama utilizando seu poder de convencimento, característica essencial para todo advogado. É uma excelente leitura para advogados e estudantes porque retrata o julgamento do personagem João Grilo, no Juízo Final, com a presença das figuras bíblicas representando os papéis do juiz, do promotor e do advogado de defesa.",
-    "ISBN":"9788520938393"
+    "isbn":"9788520938393"
   },
   {
     "id": 4,
     "titulo": "A sangue frio",
     "autor": "Truman Capote",
-    "ano de publicação": 1965,
+    "yearPub": 1965,
     "img": "https://images-na.ssl-images-amazon.com/images/I/714Uh+UUirL.jpg",
     "resumo": "Essa obra de Truman Capote fala da chacina de quatro membros de uma família em 1959, na cidade de Holcomb, nos Estados Unidos. O escritor quis retratar esse crime brutal depois de ver que o jornal The New York Times só havia publicado uma nota breve sobre os assassinatos. Disposto a descobrir detalhes para escrever sua reportagem, o jornalista foi até o lugar onde tudo aconteceu e entrevistou os familiares das vítimas, a equipe policial que cuidava do caso e os dois assassinos que estavam presos. A apuração durou mais de um ano e deu origem ao livro, que transita entre o jornalismo e a literatura.",
-    "ISBN":"8535904115"
+    "isbn":"8535904115"
   },
   {
     "id": 5,
     "titulo": "O sol é para todos",
     "autor": "Harper Lee",
-    "ano de publicação": 2006,
+    "yearPub": 2006,
     "img": "https://images-na.ssl-images-amazon.com/images/I/91WKPd60P4L.jpg",
     "resumo": "Esse clássico da literatura, escrito pela romancista Harper Lee, foi vencedor do Prêmio Pulitzer em 1961. O livro narra a história de um advogado que assume a defesa de um homem acusado de estupro. O ponto-chave da obra é o fato de o homem ser negro, enquanto a vítima é uma mulher branca. A trama se passa nos Estados Unidos da década de 1930 e tem foco no racismo e na injustiça presentes no sul do país naquela época. Merece destaque a postura ética e corajosa do advogado, bem como sua integridade e defesa de valores. Leitura indispensável para os amantes do Direito.",
-    "ISBN":"8503009498"
+    "isbn":"8503009498"
   },
   {
     "id": 6,
     "titulo": "O processo",
     "autor": "Franz Kafka",
-    "ano de publicação": 2005,
+    "yearPub": 2005,
     "img": "https://images-na.ssl-images-amazon.com/images/I/41QCPywvXcL._SX345_BO1,204,203,200_.jpg",
     "resumo": "Essa obra de Franz Kafka deveria fazer parte da coleção de todo advogado. A narrativa gira em torno de um gerente bancário bem-sucedido que é preso e processado sem saber exatamente o por que. A história prende a atenção do leitor e é muito apreciada pelos criminalistas, por causa da situação absurda vivida pelo protagonista. O livro ergue a bandeira dos limites da justiça e a do direito de defesa.",
-    "ISBN":"8535907432"
+    "isbn":"8535907432"
   },
   {
     "id": 7,
     "titulo": "Crime e castigo",
     "autor": "Fiódor Dostoiévski",
-    "ano de publicação": 1866,
+    "yearPub": 1866,
     "img": "https://m.media-amazon.com/images/I/51EsrsZmbbL.jpg",
     "resumo": "Fiódor Dostoiévski publicou seu famoso livro em 1866, mas o conflito envolvido no caráter humano continua atual. Ele nos leva a refletir sobre o dilema moral entre o certo e o errado, muito comum aos profissionais jurídicos. A obra foca na culpa de um jovem estudante de Direito que, após cometer um crime, não consegue superar seu erro e vive com medo de ser descoberto e punido.",
-    "ISBN":"9786555521306"
+    "isbn":"9786555521306"
   },
   {
     "id": 8,
     "titulo": "A revolução dos bichos",
     "autor": "George Orwell",
-    "ano de publicação": 2007,
+    "yearPub": 2007,
     "img": "https://images-na.ssl-images-amazon.com/images/I/61owA5ey3iL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
     "resumo": "Outro clássico da literatura, esse livro de George Orwell faz uma forte crítica aos regimes políticos ditatoriais e totalitários. Ele apresenta uma sátira em que os defeitos e as fraquezas dos seres humanos são projetados nos animais. A obra narra a revolução dos animais que, cansados de serem explorados pelo dono da granja, se juntam para planejarem uma rebelião e a tomada do poder. Quando o plano se concretiza, um dos líderes passa a tomar atitudes ditatoriais.",
-    "ISBN":"8535909559"
+    "isbn":"8535909559"
   },
   {
     "id": 9,
     "titulo": "A firma",
     "autor": "John Grisham",
-    "ano de publicação": 2019,
+    "yearPub": 2019,
     "img": "https://images-na.ssl-images-amazon.com/images/I/51DIstKrbbL._SX346_BO1,204,203,200_.jpg",
     "resumo": "John Grisham foi certeiro ao retratar nesse livro a pressão e a rotina dos grandes escritórios de advocacia americanos. É um livro que prende o leitor por juntar a rotina jurídica ao suspense. O protagonista da trama é Mitchell, que estuda Direito em Harvard e, após muito esforço, entra para a equipe de uma famosa firma de advogados tributaristas. Porém, ao longo da história, fica claro que aquele que parecia ser o emprego dos sonhos vai se mostrar um grande problema para o jovem.",
-    "ISBN":"8580419859"
+    "isbn":"8580419859"
   },
   {
     "id": 10,
     "titulo": "A arte da guerra",
     "autor": "Sun Tzu",
-    "ano de publicação": 2008,
+    "yearPub": 2008,
     "img": "https://images-na.ssl-images-amazon.com/images/I/419jYKS9ScL._SX340_BO1,204,203,200_.jpg",
     "resumo": "'A arte da guerra' é um tratado militar escrito por Sun Tzu, general estrategista chinês, durante o século IV a.C.. O modo como essa obra aborda estratégias que devem ser utilizadas em um combate vem contribuindo para a formação de executivos que desejam vencer a “guerra empresarial” no mundo dos negócios.Por isso, suas lições podem ser usadas para a formação da carreira de um advogado de sucesso, auxiliando o profissional a enfrentar os problemas e a lidar com as situações difíceis da profissão. É evidente o papel da literatura na formação e no desenvolvimento intelectual dos indivíduos, especialmente dos estudantes. O acesso a bons livros de Direito faz toda a diferença na capacitação do profissional, pois as leituras complementares possibilitam o domínio da linguagem e oferecem conhecimentos essenciais para o exercício da profissão.",
-    "ISBN":"9788560018000"
+    "isbn":"9788560018000"
   }
 ]
