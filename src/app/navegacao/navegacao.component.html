@@ -8,14 +8,28 @@
       </a>
     </ng-container>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i" class="btn-area">
-      <a class="menu-button" mat-list-item *ngIf="itemMenu.hab === true" routerLink="{{itemMenu.linkMenu}}" routerLinkActive="selected">
+      <a *ngIf="!itemMenu.subMenu" class="menu-button" mat-list-item
+      routerLink="{{itemMenu.linkMenu}}" routerLinkActive="selected">
         <span>{{itemMenu.labelMenu}}</span>
-        <!-- <svg width="15px" height="10px" viewBox="0 0 13 10">
-    <path d="M1,5 L11,5"></path>
-    <polyline points="8 1 12 5 8 9"></polyline>
-  </svg> -->
       </a>
-      <!-- <mat-divider></mat-divider> -->
+      <a *ngIf="itemMenu.subMenu" class="menu-button" mat-list-item
+       (click)="itemMenu.showMenu = !itemMenu.showMenu"
+       routerLinkActive="selected">
+        <span>{{itemMenu.labelMenu}}</span>
+        <mat-icon *ngIf="!itemMenu.showMenu">chevron_right</mat-icon>
+        <mat-icon *ngIf="itemMenu.showMenu">expand_more</mat-icon>
+      </a>
+      <div *ngIf="itemMenu.showMenu">
+        <div *ngIf="itemMenu.subMenu">
+          <mat-nav-list *ngFor="let sub of itemMenu.subMenu">
+            <a
+            class="menu-button" mat-list-item routerLinkActive="selected"
+             [routerLink]="sub.linkMenu"
+            >
+              {{ sub.labelMenu }}</a>
+          </mat-nav-list>
+        </div>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
 
