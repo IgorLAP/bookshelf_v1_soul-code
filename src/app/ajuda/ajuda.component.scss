@@ -1,8 +1,7 @@
-.grid-container{
-  margin: 20px;
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
+.content {
+  padding: 20px 40px 40px 40px;
+  line-height: 2em;
+  text-align: left;
 }
 
 .mat-h1{
@@ -10,35 +9,22 @@
   font-size: 1.8em;
   color: #7E56C2;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.special-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+.mb {
+  margin-bottom: 30px;
 }
 
-.special-card-titles {
-  text-align: left;
-  line-height: 1,9em;
+.mat-card-subtitle {
+  background-color: rgb(223, 221, 221);
+  padding: 10px 12px;
+  color: black;
 }
 
-.special-card-content {
-  width: 540px;
-  text-align: center;
-  line-height: 1.8em;
-  margin-left: 30px;
-  font-size: 1.1em;
-  background-color: #e1dbeb;
-  padding: 10px;
-}
-
-.mat-card-title{
-  margin-top: 0.6em;
-  margin-bottom: 0.6em;
-  font-size: 1.8em;
+.mat-list-item {
+  margin-bottom: 8px;
+  height: 60px;
 }
 
 .mat-icon{
@@ -46,4 +32,20 @@
   font-size: 28px;
   color: #7E56C2;
   padding-right: 10px;
+  position: absolute;
+  top: -3px;
 }
+
+span {
+  position: absolute;
+  top: 4px;
+  left: 60px;
+}
+
+.expandable-content{
+  overflow: hidden;
+}
+
+
+
+

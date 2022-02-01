@@ -21,6 +21,20 @@ table {
     margin-right: 10px;
   }
 }
+
+.mat-card>div{
+  overflow-x: auto;
+}
+
+.mat-header-cell{
+  text-align: center;
+}
+
+.mat-cell{
+  padding: 0 10px;
+  text-align: center;
+}
+
 .loading-spinner{
   background-color: rgb(221, 221, 221);
   display: flex;

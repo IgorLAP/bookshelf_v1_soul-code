@@ -4,10 +4,8 @@
     <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let cardVestibular of cardsVestibular$ | async">
       <mat-card class="mb">
         <mat-card-header>
-          <div class="titles">
-            <mat-card-title> {{cardVestibular.titulo}}</mat-card-title>
-            <mat-card-subtitle>{{cardVestibular.subtitulo}}</mat-card-subtitle>
-          </div>
+          <mat-card-title> {{cardVestibular.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{cardVestibular.subtitulo}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image [src]="cardVestibular.img" [alt]="cardVestibular.titulo">
         <mat-nav-list>
