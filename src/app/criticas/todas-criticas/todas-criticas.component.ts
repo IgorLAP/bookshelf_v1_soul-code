@@ -1,8 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { catchError, debounceTime, distinctUntilChanged, filter, fromEvent, Observable, of, tap } from 'rxjs';
 
 import { Criticas } from '../modelos/criticas';
 import { CriticasService } from './../../servicosInterface/criticas.service';
+import { CriticaDialogComponent } from './../critica-dialog/critica-dialog.component';
 
 @Component({
   selector: 'app-todas-criticas',
@@ -15,7 +17,16 @@ export class TodasCriticasComponent implements OnInit, AfterViewInit {
   criticas$!: Observable<Criticas[]>;
   result$?: Observable<Criticas[]>;
 
-  constructor(private criticasService: CriticasService) { }
+  constructor(
+    private criticasService: CriticasService,
+    private dialog: MatDialog
+    ) { }
+
+  dialogo(id: string){
+    this.dialog.open(CriticaDialogComponent,{
+      data: id
+    })
+  }
 
   ngOnInit(): void {
     this.criticas$ = this.criticasService.listagem()

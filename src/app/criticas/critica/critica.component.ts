@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 
@@ -19,7 +20,7 @@ export class CriticaComponent implements OnInit {
     private route: ActivatedRoute,
     private criticasService: CriticasService,
     private router: Router
-  ) { }
+  ) {  }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
