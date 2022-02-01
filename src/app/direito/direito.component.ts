@@ -10,7 +10,7 @@ import { DireitoService } from '../servicosInterface/direito.service';
 })
 export class DireitoComponent implements OnInit {
   livros$!: Observable<Direito[]>;
-  displayedColumns: string[] = ['Capa', 'Titulo', 'Publicação', 'ISBN'];
+  displayedColumns: string[] = ['Capa', 'Titulo', 'Autor', 'Publicação', 'ISBN'];
   constructor(private direitoService: DireitoService) {}
 
   ngOnInit() {

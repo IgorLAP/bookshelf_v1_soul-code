@@ -1,22 +1,22 @@
-<div class="grid-container">
+<div class="content">
   <h1 class="mat-h1">Menu de Ajuda</h1>
-  <mat-grid-list cols="1" rowHeight="450">
-    <mat-grid-tile *ngFor="let cardAjuda of cardAjuda$ |async" [colspan]="cardAjuda.cols" [rowspan]="cardAjuda.rows">
-      <mat-card class="special-card">
-        <mat-card-header class="special-card-titles">
-          <div mat-card-avatar class="example-header-image"></div>
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" *ngFor="let cardAjuda of cardAjuda$ |async">
+      <mat-card class="mb">
+        <mat-card-header>
           <mat-card-title>{{cardAjuda.titulo}}</mat-card-title>
-          <!-- <mat-card-subtitle>{{cardAjuda.subtitulo}}</mat-card-subtitle> -->
+          <mat-card-subtitle>{{cardAjuda.subtitulo}}</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content class="special-card-content">
-          <div>{{cardAjuda.subtitulo}}</div>
-        </mat-card-content>
         <mat-nav-list>
-          <mat-list-item *ngFor="let passo of cardAjuda.descricao">
-            <a matLine [href]="passo.ref"><mat-icon>{{ passo.ref| ajudaIcon}}</mat-icon>{{passo.texto}}</a>
+          <mat-list-item *ngFor="let passo of cardAjuda.descricao" [@alternando]="cardAjuda.state" class="expandable-content">
+            <p><mat-icon>{{ passo.ref| ajudaIcon}}</mat-icon><span>{{passo.texto}}</span></p>
           </mat-list-item>
+          <button mat-icon-button (click)="cardAjuda.state === 'expanded' ? cardAjuda.state = 'collapsed' : cardAjuda.state = 'expanded'">
+            <mat-icon *ngIf="cardAjuda.state === 'expanded'">keyboard_double_arrow_up</mat-icon>
+            <mat-icon *ngIf="cardAjuda.state === 'collapsed'">keyboard_double_arrow_down</mat-icon>
+          </button>
         </mat-nav-list>
       </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+  </div>
 </div>

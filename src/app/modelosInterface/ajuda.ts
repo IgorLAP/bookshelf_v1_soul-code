@@ -3,7 +3,7 @@ export interface Ajuda{
   titulo:string;
   subtitulo: string;
   descricao: [{ref:string, texto:string}];
+  state?: string;
   cols: number;
   rows: number;
-
 }
