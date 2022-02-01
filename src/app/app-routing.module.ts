@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
-import { AjudaComponent } from './ajuda/ajuda.component';
 
+import { AjudaComponent } from './ajuda/ajuda.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { ArtesComponent } from './artes/artes.component';
 import { BiblioteconomiaComponent } from './biblioteconomia/biblioteconomia.component';
+import { DireitoComponent } from './direito/direito.component';
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { FeedComponent } from './feed/feed.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
+import { PsicologiaComponent } from './psicologia/psicologia.component';
 import { RecuperarSenhaComponent } from './recuperar-senha/recuperar-senha.component';
 import { RotasDesconhecidasComponent } from './rotas-desconhecidas/rotas-desconhecidas.component';
 import { SagasComponent } from './sagas/sagas.component';
@@ -18,8 +21,6 @@ import { TeatroComponent } from './teatro/teatro.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 import { VestibularComponent } from './vestibular/vestibular.component';
-import { DireitoComponent } from './direito/direito.component';
-import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -103,6 +104,10 @@ const routes: Routes = [
   },
   {
     path: 'empreendedorismo', component: EmpreendedorismoComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'psicologia', component: PsicologiaComponent,
     ...canActivate(enviarSemLogin)
   },
   {
