@@ -81,7 +81,7 @@ export class AppCadastroComponent implements OnInit {
     } else if (this.clientEmail) {
       if (this.clientEmail.indexOf('@') === -1) {
         this.toast.error('Email inválido!');
-        return;
+        return
       }
     }
 
