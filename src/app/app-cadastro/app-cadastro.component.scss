@@ -50,9 +50,18 @@ p{
   align-items: center;
   text-align: center;
 }
+.jc-ev{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
 
 button{
   margin: 0 10px;
   padding: 0 10px;
+}
+legend{
+  padding: 10px;
 }
 

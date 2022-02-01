@@ -2,6 +2,7 @@
   <mat-card-header>
     <img  src="../../assets/imagens/cover2.png" class='img'>
   </mat-card-header>
+
   <mat-stepper [linear]="isLinear" #stepper >
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
@@ -63,28 +64,34 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup" label="Foto de Perfil" >
+    <!-- <mat-step [stepControl]="thirdFormGroup" label="Foto de Perfil" optional="">
       <form class='jc-center'>
         <div>
-          <div>
-            <label for="image"></label>
-            <input type="file" (change)="upload($event)" name="image" accept=".png, .jpg, .jpeg" id="image">
-            <button (click)="uploadImage()">enviar</button>
-          </div>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
         </div>
       </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>Deseja realizar o cadastro ?</p>
-      <div class='jc-center'>
-        <button button mat-raised-button color="accent" (click)="enviaCadastro()">Enviar</button>
-        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-        <button mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>
+    </mat-step> -->
+    <mat-step [stepControl]="forthFormGroup" label="Senha & Confirmação " >
+      <ng-template matStepLabel>Foto & Finalizar</ng-template>
+      <div class='jc-ev'>
+        <div>
+          <form>
+            <fieldset >
+              <legend>Opcional</legend>
+              <label for="image"></label>
+              <input type="file" (change)="upload($event)" name="image" accept=".png, .jpg, .jpeg" id="image">
+            </fieldset>
+          </form>
+        </div>
+        <div>
+          <p>Deseja finalizar o cadastro ?</p>
+          <div class="jc-center">
+            <button button mat-raised-button color="accent" (click)="enviaCadastro()">Enviar</button>
+            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>
+          </div>
+        </div>
       </div>
     </mat-step>
   </mat-stepper>

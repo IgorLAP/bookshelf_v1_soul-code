@@ -11,7 +11,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
-
+import { getStorage } from 'firebase/storage';
+import { provideFirebaseApp } from '@angular/fire/app';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 export function passwordMatchValidator(): ValidatorFn {
@@ -48,6 +49,8 @@ export class AppCadastroComponent implements OnInit {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   thirdFormGroup!: FormGroup;
+  forthFormGroup!: FormGroup;
+  storage = getStorage();
 
   constructor(
     private loginBuilder: FormBuilder,
@@ -78,16 +81,19 @@ export class AppCadastroComponent implements OnInit {
       }
     }
 
-    if (!this.clientEmail.includes('gmail.com') ||
+    if (
+      !this.clientEmail.includes('gmail.com') ||
       !this.clientEmail.includes('hotmail.com') ||
       !this.clientEmail.includes('outlook.com') ||
       !this.clientEmail.includes('yahoo.com')
-      ) {
+    ) {
       this.toast.error('provedor não cadastrado!');
-      return
+      return;
     }
 
-    this.autenticacaoFirebaseService
+    console.log(this.storage);
+
+    /* this.autenticacaoFirebaseService
       .cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha)
       .pipe(
         catchError((error) => {
@@ -108,7 +114,7 @@ export class AppCadastroComponent implements OnInit {
         this.clienteSenha = '';
         this.clienteConfirmSenha = '';
         this.rotas.navigate(['/']);
-      });
+      }); */
   }
 
   upload(e: any): void {
