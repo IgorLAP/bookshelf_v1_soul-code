@@ -11,12 +11,41 @@
           <mat-list-item *ngFor="let passo of cardAjuda.descricao" [@alternando]="cardAjuda.state" class="expandable-content">
             <p><mat-icon>{{ passo.ref| ajudaIcon}}</mat-icon><span>{{passo.texto}}</span></p>
           </mat-list-item>
-          <button mat-icon-button (click)="cardAjuda.state === 'expanded' ? cardAjuda.state = 'collapsed' : cardAjuda.state = 'expanded'">
+          <button mat-icon-button (click)="cardAjuda.state === 'collapsed' ? cardAjuda.state = 'expanded' : cardAjuda.state = 'collapsed'">
             <mat-icon *ngIf="cardAjuda.state === 'expanded'">keyboard_double_arrow_up</mat-icon>
             <mat-icon *ngIf="cardAjuda.state === 'collapsed'">keyboard_double_arrow_down</mat-icon>
+            <span class="passos">Ver Passo a Passo</span>
           </button>
         </mat-nav-list>
       </mat-card>
+    </div>
+    <div fxFlex="100%">
+      <mat-card class="mb">
+        <mat-card-header>
+            <mat-card-title class="matHead"><p>Erros Frequentes</p><mat-icon class="static">help</mat-icon></mat-card-title>
+            <mat-card-subtitle>Login</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content >
+          <p class="block">BS#001 - Email inválido</p>
+          <p class="block">BS#002 - Senha deve conter no mínimo 6 caracteres</p>
+          <p class="block">BS#003 - Email já registrado em nosso sistema - <a routerLink="/recuperar">Recuperar Senha</a></p>
+          <p class="block">BS#004 - Informações incorretas. Verifique novamente</p>
+          <p class="block">BS#005 - Usuário não cadastrado</p>
+          <p class="block">BS#006 - Ocorreu um erro</p>
+        </mat-card-content>
+    </mat-card>
+    </div>
+    <div fxFlex="100%">
+      <mat-card class="mb">
+        <mat-card-header>
+            <mat-card-title class="matHead"><p>Erros Frequentes</p><mat-icon class="static">help</mat-icon></mat-card-title>
+            <mat-card-subtitle>Cadastro</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="block">BS#007 - Preencha todos os campos corretamente</p>
+          <p class="block">BS#008 - As senhas não conferem!</p>
+        </mat-card-content>
+    </mat-card>
     </div>
   </div>
 </div>

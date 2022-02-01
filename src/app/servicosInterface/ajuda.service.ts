@@ -18,7 +18,7 @@ constructor(private http: HttpClient) { }
       first(),
       delay(400),
       tap(apiAjuda => apiAjuda.forEach(i=>{
-        i.state = "expanded"
+        i.state = "collapsed"
       }))
     )
   }

@@ -89,16 +89,22 @@ export class AutenticacaoFirebaseService {
   errorMessages(error: string) {
     switch (error) {
       case 'auth/invalid-email':
-        return 'Email inválido';
+        return 'BS#001 - Email inválido';
         break;
       case 'auth/weak-password':
-        return 'Senha deve conter no mínimo 6 caracteres';
+        return 'BS#002 - Senha deve conter no mínimo 6 caracteres';
         break;
       case 'auth/email-already-in-use':
-        return 'Email já registrado em nosso sistema';
+        return 'BS#003 - Email já registrado em nosso sistema';
+        break;
+      case 'auth/wrong-password':
+        return 'BS#004 - Informações incorretas. Verifique novamente'
+        break;
+      case 'auth/user-not-found':
+        return 'BS#005 - Usuário não cadastrado'
         break;
       default:
-        return 'Ocorreu um erro';
+        return 'BS#006 - Ocorreu um erro';
         break;
     }
   }

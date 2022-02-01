@@ -70,13 +70,13 @@ export class AppCadastroComponent implements OnInit {
       !this.clienteSenha ||
       !this.clienteConfirmSenha
     ) {
-      this.toast.error('Preencha todos os campos corretamente!');
+      this.toast.error('BS#007 - Preencha todos os campos corretamente!');
       return;
-    } else if (
-      this.clienteSenha !== this.clienteConfirmSenha ||
-      this.clienteSenha.length < 6
-    ) {
-      this.toast.error('As senhas não conferem!');
+    } else if (this.clienteSenha !== this.clienteConfirmSenha ) {
+      this.toast.error('BS#008 - As senhas não conferem!');
+      return;
+    } else if (this.clienteSenha.length < 6){
+      this.toast.error('BS#009 - A senha deve ter no minimo 6 caracteres!');
       return;
     } else if (this.clientEmail) {
       if (this.clientEmail.indexOf('@') === -1) {
