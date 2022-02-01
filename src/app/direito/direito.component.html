@@ -6,7 +6,7 @@
     <table mat-table [dataSource]="livros$" class="mat-elevation-z8 demo-table">
       <!-- Position Column -->
       <ng-container matColumnDef="Capa">
-        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <th mat-header-cell *matHeaderCellDef>Capa</th>
         <td mat-cell *matCellDef="let element">
         <img src="{{ element.img }}">
         </td>
@@ -14,24 +14,24 @@
 
       <!-- Name Column -->
       <ng-container matColumnDef="Titulo">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <th mat-header-cell *matHeaderCellDef>Título</th>
         <td mat-cell *matCellDef="let element">{{ element.titulo }}</td>
       </ng-container>
 
       <!-- Weight Column -->
       <ng-container matColumnDef="Autor">
-        <th mat-header-cell *matHeaderCellDef>Weight</th>
+        <th mat-header-cell *matHeaderCellDef>Autor</th>
         <td mat-cell *matCellDef="let element">{{ element.autor }}</td>
       </ng-container>
 
       <!-- Symbol Column -->
       <ng-container matColumnDef="Publicação">
-        <th mat-header-cell *matHeaderCellDef>Symbol</th>
+        <th mat-header-cell *matHeaderCellDef>Publicação Original</th>
         <td mat-cell *matCellDef="let element">{{ element.yearPub }}</td>
       </ng-container>
       <!-- Symbol Column -->
       <ng-container matColumnDef="ISBN">
-        <th mat-header-cell *matHeaderCellDef>Symbol</th>
+        <th mat-header-cell *matHeaderCellDef>ISBN</th>
         <td mat-cell *matCellDef="let element">{{ element.isbn }}</td>
       </ng-container>
 
