@@ -17,8 +17,9 @@ constructor(private http: HttpClient) { }
     .pipe(
       first(),
       delay(400),
-      tap(apiAjuda => console.log(apiAjuda))
+      tap(apiAjuda => apiAjuda.forEach(i=>{
+        i.state = "expanded"
+      }))
     )
   }
-
 }

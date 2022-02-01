@@ -7,7 +7,7 @@
       {"ref":"1","texto":"Preencher o campo de e-mail com mesmo e-mail fornecido no cadastro."},
       {"ref":"2","texto":"Preencher o campo senha com a mesma senha fornecida no cadastro."},
       {"ref":"3","texto":"Caso o usuário esqueça a senha, clicar em 'Recuperar senha'."},
-      {"ref":"4","texto":"Caso o usuário não possua cadastro, clicar em 'clique aqui' para realizar seu cadastro na plataforma"},
+      {"ref":"4","texto":"Caso o usuário não possua cadastro, clicar em 'clique aqui' para realizar seu cadastro na plataforma."},
       {"ref":"","texto":"Ou então realizar Login utilizando sua conta pessoal do Google."}
     ],
     "cols":1,
@@ -16,17 +16,17 @@
   {
     "iconeAjuda":"1",
     "titulo":"Como Realizar Cadastro",
-    "subtitulo": "Na tela principal, usuário deve seguir os passo numerados de 1 a 4.",
+    "subtitulo": "Na tela principal, usuário deve seguir os passo numerados de 1 a 4",
     "descricao":[
       {"ref":"1","texto":"Usuário deverá preencher o campo nome e e-mail e em seguida clicar em Next."},
-      {"ref":"2","texto":"Usuário deve preencher os campos senha; informando uma senha de no mínimo 8 dígitos"},
+      {"ref":"2","texto":"Usuário deve preencher os campos senha; informando uma senha de no mínimo 8 dígitos."},
       {"ref":"","texto":"Em seguida confirmar a senha escolhida."},
       {"ref":"","texto":"Clicar em Next para prosseguir ou clicar em Back para retornar aos campos de e-mail."},
       {"ref":"3","texto":"Clicar no botão 'Escolher Arquivo' e escolher uma foto para seu perfil."},
       {"ref":"","texto":"Clicar em Next ou clicar em Back para voltar ao campos de senha."},
       {"ref":"4","texto":"Usuário deve escolher e clicar em:"},
-      {"ref":"","texto":"Enviar para finalizar seu cadastro"},
-      {"ref":"","texto":"Back para retornar ao Passo 3 "},
+      {"ref":"","texto":"Enviar para finalizar seu cadastro."},
+      {"ref":"","texto":"Back para retornar ao Passo 3."},
       {"ref":"","texto":"Reset para apagar todas as informações preenchidas."}
     ],
     "cols":1,
