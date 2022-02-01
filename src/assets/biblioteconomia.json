@@ -5,9 +5,7 @@
     "data": "18/04/2017",
     "img": "../assets/imagens/biblio1.jpg",
     "resumo": "Listamos alguns livros produzidos no campo da biblioteconomia em nível nacional que consideramos merecer destaque, considerando apenas obras de única autoria.",
-    "links": [{"ref": "https://biblioo.info/livros-nacionais-fundamentais/", "texto":"Reportagem completa"}],
-    "cols": 1,
-    "rows": 2
+    "links": [{"ref": "https://biblioo.info/livros-nacionais-fundamentais/", "texto":"Reportagem completa"}]
   },
   {
     "titulo": "7 dicas para as bibliotecas aproveitarem os próximos três meses do Big Brother Brasil",
@@ -15,9 +13,7 @@
     "resumo": "Já começou o novo Big Brother Brasil (BBB) 2022! Uma das consequências deste fato é que ele provoca, invariavelmente, a volta o debate superficial sobre cultura dita erudita e entretenimento de massa. Começam os julgamentos e os esnobes que nunca assistiram uma edição do programa, mesmo que para criticá-lo.",
     "autor": "Dandara Baçã",
     "data": "24/01/2022",
-    "links": [{"ref": "https://biblioo.info/7-dicas-para-as-bibliotecas-aproveitarem-os-proximos-tres-meses-do-big-brother-brasil/","texto":"Reportagem completa"}],
-    "cols": 1,
-    "rows": 2
+    "links": [{"ref": "https://biblioo.info/7-dicas-para-as-bibliotecas-aproveitarem-os-proximos-tres-meses-do-big-brother-brasil/","texto":"Reportagem completa"}]
   },
   {
     "titulo": "A Biblioteca Sanae Kato Hasui, da Associação Comunitária Despertar",
@@ -25,9 +21,7 @@
     "resumo": "Em meados de 2008, a professora Dalila (responsável por uma das turmas da 3ª série da Escola Estadual Hermano Ribeiro da Silva) nos passou uma atividade: encontrar um livro para ler.",
     "autor": "Alessandra Balbino",
     "data": "11/01/2022",
-    "links":[{"ref": "https://biblioo.info/a-biblioteca-senae-kato-hasui-da-associacao-comunitaria-despertar/","texto":"Reportagem completa"}],
-    "cols": 1,
-    "rows": 2
+    "links":[{"ref": "https://biblioo.info/a-biblioteca-senae-kato-hasui-da-associacao-comunitaria-despertar/","texto":"Reportagem completa"}]
   },
   {
     "titulo": "Que papel a Leitura deve assumir num eventual novo governo Lula?",
@@ -35,8 +29,6 @@
     "resumo": "A fala do Lula na entrevista desta quarta-feira (19) foi franca e direta. Entre convergências e divergências, o saldo é positivo e destaco uma parte óbvia: a ênfase que ele dará para a cultura em um possível novo governo.",
     "autor": "Ricardo Queiroz",
     "data": "21/01/2022",
-    "links":[{"ref": "https://biblioo.info/que-papel-a-leitura-deve-assumir-num-eventual-novo-governo-lula/", "texto":"Reportagem completa"}],
-    "cols": 1,
-    "rows": 2
+    "links":[{"ref": "https://biblioo.info/que-papel-a-leitura-deve-assumir-num-eventual-novo-governo-lula/", "texto":"Reportagem completa"}]
   }
 ]

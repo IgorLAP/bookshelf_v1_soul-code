@@ -1,15 +1,17 @@
-<div class="grid-container">
+<div class="content">
   <h1 class="mat-h1">Biblioteconomia</h1>
-  <mat-grid-list cols="2" rowHeight="320px">
-    <mat-grid-tile *ngFor="let cardBiblioteconomia of cardsBiblioteconomia$ | async" [colspan]="cardBiblioteconomia.cols" [rowspan]="cardBiblioteconomia.rows">
-      <mat-card class="special-card">
-        <mat-card-header class="special-card-titles">
+  <div fxLayout="row wrap" fxLayoutGap="30px grid">
+    <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let cardBiblioteconomia of cardsBiblioteconomia$ | async">
+      <mat-card class="mb">
+        <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{cardBiblioteconomia.titulo}}</mat-card-title>
-          <mat-card-subtitle>{{cardBiblioteconomia.autor}} | {{cardBiblioteconomia.data}}</mat-card-subtitle>
+          <div class="titles">
+            <mat-card-title>{{cardBiblioteconomia.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{cardBiblioteconomia.autor}} | {{cardBiblioteconomia.data}}</mat-card-subtitle>
+          </div>
         </mat-card-header>
         <div id="img"><img mat-card-image [src]="cardBiblioteconomia.img" [alt]="cardBiblioteconomia.titulo"></div>
-        <mat-card-content class="special-card-content">
+        <mat-card-content>
           <div>{{cardBiblioteconomia.resumo}}</div>
         </mat-card-content>
         <mat-nav-list>
@@ -22,6 +24,6 @@
           </mat-list-item>
         </mat-nav-list>
       </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+  </div>
 </div>
