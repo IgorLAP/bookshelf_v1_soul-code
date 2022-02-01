@@ -1,32 +1,6 @@
-.grid-container {
-  margin: 20px;
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.special-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.special-card-titles {
-  text-align: left;
-  line-height: 1.9em;
-}
-
-.special-card-content {
-  text-align: justify;
-  line-height: 1.8em;
+.content {
+  padding: 20px 40px 40px 40px;
+  line-height: 2em;
 }
 
 .mat-h1{
@@ -34,14 +8,26 @@
   font-size: 1.8em;
   color: #7E56C2;
   text-align: center;
+  margin-bottom: 40px;
 }
 
+//Imagem Logo avatar-card
 .example-header-image {
   width: 90px;
   height: 90px;
   background-image: url('../../assets/imagens/logoBS4.png');
   background-size: cover;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+}
 
+.mb {
+  margin-bottom: 30px;
+}
+
+.titles {
+  padding-left: 38px;
 }
 
 .mat-divider {

@@ -7,9 +7,7 @@
     "links":[
       {"ref":"https://g1.globo.com/mundo/noticia/2022/01/21/livro-sobre-traicao-contra-anne-frank-e-familia-revela-investigacao-seria-mas-conclusao-exige-cautela.ghtml", "texto":"Reportagem completa"},
       {"ref":"https://rosemarysullivan.com/","texto":"Escritora e seus principais livros"}
-    ],
-    "cols": 1,
-    "rows": 2
+    ]
   },
   {
     "titulo": "Autora de livro sobre a Boate Kiss lança obra com bastidores de Brumadinho",
@@ -19,9 +17,7 @@
     "links":[
       {"ref":"https://gauchazh.clicrbs.com.br/cultura-e-lazer/livros/noticia/2022/01/autora-de-livro-sobre-a-boate-kiss-lanca-obra-com-bastidores-da-tragedia-de-brumadinho-ckywzveqa002w015pdnd6c6yx.html", "texto":"Reportagem completa"},
       {"ref":"https://danielaarbex.com.br/","texto":"Escritora e seus principais livros"}
-    ],
-    "cols": 1,
-    "rows": 2
+    ]
   },
   {
     "titulo": "Livro para crianças tematiza consequências de Brumadinho",
@@ -31,9 +27,7 @@
     "links":[
       {"ref":"https://www.em.com.br/app/noticia/cultura/2022/01/25/interna_cultura,1339853/livro-para-criancas-tematiza-as-consequencias-da-tragedia-de-brumadinho.shtml", "texto":"Reportagem completa"},
       {"ref":"https://www.escavador.com/sobre/6758635/monica-borja-bonilha-moraes","texto":"Escritora e seus principais livros"}
-    ],
-    "cols": 1,
-    "rows": 2
+    ]
   },
   {
     "titulo": "Após 20 anos de lançamento, 'Cidade de Deus' ganha audiolivro",
@@ -43,8 +37,6 @@
     "links":[
       {"ref":"https://www.correiobraziliense.com.br/diversao-e-arte/2022/01/4980366-apos-20-anos-de-lancamento-cidade-de-deus-ganha-audiolivro.html", "texto":"Reportagem completa"},
       {"ref":"http://www.letras.ufmg.br/literafro/autores/381-paulo-lins","texto":"Escritor e seus principais livros"}
-    ],
-    "cols": 1,
-    "rows": 2
+    ]
   }
 ]

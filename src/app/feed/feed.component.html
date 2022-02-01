@@ -51,8 +51,8 @@
 </div>
 <!--Fim Forms Pesquisar-->
 
-  <div *ngIf=" main$ | async as main; else loading;">
-    <h1 class="mat-h1" *ngIf="usuario$ | async as usuario ;else loading;">Olá, {{usuario.displayName}} seja bem-vindo(a)!</h1>
+<div *ngIf=" main$ | async as main; else loading;">
+  <h1 class="mat-h1" *ngIf="usuario$ | async as usuario ;else loading;">Olá, {{usuario.displayName}} seja bem-vindo(a)!</h1>
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
       <div fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let unique of main$ | async">
         <mat-card>
@@ -83,40 +83,37 @@
         </mat-card>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="content">
-  <div *ngIf=" cards$ | async as card">
-    <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let card of cards$ | async">
-        <mat-card>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <div class="titles">
-              <mat-card-title>{{card.titulo}}</mat-card-title>
-              <mat-card-subtitle>{{card.subtitulo}}</mat-card-subtitle>
-            </div>
-          </mat-card-header>
-          <img mat-card-image [src]="card.img" [alt]="card.titulo">
-          <mat-card-content class="dashboard-card-content">
-            <div>{{card.conteudo}}</div>
-          </mat-card-content>
-          <mat-nav-list>
-            <mat-list-item *ngFor="let link of card.link" [@alternando]="card.state" class="expandable-content">
-              <a target="_blank" matLine [href]="link.ref">{{ link.texto }}</a>
-              <button mat-icon-button>
-                  <mat-icon>info</mat-icon>
-              </button>
-              <mat-divider inset></mat-divider>
-            </mat-list-item>
-            <button mat-icon-button (click)="card.state === 'expanded' ? card.state = 'collapsed' : card.state = 'expanded'">
-              <mat-icon *ngIf="card.state === 'expanded'">keyboard_double_arrow_up</mat-icon>
-              <mat-icon *ngIf="card.state === 'collapsed'">keyboard_double_arrow_down</mat-icon>
-          </button>
-          </mat-nav-list>
-        </mat-card>
-      </div>
+  <div fxLayout="row wrap" fxLayoutGap="30px grid">
+    <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let card of cards$ | async">
+      <mat-card class="mb">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <div class="titles">
+            <mat-card-title>{{card.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{card.subtitulo}}</mat-card-subtitle>
+          </div>
+        </mat-card-header>
+        <img mat-card-image [src]="card.img" [alt]="card.titulo">
+        <mat-card-content class="dashboard-card-content">
+          <div>{{card.conteudo}}</div>
+        </mat-card-content>
+        <mat-nav-list>
+          <mat-list-item *ngFor="let link of card.link" [@alternando]="card.state" class="expandable-content">
+            <a target="_blank" matLine [href]="link.ref">{{ link.texto }}</a>
+            <button mat-icon-button>
+                <mat-icon>info</mat-icon>
+            </button>
+            <mat-divider inset></mat-divider>
+          </mat-list-item>
+          <button mat-icon-button (click)="card.state === 'expanded' ? card.state = 'collapsed' : card.state = 'expanded'">
+            <mat-icon *ngIf="card.state === 'expanded'">keyboard_double_arrow_up</mat-icon>
+            <mat-icon *ngIf="card.state === 'collapsed'">keyboard_double_arrow_down</mat-icon>
+        </button>
+        </mat-nav-list>
+      </mat-card>
     </div>
   </div>
 </div>

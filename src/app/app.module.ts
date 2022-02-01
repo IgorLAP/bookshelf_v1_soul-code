@@ -52,6 +52,7 @@ import { DireitoComponent } from './direito/direito.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { PsicologiaComponent } from './psicologia/psicologia.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DireitoComponent,
     TecnologiaComponent,
     EmpreendedorismoComponent,
+    PsicologiaComponent,
   ],
   imports: [
     BrowserModule,
