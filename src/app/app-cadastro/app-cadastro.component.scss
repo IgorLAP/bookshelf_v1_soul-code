@@ -38,6 +38,17 @@ mat-form-field{
   }
 }
 
+.div-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.div-img img {
+  height: 75px;
+  width: auto;
+}
 
 
 p{

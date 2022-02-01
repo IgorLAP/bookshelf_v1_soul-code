@@ -1,13 +1,13 @@
 <mat-card class="card-cadastro">
   <mat-card-header>
-    <img  src="../../assets/imagens/cover2.png" class='img'>
+    <img src="../../assets/imagens/cover2.png" class="img" />
   </mat-card-header>
 
-  <mat-stepper [linear]="isLinear" #stepper >
+  <mat-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Nome & E-mail</ng-template>
-        <div class='jc-center'>
+        <div class="jc-center">
           <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
             <input
@@ -36,12 +36,12 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Senha & Confirmação " >
-      <form [formGroup]="secondFormGroup" class='jc-center'>
+    <mat-step [stepControl]="secondFormGroup" label="Senha & Confirmação ">
+      <form [formGroup]="secondFormGroup" class="jc-center">
         <mat-form-field appearance="fill">
           <mat-label>Senha</mat-label>
           <input
-          type="password"
+            type="password"
             matInput
             formControlName="secondCtrl"
             [(ngModel)]="clienteSenha"
@@ -51,10 +51,10 @@
         <mat-form-field appearance="fill">
           <mat-label>Confirmar Senha</mat-label>
           <input
-          type="password"
+            type="password"
             matInput
             formControlName="secondCtrl"
-          [(ngModel)]="clienteConfirmSenha"
+            [(ngModel)]="clienteConfirmSenha"
             required
           />
         </mat-form-field>
@@ -72,24 +72,44 @@
         </div>
       </form>
     </mat-step> -->
-    <mat-step [stepControl]="forthFormGroup" label="Senha & Confirmação " >
+    <mat-step [stepControl]="forthFormGroup" label="Senha & Confirmação ">
       <ng-template matStepLabel>Foto & Finalizar</ng-template>
-      <div class='jc-ev'>
-        <div>
-          <form>
-            <fieldset >
-              <legend>Opcional</legend>
-              <label for="image"></label>
-              <input type="file" (change)="upload($event)" name="image" accept=".png, .jpg, .jpeg" id="image">
-            </fieldset>
-          </form>
+      <div class="jc-ev">
+        <div class="div-img" *ngIf="state">
+          <img [src]="imgLoad"/>
         </div>
+        <form>
+          <fieldset>
+            <legend>Opcional</legend>
+            <label for="image"></label>
+            <input type="url" name="image" #inputPhoto />
+            <button
+              button
+              mat-raised-button
+              type="button"
+              (click)="carregarImg()"
+            >
+              Carregar
+            </button>
+          </fieldset>
+        </form>
         <div>
           <p>Deseja finalizar o cadastro ?</p>
           <div class="jc-center">
-            <button button mat-raised-button color="accent" (click)="enviaCadastro()">Enviar</button>
-            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-            <button mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>
+            <button
+              button
+              mat-raised-button
+              color="accent"
+              (click)="enviaCadastro()"
+            >
+              Enviar
+            </button>
+            <button mat-raised-button color="primary" matStepperPrevious>
+              Back
+            </button>
+            <button mat-raised-button color="warn" (click)="stepper.reset()">
+              Reset
+            </button>
           </div>
         </div>
       </div>

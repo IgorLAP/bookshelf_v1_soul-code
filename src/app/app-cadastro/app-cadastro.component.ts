@@ -1,6 +1,6 @@
 import { catchError, of } from 'rxjs';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -51,13 +51,17 @@ export class AppCadastroComponent implements OnInit {
   thirdFormGroup!: FormGroup;
   forthFormGroup!: FormGroup;
   storage = getStorage();
-
+  imgLoad!: string;
+  state: boolean = false
   constructor(
     private loginBuilder: FormBuilder,
     private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     private toast: HotToastService,
     private rotas: Router
   ) {}
+
+  @ViewChild('inputPhoto') inputPhoto!: ElementRef
+
 
   enviaCadastro() {
     if (
@@ -113,6 +117,8 @@ export class AppCadastroComponent implements OnInit {
         this.clientEmail = '';
         this.clienteSenha = '';
         this.clienteConfirmSenha = '';
+        this.imgLoad = '';
+        this.inputPhoto.nativeElement.value = '';
         this.rotas.navigate(['/']);
       }); */
   }
@@ -132,9 +138,15 @@ export class AppCadastroComponent implements OnInit {
     };
   }
 
-  uploadImage() {
-    console.log('upload');
+  carregarImg(): void {
+    if (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png')) {
+      this.imgLoad = this.inputPhoto.nativeElement.value
+      this.state = true
+      console.log('imagem nao suportada')
+    } else {
+    }
   }
+
   ngOnInit() {
     this.firstFormGroup = this.loginBuilder.group({
       firstCtrl: ['', Validators.required],
