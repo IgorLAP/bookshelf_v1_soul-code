@@ -56,10 +56,10 @@ export class AppCadastroComponent implements OnInit {
       !this.clienteSenha ||
       !this.clienteConfirmSenha
     ) {
-      this.toast.error('Preencha todos os campos corretamente!');
+      this.toast.error('BS#007 - Preencha todos os campos corretamente!');
       return;
     } else if (this.clienteSenha !== this.clienteConfirmSenha) {
-      this.toast.error('As senhas não conferem!');
+      this.toast.error('BS#008 - As senhas não conferem!');
       return;
     }
 
