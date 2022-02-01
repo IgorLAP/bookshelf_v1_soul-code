@@ -2,13 +2,14 @@
   {
     "iconeAjuda":"0",
     "titulo":"Como Efetuar Login",
-    "subtitulo": "Na tela principal, no canto superior direito, usuário deve clicar no botão LOGIN",
+    "subtitulo": "Na tela principal, no canto superior direito, usuário deve clicar no botão LOGIN.",
     "descricao":[
       {"ref":"1","texto":"Preencher o campo de e-mail com mesmo e-mail fornecido no cadastro."},
       {"ref":"2","texto":"Preencher o campo senha com a mesma senha fornecida no cadastro."},
       {"ref":"3","texto":"Caso o usuário esqueça a senha, clicar em 'Recuperar senha'."},
       {"ref":"4","texto":"Caso o usuário não possua cadastro, clicar em 'clique aqui' para realizar seu cadastro na plataforma."},
-      {"ref":"","texto":"Ou então realizar Login utilizando sua conta pessoal do Google."}
+      {"ref":"", "texto":"Ou então realizar Login utilizando sua conta pessoal do Google."},
+      {"ref":"5","texto":"Clique aqui e veja o vídeo demonstrativo de como Efetuar Login."}
     ],
     "cols":1,
     "rows":1
@@ -16,7 +17,7 @@
   {
     "iconeAjuda":"1",
     "titulo":"Como Realizar Cadastro",
-    "subtitulo": "Na tela principal, usuário deve seguir os passo numerados de 1 a 4",
+    "subtitulo": "Na tela principal, usuário deve seguir os passo numerados de 1 a 4.",
     "descricao":[
       {"ref":"1","texto":"Usuário deverá preencher o campo nome e e-mail e em seguida clicar em Next."},
       {"ref":"2","texto":"Usuário deve preencher os campos senha; informando uma senha de no mínimo 8 dígitos."},
@@ -27,10 +28,11 @@
       {"ref":"4","texto":"Usuário deve escolher e clicar em:"},
       {"ref":"","texto":"Enviar para finalizar seu cadastro."},
       {"ref":"","texto":"Back para retornar ao Passo 3."},
-      {"ref":"","texto":"Reset para apagar todas as informações preenchidas."}
+      {"ref":"","texto":"Reset para apagar todas as informações preenchidas."},
+      {"ref":"5","texto":"Clique aqui e veja o vídeo demonstrativo de como Realizar Cadastro"}
     ],
     "cols":1,
-    "rows":2
+    "rows":3
   }
 
 ]
