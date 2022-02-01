@@ -49,10 +49,12 @@ export class AppLoginComponent {
         this.toast.observe({
           success: 'Login valido, obrigado',
           loading: 'Redirecionando...',
-          error: 'Algo deu errado, confira as informações'
+          error: 'Erro'
         }),
         catchError((err)=>{
-          this.toast.error(err.message)
+          this.toast.error(
+            this.autenticacaoFirebaseService.errorMessages(err.message.split('(')[1].split(')')[0])
+          )
           return of(err)
         })
       )

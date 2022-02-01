@@ -3,7 +3,7 @@
   {"linkMenu": "/feed", "labelMenu":"Feed Notícias", "hab": true},
   {"linkMenu": "/especial-mes", "labelMenu":"Especiais do Mês", "hab": true},
   {"linkMenu": "/sugestoes", "labelMenu":"Sugestões", "hab": true},
-  {"linkMenu": "", "labelMenu": "Listas", "hab": true,
+  {"linkMenu": "", "labelMenu": "Seções", "hab": true,
     "subMenu": [
       {"linkMenu": "/mais-vendidos", "labelMenu":"Mais Vendidos", "hab": true},
       {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true},
@@ -13,13 +13,13 @@
       {"linkMenu": "/teatro", "labelMenu":"Teatro", "hab": true},
       {"linkMenu": "/tecnologia", "labelMenu":"Tecnologia", "hab": true},
       {"linkMenu": "/psicologia", "labelMenu":"Psicologia", "hab": true},
-      {"linkMenu": "/empreendedorismo", "labelMenu":"Empreendedorismo", "hab": true}
+      {"linkMenu": "/empreendedorismo", "labelMenu":"Empreendedorismo", "hab": true},
+      {"linkMenu":"/vestibular", "labelMenu":"Dicas de Vestibular", "hab":true}
     ],
     "showMenu": false
   },
   {"linkMenu": "", "labelMenu": "Informações", "hab": true,
     "subMenu":[
-      {"linkMenu":"/vestibular", "labelMenu":"Dicas de Vestibular", "hab":true},
       {"linkMenu": "/isbn", "labelMenu":"ISBN", "hab": true},
       {"linkMenu": "/biblioteconomia", "labelMenu":"Biblioteconomia", "hab": true}
     ],
