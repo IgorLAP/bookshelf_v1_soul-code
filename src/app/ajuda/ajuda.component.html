@@ -11,9 +11,10 @@
           <mat-list-item *ngFor="let passo of cardAjuda.descricao" [@alternando]="cardAjuda.state" class="expandable-content">
             <p><mat-icon>{{ passo.ref| ajudaIcon}}</mat-icon><span>{{passo.texto}}</span></p>
           </mat-list-item>
-          <button mat-icon-button (click)="cardAjuda.state === 'expanded' ? cardAjuda.state = 'collapsed' : cardAjuda.state = 'expanded'">
+          <button mat-icon-button (click)="cardAjuda.state === 'collapsed' ? cardAjuda.state = 'expanded' : cardAjuda.state = 'collapsed'">
             <mat-icon *ngIf="cardAjuda.state === 'expanded'">keyboard_double_arrow_up</mat-icon>
             <mat-icon *ngIf="cardAjuda.state === 'collapsed'">keyboard_double_arrow_down</mat-icon>
+            <span class="passos">Ver Passo a Passo</span>
           </button>
         </mat-nav-list>
       </mat-card>
