@@ -2,20 +2,28 @@
   {"linkMenu": "/cdd", "labelMenu":"Classes Dewey", "hab": true},
   {"linkMenu": "/feed", "labelMenu":"Feed Notícias", "hab": true},
   {"linkMenu": "/especial-mes", "labelMenu":"Especiais do Mês", "hab": true},
-  {"linkMenu":"/vestibular", "labelMenu":"Livros para Vestibular", "hab":true},
-  {"linkMenu": "/isbn", "labelMenu":"ISBN", "hab": true},
   {"linkMenu": "/sugestoes", "labelMenu":"Sugestões", "hab": true},
-  {"linkMenu": "/mais-vendidos", "labelMenu":"Mais Vendidos", "hab": true},
-  {"linkMenu": "/biblioteconomia", "labelMenu":"Biblioteconomia", "hab": true},
-  {"linkMenu": "/teatro", "labelMenu":"Teatro", "hab": true},
-  {"linkMenu": "/ajuda", "labelMenu":"Ajuda", "hab": true},
-  {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true},
-  {"linkMenu": "/artes", "labelMenu":"Artes", "hab": true},
-  {"linkMenu": "criticas", "labelMenu": "Criticas", "hab": true},
-  {"linkMenu": "/direito", "labelMenu":"Direito", "hab": true},
-  {"linkMenu": "/tecnologia", "labelMenu":"Tecnologia", "hab": true},
-  {"linkMenu": "/empreendedorismo", "labelMenu":"Empreendedorismo", "hab": true},
-  {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false},
-  {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false},
-  {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false}
+  {"linkMenu": "", "labelMenu": "Listas", "hab": true,
+    "subMenu": [
+      {"linkMenu": "/mais-vendidos", "labelMenu":"Mais Vendidos", "hab": true},
+      {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true},
+      {"linkMenu": "/artes", "labelMenu":"Artes", "hab": true},
+      {"linkMenu": "criticas", "labelMenu": "Criticas", "hab": true},
+      {"linkMenu": "/direito", "labelMenu":"Direito", "hab": true},
+      {"linkMenu": "/teatro", "labelMenu":"Teatro", "hab": true},
+      {"linkMenu": "/tecnologia", "labelMenu":"Tecnologia", "hab": true},
+      {"linkMenu": "/psicologia", "labelMenu":"Psicologia", "hab": true},
+      {"linkMenu": "/empreendedorismo", "labelMenu":"Empreendedorismo", "hab": true}
+    ],
+    "showMenu": false
+  },
+  {"linkMenu": "", "labelMenu": "Informações", "hab": true,
+    "subMenu":[
+      {"linkMenu":"/vestibular", "labelMenu":"Dicas de Vestibular", "hab":true},
+      {"linkMenu": "/isbn", "labelMenu":"ISBN", "hab": true},
+      {"linkMenu": "/biblioteconomia", "labelMenu":"Biblioteconomia", "hab": true}
+    ],
+    "showMenu":false
+  },
+  {"linkMenu": "/ajuda", "labelMenu":"Ajuda", "hab": true}
 ]

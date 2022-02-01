@@ -1,54 +1,49 @@
-h2{
+.grid-container{
+  margin: 20px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-h1{
   font-weight: bold;
   font-size: 1.8em;
   color: #7E56C2;
   text-align: center;
-  margin: 20px 0;
 }
 
-.card-mv{
-  margin: 30px auto;
-  max-width: 995;
+.special-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
 }
 
-.mat-card>div{
-  overflow-x: auto;
+.special-card-titles {
+  text-align: left;
+  line-height: 1,9em;
 }
 
-table {
-  width: 100%;
-  th{
-    color: white;
-    background-color: #7E56C2;
-    font-size: 15px;
-    align-items: center;
-  }
-
-  td{
-    font-size: 17px;
-  }
+.special-card-content {
+  width: 540px;
+  text-align: center;
+  line-height: 1.8em;
+  margin-left: 30px;
+  font-size: 1.1em;
+  background-color: #e1dbeb;
+  padding: 10px;
 }
 
-.mat-cell{
-  padding: 0 10px;
+.mat-card-title{
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  font-size: 1.8em;
 }
 
-.mat-column-descricao{
-  width: 150px;
-}
-
-.mat-column-comCadastro{
-  padding: 20px;
-}
-
-.iconeAjuda{
-  margin: 0.5rem;
-}
-
-.loading-spinner{
-  background-color: rgb(221,221,221);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem;
+.mat-icon{
+  margin-top: 7px;
+  font-size: 28px;
+  color: #7E56C2;
+  padding-right: 10px;
 }

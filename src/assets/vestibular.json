@@ -6,9 +6,7 @@
     "link": [
        {"ref":"https://www.companhiadasletras.com.br/detalhe.php?codigo=11412", "livro": " Uma Janela em Copacabana [Luiz Alfredo Garcia-Roza]"},
        {"ref":"http://www.dominiopublico.gov.br/download/texto/bv000164.pdf", "livro": " Os Sonetos [Luiz de Camões]"}
-    ],
-    "cols":1,
-    "rows":2
+    ]
   },
   {
     "titulo": "Vestibular UFPR",
@@ -18,9 +16,7 @@
        {"ref":"http://www.dominiopublico.gov.br/download/texto/bv000014.pdf","livro": "Casa de Pensão [ Aluísio de Azevedo]"},
        {"ref":"http://www.dominiopublico.gov.br/pesquisa/DetalheObraForm.do?select_action=&co_obra=1858", "livro":"Clara dos Anjos [ Lima Barreto]"},
        {"ref":"","livro": "Últimos Cantos [ Gonçalves Dias]"}
-    ],
-    "cols":1,
-    "rows":2
+    ]
   },
   {
     "titulo": "Vestibular ITA",
@@ -30,9 +26,7 @@
       {"ref":"http://www.dominiopublico.gov.br/pesquisa/DetalheObraForm.do?select_action=&co_obra=1864","livro": "Numa e Ninfa [Afonso Henriques de Lima Barreto]"},
       {"ref":"https://www.google.com.br/books/edition/Antologia_po%C3%A9tica/txeoBAAAQBAJ?hl=pt-BR&gbpv=1&printsec=frontcover","livro": "Antologia Poética [Carlos Drummond de Andrade]"},
       {"ref":"","livro":"O seminário de ratos [Lygia Fagundes Telles]"}
-    ],
-    "cols":1,
-    "rows":2
+    ]
   },
   {
     "titulo": "Vestibular UNICAMP",
@@ -42,9 +36,7 @@
        {"ref":"http://ponteseditores.com.br/loja/index.php?route=product/product&product_id=1281","livro": "O Marinheiro [Fernando Pessoa]"},
        {"ref":"http://machado.mec.gov.br/index.php?option=com_k2&view=itemlist&layout=category&task=category&id=20&order=year&searchword=bons+dias&Itemid=668","livro": "Bons Dias [Machado de Assis]"},
        {"ref":"","livro": "Sonetos Escolhidos [ Luis de Camões]"}
-    ],
-    "cols":1,
-    "rows":2
+    ]
   }
 
 ]

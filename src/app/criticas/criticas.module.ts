@@ -5,12 +5,14 @@ import { AppMaterialModule } from './../app-compartilhado/app-material/app-mater
 import { CriticaComponent } from './critica/critica.component';
 import { CriticasRoutingModule } from './criticas-routing.module';
 import { TodasCriticasComponent } from './todas-criticas/todas-criticas.component';
+import { CriticaDialogComponent } from './critica-dialog/critica-dialog.component';
 
 
 @NgModule({
   declarations: [
     TodasCriticasComponent,
-    CriticaComponent
+    CriticaComponent,
+    CriticaDialogComponent
   ],
   imports: [
     CommonModule,

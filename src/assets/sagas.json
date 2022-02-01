@@ -13,9 +13,7 @@
     "img": "../assets/imagens/saga1.jpg",
     "resumo": "Uma das sagas literárias mais ricas e completas da atualidade, sem sombras de dúvidas! As Crônicas do Gelo e Fogo é de autoria do roteirista e romancista norte-americano George R. R. Martin, que vem publicando os livros da série desde 1996.",
     "links": [{"ref": "https://www.geloefogo.com/livros", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "O senhor dos Aneis",
@@ -28,9 +26,7 @@
     "img": "../assets/imagens/saga2.jpeg",
     "resumo": "A história gira em torno de Frodo Bolseiro, um hobbit com a missão de destruir um misterioso Anel, um artefato mágico forjado por Sauron, o Senhor do Escuro, e que representa um grande perigo para quem o utiliza.",
     "links": [{"ref": "https://pt.wikipedia.org/wiki/O_Senhor_dos_An%C3%A9is", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "Harry Potter",
@@ -47,9 +43,7 @@
     "img": "../assets/imagens/saga3.jpg",
     "resumo": "Para o extraterrestre que não conhece a sinopse da história, Harry Potter narra as aventuras de Harry Potter, um famoso bruxo que sobreviveu ao ataque do Lord Voldemort quando ainda era um bebê. O jovem feiticeiro entra para a Escola de Magia e Bruxaria de Hogwarts e conhece seus melhores amigos, Ronald Weasley e Hermione Granger.",
     "links": [{"ref": "https://pt.wikipedia.org/wiki/Harry_Potter", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": " As Crônicas de Nárnia",
@@ -66,9 +60,7 @@
     "img": "../assets/imagens/saga4.jpg",
     "resumo": "As personagens principais são crianças do 'nosso mundo' que foram transportadas para o mágico Reino de Nárnia, um lugar especial e muito bem construído por Lewis. Além de magia, animais falantes, temas cristãos e elementos da mitologia grega e nórdica, As Crônicas de Nárnia também é feito com base nos tradicionais contos de fadas.",
     "links": [{"ref": "https://pt.wikipedia.org/wiki/The_Chronicles_of_Narnia","texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "O Guia do Mochileiro das Galáxias",
@@ -84,9 +76,7 @@
     "img": "../assets/imagens/sagas5.jpg",
     "resumo": "Fã que é fã de literatura sci-fi não pode deixar de ler O Guia do Mochileiro das Galáxias, um marco simbólico da cultura geek! A obra de Douglas Adams gerou dezenas de ícones para a cultura pop, como o Dia da Toalha, por exemplo.",
     "links": [{"ref": "https://muraldoslivros.com/ordem-dos-livros-do-guia-do-mochileiro-das-galaxias/", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "Desventuras em Série",
@@ -109,9 +99,7 @@
     "img": "../assets/imagens/saga6.jpg",
     "resumo": "Ao longo dos livros, acompanhamos as aventuras dos irmãos Baudelaire sob a tutela do terrível Conde Olaf, após os jovens perderem os seus pais num incêndio. Em cada livro o ambicioso Olaf surge com um novo e inusitado disfarce na tentativa de roubar as crianças e a enorme fortuna que seus pais lhes deixaram.",
     "links": [{"ref": "https://pt.wikipedia.org/wiki/A_Series_of_Unfortunate_Events", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "As Brumas de Avalon",
@@ -125,9 +113,7 @@
     "img": "../assets/imagens/saga7.jpg",
     "resumo": "As Brumas de Avalon narra as lutas de Artur para unificar a Bretanha contra a invasão saxônica pelos olhos das mulheres, as heroínas da história, e ‘A senhora da magia’ vai tratar desde o início dos conflitos, um pouco antes de Artur nascer e até este se tornar rei, sendo o início narrado pelos olhos de Igraine, futura mãe de Artur.",
     "links": [{"ref": "https://pt.wikipedia.org/wiki/As_Brumas_de_Avalon", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "Ciclo da Herança",
@@ -141,9 +127,7 @@
     "img": "../assets/imagens/saga8.jpg",
     "resumo": "A história se passa na terra de Alagaesia, onde conhecemos Eragon e sua companheira dragão, Saphira. Ambos precisam enfrentar o tirano Imperador Galbatorix e restaurar a Ordem dos Cavaleiro de Dragões.",
     "links": [{"ref": "https://pt.wikipedia.org/wiki/Ciclo_da_Heran%C3%A7a", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "Percy Jackson",
@@ -158,9 +142,7 @@
     "img": "../assets/imagens/saga9.jpg",
     "resumo": "A vida do adolescente Percy Jackson, que está sempre pronto para entrar em uma confusão, torna-se bem mais complicada quando ele descobre que é filho do deus grego Poseidon.",
     "links": [{"ref": "https://muraldoslivros.com/ordem-dos-livros-percy-jackson/", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   },
   {
     "titulo": "Outlander: a viajante do tempo",
@@ -178,11 +160,7 @@
     "img": "../assets/imagens/saga10.jpeg",
     "resumo": "Outlander conta a história de Claire Randall (Caitriona Balfe), uma enfermeira em combate no ano de 1945. Ela é misteriosamente transportada através do tempo e mandada para 1743, e sua vida passa a correr riscos que ela desconhece. Forçada a se casar com Jamie Fraser (Sam Heughan), um cortês e nobre guerreiro escocês..",
     "links": [{"ref": "https://muraldoslivros.com/ordem-dos-livros-outlander/", "texto":"Saiba mais sobre a história"}],
-    "saga": [{"texto":"Conheça Toda Saga"}],
-    "cols": 1,
-    "rows": 1
+    "saga": [{"texto":"Conheça Toda Saga"}]
   }
-
-
 
 ]

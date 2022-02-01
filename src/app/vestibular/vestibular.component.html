@@ -1,17 +1,15 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Livros para Vestibulares</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let cardVestibular of cardsVestibular$ | async" [colspan]="cardVestibular.cols" [rowspan]="cardVestibular.rows">
-      <mat-card class="dashboard-card">
+<div class="content">
+  <h1 class="mat-h1">Dicas de Vestibular</h1>
+  <div fxLayout="row wrap" fxLayoutGap="30px grid">
+    <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" *ngFor="let cardVestibular of cardsVestibular$ | async">
+      <mat-card class="mb">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title> {{cardVestibular.titulo}}</mat-card-title>
-          <mat-card-subtitle>{{cardVestibular.subtitulo}}</mat-card-subtitle>
+          <div class="titles">
+            <mat-card-title> {{cardVestibular.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{cardVestibular.subtitulo}}</mat-card-subtitle>
+          </div>
         </mat-card-header>
         <img mat-card-image [src]="cardVestibular.img" [alt]="cardVestibular.titulo">
-        <!-- <mat-card-content class="dashboard-card-content">
-          <div>{{cardVestibular.conteudo}}</div>
-        </mat-card-content> -->
         <mat-nav-list>
           <mat-list-item *ngFor="let link of cardVestibular.link">
             <a matLine [href]="link.ref">{{link.livro}}</a>
@@ -21,7 +19,7 @@
           </mat-list-item>
         </mat-nav-list>
       </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+  </div>
 </div>
 
