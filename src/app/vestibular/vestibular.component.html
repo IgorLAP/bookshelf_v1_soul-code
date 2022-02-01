@@ -12,9 +12,9 @@
         <img mat-card-image [src]="cardVestibular.img" [alt]="cardVestibular.titulo">
         <mat-nav-list>
           <mat-list-item *ngFor="let link of cardVestibular.link">
-            <a matLine [href]="link.ref">{{link.livro}}</a>
+            <a target="_blank" matLine [href]="link.ref">{{link.livro}}</a>
             <button mat-icon-button>
-              <mat-icon>info</mat-icon>
+              <a target="_blank" matLine [href]="link.ref"><mat-icon>open_in_new</mat-icon></a>
             </button>
           </mat-list-item>
         </mat-nav-list>
