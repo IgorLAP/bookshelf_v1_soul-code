@@ -12,17 +12,13 @@ import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao
 export class TelaUsuarioComponent implements OnInit {
   logo ='../../assets/imagens/ShelfBook.png';
   usuario$!: Observable<DocumentData | undefined>
-  // profile!: any;
+  
   constructor(
     private autenticacaoFirebaseService: AutenticacaoFirebaseService
   ) { }
 
   ngOnInit(): void {
     this.usuario$ = this.autenticacaoFirebaseService.user;
-    // this.profile = this.autenticacaoFirebaseService.user
-    // .pipe(
-    //   tap(i => console.log(i))
-    // )
   }
 
 }
