@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class TelaUsuarioComponent implements OnInit {
   logo='../../assets/imagens/ShelfBook.png';
   usuario$= this.autenticacaoFirebaseService.usuarioLogado$
-
+  // user$ = this.autenticacaoFirebaseService.user;
   constructor(
     private autenticacaoFirebaseService: AutenticacaoFirebaseService
   ) { }

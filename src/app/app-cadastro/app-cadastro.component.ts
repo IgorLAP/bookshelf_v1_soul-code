@@ -1,18 +1,12 @@
-import { catchError, of } from 'rxjs';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  ValidationErrors,
-  ValidatorFn,
-  Validators,
-} from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 import { getStorage } from 'firebase/storage';
-import { provideFirebaseApp } from '@angular/fire/app';
+import { catchError, of } from 'rxjs';
+
+import { User } from '../modelosInterface/user';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 export function passwordMatchValidator(): ValidatorFn {
@@ -80,70 +74,67 @@ export class AppCadastroComponent implements OnInit {
       return;
     } else if (this.clientEmail) {
       if (this.clientEmail.indexOf('@') === -1) {
-        this.toast.error('Email inválido!');
+        this.toast.error('BS#010 - Email inválido!');
         return
       }
     }
 
     if (
-      !this.clientEmail.includes('gmail.com') ||
-      !this.clientEmail.includes('hotmail.com') ||
-      !this.clientEmail.includes('outlook.com') ||
+      !this.clientEmail.includes('gmail.com') &&
+      !this.clientEmail.includes('hotmail.com') &&
+      !this.clientEmail.includes('outlook.com') &&
       !this.clientEmail.includes('yahoo.com')
     ) {
-      this.toast.error('provedor não cadastrado!');
+      this.toast.error('BS#011 - Provedor não cadastrado!');
       return;
     }
 
-    console.log(this.storage);
+    const user: User = {
+      name: this.clientName,
+      email: this.clientEmail,
+      photo: '../../assets/imagens/profile.png'
+    }
 
-    /* this.autenticacaoFirebaseService
-      .cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha)
-      .pipe(
-        catchError((error) => {
-          return of([]);
-        }),
-        this.toast.observe({
-          success: 'Cadatro executado, bem vindo ao BookShelf',
-          loading: 'Enviando informações...',
-          error: ({ message }) =>
-            this.autenticacaoFirebaseService.errorMessages(
-              message.split('(')[1].split(')')[0]
-            ),
-        })
-      )
-      .subscribe(() => {
-        this.clientName = '';
-        this.clientEmail = '';
-        this.clienteSenha = '';
-        this.clienteConfirmSenha = '';
-        this.imgLoad = '';
-        this.inputPhoto.nativeElement.value = '';
-        this.rotas.navigate(['/']);
-      }); */
-  }
+    if(this.inputPhoto.nativeElement.value !== '' && (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
+      user.photo = this.inputPhoto.nativeElement.value;
+    } else if(this.inputPhoto.nativeElement.value !== '' && !(this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
+      this.toast.error('BS#012 - Formato não suportado, tente outra imagem');
+      return;
+    }
 
-  upload(e: any): void {
-    let file = e.target.files[0];
-    let read = new FileReader();
-    read.readAsDataURL(file);
 
-    read.onloadend = () => {
-      console.log(read.result);
-      console.log('Type=> ', file.type);
-      this.autenticacaoFirebaseService.subirImagem(
-        `${this.clientName}_${Date.now()}`,
-        read.result
-      );
-    };
+    this.autenticacaoFirebaseService.cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha, user)
+    .pipe(
+      catchError((error) => {
+        return of([]);
+      }),
+      this.toast.observe({
+        success: 'Cadatro executado, bem vindo ao BookShelf',
+        loading: 'Enviando informações...',
+        error: ({ message }) =>
+          this.autenticacaoFirebaseService.errorMessages(
+            message.split('(')[1].split(')')[0]
+          ),
+      })
+    )
+    .subscribe(
+      () => {
+      this.clientName = '';
+      this.clientEmail = '';
+      this.clienteSenha = '';
+      this.clienteConfirmSenha = '';
+      this.imgLoad = '';
+      this.inputPhoto.nativeElement.value = '';
+      this.rotas.navigate(['/feed']);
+    });
   }
 
   carregarImg(): void {
     if (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png')) {
       this.imgLoad = this.inputPhoto.nativeElement.value
       this.state = true
-      console.log('imagem nao suportada')
     } else {
+      console.log('BS#012 - Formato não suportado, tente outra imagem')
     }
   }
 

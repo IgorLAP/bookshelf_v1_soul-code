@@ -2,8 +2,6 @@
   border-radius: 0px 0px 20px 20px;
   max-width: 450px;
   margin: 140px auto;
-  height: 48%;
-  background-image: url("../../assets/imagens/logoBS3.png");
   background-size: 230px;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -31,9 +29,27 @@
 }
 
 .border {
+  display: flex;
+  word-break: break-all;
   background-color: white;
   border-radius: 20px;
   padding: 10px 10px 1.3px 10px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right{
+  margin: 10px;
+  width: 180px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .mt {
@@ -44,3 +60,11 @@ span {
   color: rgb(100, 60, 165);
 }
 
+@media only screen and(max-width: 510px) {
+  .border{
+    flex-wrap: wrap;
+  }
+  .right{
+    margin: 0 auto;
+  }
+}

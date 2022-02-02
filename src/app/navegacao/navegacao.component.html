@@ -48,7 +48,7 @@
       </button>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
         <button class="button dropdownMenu" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu" matTooltip="Menu de navegação do usuário">
-          <mat-icon class="mat-18 userIcon">local_library</mat-icon>
+          <img style="width: 32px; height: 32px; border-radius: 50%; margin: 5px;" [src]="usuario.photoURL" alt="">
           <span class="username">{{usuario.displayName|| usuario.email}}</span>
           <mat-icon>expand_more</mat-icon>
         </button>
