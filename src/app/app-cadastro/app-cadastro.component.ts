@@ -1,18 +1,12 @@
-import { catchError, of } from 'rxjs';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  ValidationErrors,
-  ValidatorFn,
-  Validators,
-} from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 import { getStorage } from 'firebase/storage';
-import { provideFirebaseApp } from '@angular/fire/app';
+import { catchError, of } from 'rxjs';
+
+import { User } from './../modelosInterface/user';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 export function passwordMatchValidator(): ValidatorFn {
@@ -76,74 +70,70 @@ export class AppCadastroComponent implements OnInit {
       this.toast.error('BS#008 - As senhas não conferem!');
       return;
     } else if (this.clienteSenha.length < 6){
-      this.toast.error('BS#009 - A senha deve ter no minimo 6 caracteres!');
+      this.toast.error('BS#002 - Senha deve conter no mínimo 6 caracteres');
       return;
     } else if (this.clientEmail) {
       if (this.clientEmail.indexOf('@') === -1) {
-        this.toast.error('Email inválido!');
+        this.toast.error('BS#009 - Email inválido!');
         return
       }
     }
 
     if (
-      !this.clientEmail.includes('gmail.com') ||
-      !this.clientEmail.includes('hotmail.com') ||
-      !this.clientEmail.includes('outlook.com') ||
+      !this.clientEmail.includes('gmail.com') &&
+      !this.clientEmail.includes('hotmail.com') &&
+      !this.clientEmail.includes('outlook.com') &&
       !this.clientEmail.includes('yahoo.com')
     ) {
-      this.toast.error('provedor não cadastrado!');
+      this.toast.error('BS#010 - Provedor de email não cadastrado!');
       return;
     }
 
-    console.log(this.storage);
+    if((!this.inputPhoto.nativeElement.value.includes('.jpg') || !this.inputPhoto.nativeElement.value.includes('.png'))){
+      this.toast.error('BS#011 - Imagem não Suportada');
+      this.inputPhoto.nativeElement.value = '';
+      return;
+    }
 
-    /* this.autenticacaoFirebaseService
-      .cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha)
-      .pipe(
-        catchError((error) => {
-          return of([]);
-        }),
-        this.toast.observe({
-          success: 'Cadatro executado, bem vindo ao BookShelf',
-          loading: 'Enviando informações...',
-          error: ({ message }) =>
-            this.autenticacaoFirebaseService.errorMessages(
-              message.split('(')[1].split(')')[0]
-            ),
-        })
-      )
-      .subscribe(() => {
-        this.clientName = '';
-        this.clientEmail = '';
-        this.clienteSenha = '';
-        this.clienteConfirmSenha = '';
-        this.imgLoad = '';
-        this.inputPhoto.nativeElement.value = '';
-        this.rotas.navigate(['/']);
-      }); */
-  }
+    const user: User = {
+      name: this.clientName,
+      email: this.clientEmail,
+      photo: this.inputPhoto.nativeElement.value
+    }
 
-  upload(e: any): void {
-    let file = e.target.files[0];
-    let read = new FileReader();
-    read.readAsDataURL(file);
-
-    read.onloadend = () => {
-      console.log(read.result);
-      console.log('Type=> ', file.type);
-      this.autenticacaoFirebaseService.subirImagem(
-        `${this.clientName}_${Date.now()}`,
-        read.result
-      );
-    };
+    this.autenticacaoFirebaseService.cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha, user)
+    .pipe(
+      catchError((error) => {
+        return of([]);
+      }),
+      this.toast.observe({
+        success: 'Cadatro executado, bem vindo ao BookShelf',
+        loading: 'Enviando informações...',
+        error: ({ message }) =>
+          this.autenticacaoFirebaseService.errorMessages(
+            message.split('(')[1].split(')')[0]
+          ),
+      })
+    )
+    .subscribe(
+      () => {
+      this.clientName = '';
+      this.clientEmail = '';
+      this.clienteSenha = '';
+      this.clienteConfirmSenha = '';
+      this.imgLoad = '';
+      this.inputPhoto.nativeElement.value = '';
+      this.rotas.navigate(['/feed']);
+    });
   }
 
   carregarImg(): void {
     if (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png')) {
       this.imgLoad = this.inputPhoto.nativeElement.value
       this.state = true
-      console.log('imagem nao suportada')
     } else {
+      this.toast.error('BS#011 - Imagem não Suportada');
+      this.inputPhoto.nativeElement.value = '';
     }
   }
 

@@ -2,6 +2,7 @@ import 'firebase/compat/storage';
 
 import { Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
+import { Firestore } from '@angular/fire/firestore';
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -9,24 +10,24 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
-  updateProfile,
 } from 'firebase/auth';
-import { authState } from 'rxfire/auth';
-import { from, switchMap } from 'rxjs';
+import { collection, doc, setDoc } from 'firebase/firestore';
+import { authState, user } from 'rxfire/auth';
+import { docData } from 'rxfire/firestore';
+import { from, of, switchMap, tap } from 'rxjs';
+
+import { User } from './../modelosInterface/user';
 
 
-// firebase.initializeApp(environment.firebase)
 @Injectable({
   providedIn: 'root',
 })
 export class AutenticacaoFirebaseService {
-  /* firebaseApp = getApp();
-  storage = getStorage(this.firebaseApp, environment.firebase.storageBucket); */
 
   usuarioLogado$ = authState(this.usuarioFb);
   auth = getAuth();
 
-  constructor(private usuarioFb: Auth) {}
+  constructor(private usuarioFb: Auth, private db: Firestore) {}
 
   loginUsuario(usuarioEmail: string, usuarioSenha: string) {
     return from(
@@ -38,11 +39,41 @@ export class AutenticacaoFirebaseService {
     return from(this.usuarioFb.signOut());
   }
 
-  cadastrarUsuario(nome: string, email: string, senha: string) {
-    
+  cadastrarUsuario(nome: string, email: string, senha: string, payload: User) {
+
     return from(
       createUserWithEmailAndPassword(this.usuarioFb, email, senha)
-    ).pipe(switchMap(({ user }) => updateProfile(user, { displayName: nome })));
+    ).pipe(
+      tap((creds)=>{
+        payload.uid = creds.user.uid;
+        const users = collection(this.db, 'users');
+        const usersDoc = doc(users, payload.uid);
+        setDoc(usersDoc, payload);
+      }),
+      // switchMap(({ user }) => updateProfile(user, { displayName: nome }))
+    );
+  }
+
+  get user(){
+    //user do @angular/fire, tipo do firebase, retorna um usuario ou null | Se retonar o user ele tá logado
+    return user(this.auth).pipe(
+      //switchMap quando quer enviar de um Observable para outro sem colidor/encadear a tipagem
+      //Permite tratar o resultado de um Observable (valor emitido) e te obriga a retornar um novo Observable
+      switchMap((user) => {
+        //se há um User ele continua e chama o metodo privado abaixo passando o uid, se não retorna undefined
+        if(user){
+          return this.getUserData(user.uid);
+        }
+        return of(undefined)
+      })
+    )
+  }
+
+  private getUserData(uid: string){
+    const users = collection(this.db, 'users');
+    const userDoc = doc(users, uid);
+
+    return docData(userDoc)
   }
 
   loginGoogle() {
@@ -74,18 +105,6 @@ export class AutenticacaoFirebaseService {
     return from(sendPasswordResetEmail(this.usuarioFb, emailAddress));
   }
 
-  async subirImagem(nome: string, imgBase64: any) {
-    /*    if (!imgBase64) return;
-
-    try {
-      let res = await this.storageRef.child("user/" + nome).putString(imgBase64, 'data_url');
-
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    } */
-  }
-
   errorMessages(error: string) {
     switch (error) {
       case 'auth/invalid-email':
@@ -108,4 +127,5 @@ export class AutenticacaoFirebaseService {
         break;
     }
   }
+
 }

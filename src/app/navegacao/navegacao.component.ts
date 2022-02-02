@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
+import { DocumentData } from 'rxfire/firestore/interfaces';
 import { catchError, Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -34,6 +35,7 @@ export class NavegacaoComponent {
 
     toolbarColor : string = 'primary';
     toolbarBoolean: boolean = true;
+    user$!: Observable<DocumentData | undefined>;
   constructor(
     private breakpointObserver: BreakpointObserver,
     private telaLogin: MatDialog,
@@ -42,6 +44,7 @@ export class NavegacaoComponent {
     private autenticacaoFirebaseService: AutenticacaoFirebaseService,
     private navegadorService: NavegacaoService
     ) {
+      this.user$ = this.autenticacaoFirebaseService.user;
       this.itensMenu$ = navegadorService.listagemMenu()
       .pipe(
         catchError(error =>{

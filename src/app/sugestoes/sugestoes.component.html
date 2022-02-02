@@ -14,7 +14,12 @@
     <div *ngFor="let i of sugestoes">
       <mat-card *ngIf="!result$" class="sugestoes-card">
         <mat-card-title-group>
-          <mat-card-title>{{ i.titulo }}, {{ i.autor }}</mat-card-title>
+          <mat-card-title>
+            {{ i.titulo }}
+            <div>
+              <span>{{ i.autor }}</span>
+            </div>
+          </mat-card-title>
           <mat-card-subtitle>{{ i.sinopse }}</mat-card-subtitle>
           <img mat-card-xl-image [src]="i.image" >
         </mat-card-title-group>
@@ -25,7 +30,12 @@
     <div *ngFor="let i of result">
       <mat-card class="sugestoes-card">
         <mat-card-title-group>
-          <mat-card-title>{{ i.titulo }}, {{ i.autor }}</mat-card-title>
+          <mat-card-title>
+            {{ i.titulo }}
+            <div id="subtitulo">
+              <span>{{ i.autor }}</span>
+            </div>
+          </mat-card-title>
           <mat-card-subtitle>{{ i.sinopse }}</mat-card-subtitle>
           <img mat-card-xl-image [src]="i.image" >
         </mat-card-title-group>
