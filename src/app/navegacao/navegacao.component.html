@@ -48,9 +48,12 @@
       </button>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
         <button class="button dropdownMenu" mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu" matTooltip="Menu de navegação do usuário">
-          <mat-icon class="mat-18 userIcon">local_library</mat-icon>
-          <span class="username">{{usuario.displayName|| usuario.email}}</span>
-          <mat-icon>expand_more</mat-icon>
+          <div class="userMenu" *ngIf="user$ | async as user">
+            <div *ngIf="user['photo']" class="profileImg" [ngStyle]="{'background-image': 'url(' + user['photo'] + ')'}"></div>
+            <mat-icon #default *ngIf="!user['photo']" class="mat-18">local_library</mat-icon>
+            <span class="username">{{ user['name'] }}</span>
+            <mat-icon>expand_more</mat-icon>
+          </div>
         </button>
       </ng-container>
       <ng-template #botaoLogin>
