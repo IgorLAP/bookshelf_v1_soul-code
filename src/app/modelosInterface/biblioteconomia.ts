@@ -5,6 +5,4 @@ export interface Biblioteconomia {
   img: string;
   resumo: string;
   links: [{ref: string, texto: string}];
-  cols: number;
-  rows: number;
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "titulo":"Erros Frequentes",
+    "subtitulo": "Login",
+    "descricao":[
+      {"ref":"BS#001","texto":" - Email inválido","link":"","texto2":""},
+      {"ref":"BS#002","texto":" - Senha deve conter no mínimo 6 caracteres","link":"","texto2":""},
+      {"ref":"BS#003","texto":" - Email já registrado em nosso sistema - ","link":"/recuperar","texto2":"Recuperar Senha"},
+      {"ref":"BS#004","texto":" - Informações incorretas. Verifique novamente","link":"","texto2":""},
+      {"ref":"BS#005","texto":" - Usuário não cadastrado","link":"","texto2":""},
+      {"ref":"BS#006","texto":" - Ocorreu um erro","link":"","texto2":""}
+    ]
+  },
+  {
+    "titulo":"Erros Frequentes",
+    "subtitulo": "Cadastro",
+    "descricao":[
+      {"ref":"BS#007","texto":" - Preencha todos os campos corretamente","link":"","texto2":""},
+      {"ref":"BS#008","texto":" - As senhas não conferem!","link":"","texto2":""}
+    ]
+  }
+]

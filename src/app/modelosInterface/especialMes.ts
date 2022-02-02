@@ -4,6 +4,4 @@ export interface EspecialMes {
   img: string;
   reportagem: string;
   links: [{ ref: string, texto: string }];
-  cols: number;
-  rows: number;
 }

@@ -1,6 +1,5 @@
 [
   {
-    "iconeAjuda":"0",
     "titulo":"Como Efetuar Login",
     "subtitulo": "Na tela principal, no canto superior direito, usuário deve clicar no botão LOGIN.",
     "descricao":[
@@ -10,12 +9,9 @@
       {"ref":"4","texto":"Caso o usuário não possua cadastro, clicar em 'clique aqui' para realizar seu cadastro na plataforma."},
       {"ref":"", "texto":"Ou então realizar Login utilizando sua conta pessoal do Google."},
       {"ref":"5","texto":"Clique aqui e veja o vídeo demonstrativo de como Efetuar Login."}
-    ],
-    "cols":1,
-    "rows":1
+    ]
   },
   {
-    "iconeAjuda":"1",
     "titulo":"Como Realizar Cadastro",
     "subtitulo": "Na tela principal, usuário deve seguir os passo numerados de 1 a 4.",
     "descricao":[
@@ -30,9 +26,6 @@
       {"ref":"","texto":"Back para retornar ao Passo 3."},
       {"ref":"","texto":"Reset para apagar todas as informações preenchidas."},
       {"ref":"5","texto":"Clique aqui e veja o vídeo demonstrativo de como Realizar Cadastro"}
-    ],
-    "cols":1,
-    "rows":3
+    ]
   }
-
 ]
