@@ -1,13 +1,7 @@
 .card {
   border-radius: 0px 0px 20px 20px;
-  max-width: 450px;
+  max-width: 560px;
   margin: 140px auto;
-  height: 48%;
-  background-image: url("../../assets/imagens/logoBS3.png");
-  background-size: 230px;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 100px;
   background-color: rgb(69, 67, 72);
 }
 
@@ -18,7 +12,7 @@
   top: -52px;
   left: 0px;
   border-radius: 20px 20px 0px 0px;
-  width: 95.9%;
+  width: 96.6%;
   padding: 10px;
   color: white;
   background-color: rgb(105, 55, 187);
@@ -30,10 +24,32 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.profileImg{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
 .border {
+  display: flex;
+  padding: 10px;
   background-color: white;
   border-radius: 20px;
   padding: 10px 10px 1.3px 10px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right{
+
+  margin: 0 auto;
+  margin-left: 15px;
 }
 
 .mt {
@@ -41,6 +57,15 @@
 }
 
 span {
+  font-weight: bold;
   color: rgb(100, 60, 165);
 }
 
+@media only screen and(max-width: 720px) {
+  .border{
+    flex-wrap: wrap;
+  }
+  .right{
+    margin: 0 auto;
+  }
+}
