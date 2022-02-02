@@ -11,6 +11,7 @@ export class AjudaIconPipe implements PipeTransform {
       case '2': return 'looks_two';
       case '3':return 'looks_3';
       case '4': return 'looks_4';
+      case '5': return 'smart_display';
 
     }
     return 'subdirectory_arrow_right';
