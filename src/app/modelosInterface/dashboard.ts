@@ -4,7 +4,5 @@ export interface Dashboard {
   img: string;
   conteudo: string;
   link: [{ ref: string, texto: string }];
-  state?: string
-  cols: number;
-  rows: number;
+  state?: string;
 }

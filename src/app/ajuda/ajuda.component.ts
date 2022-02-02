@@ -20,8 +20,8 @@ import { AjudaService } from '../servicosInterface/ajuda.service';
 })
 export class AjudaComponent implements OnInit {
 
-
   cardAjuda$!: Observable<Ajuda[]>;
+  cardErros$!: Observable<Ajuda[]>;
 
   constructor(private ajudaService: AjudaService,private toast: HotToastService) { }
 
@@ -31,6 +31,10 @@ export class AjudaComponent implements OnInit {
       this.toast.error('Um erro ocorreu: BS# ${error}')
       return of([])
     }))
+    this.cardErros$ = this.ajudaService.listagemErros()
+    .pipe(catchError(error => {
+      this.toast.error('Um erro ocorreu: BS# ${error}')
+      return of([])
+    }))
   }
-
 }

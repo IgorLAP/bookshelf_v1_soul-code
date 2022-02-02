@@ -6,5 +6,4 @@ export interface Tecnologia {
   img: string;
   resumo: string;
   isbn: string;
-
 }

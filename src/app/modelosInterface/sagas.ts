@@ -5,7 +5,5 @@ export interface Sagas {
   img: string;
   resumo: string;
   links: [{ref: string, texto: string}];
-  saga: [{texto: string}]
-  cols: number;
-  rows: number;
+  saga: [{texto: string}];
 }

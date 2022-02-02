@@ -89,6 +89,12 @@ export class AppCadastroComponent implements OnInit {
       return;
     }
 
+    if((!this.inputPhoto.nativeElement.value.includes('.jpg') || !this.inputPhoto.nativeElement.value.includes('.png'))){
+      this.toast.error('BS#011 - Imagem não Suportada');
+      this.inputPhoto.nativeElement.value = '';
+      return;
+    }
+
     const user: User = {
       name: this.clientName,
       email: this.clientEmail,
