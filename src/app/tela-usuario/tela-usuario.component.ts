@@ -10,15 +10,13 @@ import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao
   styleUrls: ['./tela-usuario.component.scss']
 })
 export class TelaUsuarioComponent implements OnInit {
-  logo ='../../assets/imagens/ShelfBook.png';
-  usuario$!: Observable<DocumentData | undefined>
-  
+  logo='../../assets/imagens/ShelfBook.png';
+  usuario$= this.autenticacaoFirebaseService.usuarioLogado$
   constructor(
     private autenticacaoFirebaseService: AutenticacaoFirebaseService
   ) { }
 
   ngOnInit(): void {
-    this.usuario$ = this.autenticacaoFirebaseService.user;
   }
 
 }

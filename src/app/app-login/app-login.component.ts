@@ -73,7 +73,7 @@ export class AppLoginComponent {
   abrirLoginGoogle(){
     this.autenticacaoFirebaseService.loginGoogle()
     .subscribe(()=>{
-      this.rotas.navigate(['/feed'])
+      this.fecharDialog('/feed')
     })
   }
 

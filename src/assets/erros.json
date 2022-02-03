@@ -16,7 +16,10 @@
     "subtitulo": "Cadastro",
     "descricao":[
       {"ref":"BS#007","texto":" - Preencha todos os campos corretamente","link":"","texto2":""},
-      {"ref":"BS#008","texto":" - As senhas não conferem!","link":"","texto2":""}
+      {"ref":"BS#008","texto":" - As senhas não conferem!","link":"","texto2":""},
+      {"ref":"BS#009", "texto": " - Email inválido!", "link": "", "texto2":""},
+      {"ref":"BS#010", "texto": " - Provedor não cadastrado!", "link": "", "texto2":""},
+      {"ref":"BS#011", "texto": " - Formato não suportado, tente outra imagem", "link": "", "texto2":""}
     ]
   }
 ]

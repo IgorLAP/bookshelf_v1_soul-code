@@ -85,21 +85,23 @@ export class AppCadastroComponent implements OnInit {
       !this.clientEmail.includes('outlook.com') &&
       !this.clientEmail.includes('yahoo.com')
     ) {
-      this.toast.error('BS#010 - Provedor de email não cadastrado!');
-      return;
-    }
-
-    if((!this.inputPhoto.nativeElement.value.includes('.jpg') || !this.inputPhoto.nativeElement.value.includes('.png'))){
-      this.toast.error('BS#011 - Imagem não Suportada');
-      this.inputPhoto.nativeElement.value = '';
+      this.toast.error('BS#010 - Provedor não cadastrado!');
       return;
     }
 
     const user: User = {
       name: this.clientName,
       email: this.clientEmail,
-      photo: this.inputPhoto.nativeElement.value
+      photo: './../../assets/imagens/profile.png'
     }
+
+    if(this.inputPhoto.nativeElement.value !== '' && (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
+      user.photo = this.inputPhoto.nativeElement.value;
+    } else if(this.inputPhoto.nativeElement.value !== '' && !(this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
+      this.toast.error('BS#011 - Formato não suportado, tente outra imagem');
+      return;
+    }
+
 
     this.autenticacaoFirebaseService.cadastrarUsuario(this.clientName, this.clientEmail, this.clienteSenha, user)
     .pipe(
@@ -132,7 +134,7 @@ export class AppCadastroComponent implements OnInit {
       this.imgLoad = this.inputPhoto.nativeElement.value
       this.state = true
     } else {
-      this.toast.error('BS#011 - Imagem não Suportada');
+      this.toast.error('BS#011 - Formato não suportado, tente outra imagem');
       this.inputPhoto.nativeElement.value = '';
     }
   }

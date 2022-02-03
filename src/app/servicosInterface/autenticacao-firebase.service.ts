@@ -10,13 +10,14 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
+  updateProfile,
 } from 'firebase/auth';
 import { collection, doc, setDoc } from 'firebase/firestore';
 import { authState, user } from 'rxfire/auth';
 import { docData } from 'rxfire/firestore';
 import { from, of, switchMap, tap } from 'rxjs';
 
-import { User } from './../modelosInterface/user';
+import { User } from '../modelosInterface/user';
 
 
 @Injectable({
@@ -50,7 +51,7 @@ export class AutenticacaoFirebaseService {
         const usersDoc = doc(users, payload.uid);
         setDoc(usersDoc, payload);
       }),
-      // switchMap(({ user }) => updateProfile(user, { displayName: nome }))
+      switchMap(({ user }) => updateProfile(user, { displayName: nome, photoURL: payload.photo }))
     );
   }
 
