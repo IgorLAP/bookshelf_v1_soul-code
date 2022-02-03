@@ -1,6 +1,8 @@
-import { tap } from 'rxjs';
-import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 import { Component, OnInit } from '@angular/core';
+import { DocumentData } from 'rxfire/firestore/interfaces';
+import { map, Observable, tap } from 'rxjs';
+
+import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 @Component({
   selector: 'app-tela-usuario',
@@ -10,7 +12,6 @@ import { Component, OnInit } from '@angular/core';
 export class TelaUsuarioComponent implements OnInit {
   logo='../../assets/imagens/ShelfBook.png';
   usuario$= this.autenticacaoFirebaseService.usuarioLogado$
-  // user$ = this.autenticacaoFirebaseService.user;
   constructor(
     private autenticacaoFirebaseService: AutenticacaoFirebaseService
   ) { }

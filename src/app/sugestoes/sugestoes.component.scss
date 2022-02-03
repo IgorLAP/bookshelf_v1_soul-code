@@ -16,7 +16,7 @@
   flex-wrap: wrap;
 }
 .sugestoes-card {
-  max-width: 400px;
+  max-width: 450px;
   margin-bottom: 8px;
   padding: 20px;
   display: flex;
@@ -34,8 +34,16 @@
   .mat-card-title{
     margin-bottom: 15px;
     margin-right: 35px;
+    line-height: 1.2em;
+  }
+  .mat-card-subtitle{
+    margin-bottom: 15px;
+    margin-right: 35px;
+    line-height: 1.5em;
+    text-align: justify;
   }
 }
+
 
 .sugestoes-card:hover{
   transform: scale(1);
@@ -51,6 +59,12 @@
   align-items: center;
   justify-content: center;
   padding: 5rem;
+}
+
+
+span {
+  font-size: 0.8em;
+  color: #757575;
 }
 
 @media only screen and(max-width: 1120px) {

@@ -6,7 +6,7 @@ import { HotToastService } from '@ngneat/hot-toast';
 import { getStorage } from 'firebase/storage';
 import { catchError, of } from 'rxjs';
 
-import { User } from '../modelosInterface/user';
+import { User } from './../modelosInterface/user';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 export function passwordMatchValidator(): ValidatorFn {
@@ -70,11 +70,11 @@ export class AppCadastroComponent implements OnInit {
       this.toast.error('BS#008 - As senhas não conferem!');
       return;
     } else if (this.clienteSenha.length < 6){
-      this.toast.error('BS#009 - A senha deve ter no minimo 6 caracteres!');
+      this.toast.error('BS#002 - Senha deve conter no mínimo 6 caracteres');
       return;
     } else if (this.clientEmail) {
       if (this.clientEmail.indexOf('@') === -1) {
-        this.toast.error('BS#010 - Email inválido!');
+        this.toast.error('BS#009 - Email inválido!');
         return
       }
     }
@@ -85,7 +85,7 @@ export class AppCadastroComponent implements OnInit {
       !this.clientEmail.includes('outlook.com') &&
       !this.clientEmail.includes('yahoo.com')
     ) {
-      this.toast.error('BS#011 - Provedor não cadastrado!');
+      this.toast.error('BS#010 - Provedor não cadastrado!');
       return;
     }
 
@@ -98,7 +98,7 @@ export class AppCadastroComponent implements OnInit {
     if(this.inputPhoto.nativeElement.value !== '' && (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
       user.photo = this.inputPhoto.nativeElement.value;
     } else if(this.inputPhoto.nativeElement.value !== '' && !(this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
-      this.toast.error('BS#012 - Formato não suportado, tente outra imagem');
+      this.toast.error('BS#011 - Formato não suportado, tente outra imagem');
       return;
     }
 
@@ -134,7 +134,8 @@ export class AppCadastroComponent implements OnInit {
       this.imgLoad = this.inputPhoto.nativeElement.value
       this.state = true
     } else {
-      console.log('BS#012 - Formato não suportado, tente outra imagem')
+      this.toast.error('BS#012 - Imagem não Suportada');
+      this.inputPhoto.nativeElement.value = '';
     }
   }
 

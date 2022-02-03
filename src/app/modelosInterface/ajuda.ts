@@ -1,9 +1,6 @@
 export interface Ajuda{
-  iconeAjuda: string;
   titulo:string;
   subtitulo: string;
-  descricao: [{ref:string,texto:string}];
+  descricao: [{ref:string,texto:string,link:string,texto2:string}];
   state?: string;
-  cols: number;
-  rows: number;
 }

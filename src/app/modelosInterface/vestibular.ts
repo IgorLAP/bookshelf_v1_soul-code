@@ -3,6 +3,4 @@ export interface Vestibular {
   subtitulo: string;
   img: string;
   link: [{ref: string, livro: string}];
-  cols: number;
-  rows: number;
 }

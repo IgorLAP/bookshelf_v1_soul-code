@@ -10,7 +10,6 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
-  updateProfile,
 } from 'firebase/auth';
 import { collection, doc, setDoc } from 'firebase/firestore';
 import { authState, user } from 'rxfire/auth';
@@ -40,6 +39,42 @@ export class AutenticacaoFirebaseService {
     return from(this.usuarioFb.signOut());
   }
 
+  cadastrarUsuario(nome: string, email: string, senha: string, payload: User) {
+
+    return from(
+      createUserWithEmailAndPassword(this.usuarioFb, email, senha)
+    ).pipe(
+      tap((creds)=>{
+        payload.uid = creds.user.uid;
+        const users = collection(this.db, 'users');
+        const usersDoc = doc(users, payload.uid);
+        setDoc(usersDoc, payload);
+      }),
+      // switchMap(({ user }) => updateProfile(user, { displayName: nome }))
+    );
+  }
+
+  get user(){
+    //user do @angular/fire, tipo do firebase, retorna um usuario ou null | Se retonar o user ele tá logado
+    return user(this.auth).pipe(
+      //switchMap quando quer enviar de um Observable para outro sem colidor/encadear a tipagem
+      //Permite tratar o resultado de um Observable (valor emitido) e te obriga a retornar um novo Observable
+      switchMap((user) => {
+        //se há um User ele continua e chama o metodo privado abaixo passando o uid, se não retorna undefined
+        if(user){
+          return this.getUserData(user.uid);
+        }
+        return of(undefined)
+      })
+    )
+  }
+
+  private getUserData(uid: string){
+    const users = collection(this.db, 'users');
+    const userDoc = doc(users, uid);
+
+    return docData(userDoc)
+  }
 
   loginGoogle() {
     const provider = new GoogleAuthProvider();
@@ -70,43 +105,6 @@ export class AutenticacaoFirebaseService {
     return from(sendPasswordResetEmail(this.usuarioFb, emailAddress));
   }
 
-  cadastrarUsuario(nome: string, email: string, senha: string, payload: User) {
-
-    return from(
-      createUserWithEmailAndPassword(this.usuarioFb, email, senha)
-    ).pipe(
-      tap((creds)=>{
-        payload.uid = creds.user.uid;
-        const users = collection(this.db, 'users');
-        const usersDoc = doc(users, payload.uid);
-        setDoc(usersDoc, payload);
-      }),
-      switchMap(({ user }) => updateProfile(user, { displayName: nome, photoURL: payload.photo }))
-    );
-  }
-
-  get user(){
-    //user do @angular/fire, tipo do firebase, retorna um usuario ou null | Se retonar o user ele tá logado
-    return user(this.auth).pipe(
-      //switchMap quando quer enviar de um Observable para outro sem colidor/encadear a tipagem
-      //Permite tratar o resultado de um Observable (valor emitido) e te obriga a retornar um novo Observable
-      switchMap((user) => {
-        //se há um User ele continua e chama o metodo privado abaixo passando o uid, se não retorna undefined
-        if(user){
-          return this.getUserData(user.uid);
-        }
-        return of(undefined)
-      })
-    )
-  }
-
-  private getUserData(uid: string){
-    const users = collection(this.db, 'users');
-    const userDoc = doc(users, uid);
-
-    return docData(userDoc)
-  }
-
   errorMessages(error: string) {
     switch (error) {
       case 'auth/invalid-email':
@@ -129,4 +127,5 @@ export class AutenticacaoFirebaseService {
         break;
     }
   }
+
 }

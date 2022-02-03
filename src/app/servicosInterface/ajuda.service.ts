@@ -9,6 +9,7 @@ import { Ajuda } from '../modelosInterface/ajuda';
 export class AjudaService {
 
 private readonly urlAPI = '../../assets/ajuda.json';
+private readonly urlERR = '../../assets/erros.json';
 
 constructor(private http: HttpClient) { }
 
@@ -18,6 +19,17 @@ constructor(private http: HttpClient) { }
       first(),
       delay(400),
       tap(apiAjuda => apiAjuda.forEach(i=>{
+        i.state = "collapsed"
+      }))
+    )
+  }
+
+  listagemErros(){
+    return this.http.get<Ajuda[]>(this.urlERR)
+    .pipe(
+      first(),
+      delay(400),
+      tap(apiErros => apiErros.forEach(i=>{
         i.state = "collapsed"
       }))
     )

@@ -176,6 +176,20 @@
   text-align: center;
 }
 
+.userMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImg{
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
 
 .selected{
   background: linear-gradient(90deg, #5e17eb 0%, #ba52ff 100%);
