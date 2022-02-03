@@ -11,3 +11,8 @@
 - [Wellington Silva](https://github.com/welsda)
 
 <img src="https://i.imgur.com/fsQXC54.png" />
+
+## Instalação
+- `git clone` para clonar para sua máquina
+- `npm i` na pasta clonada, para instalação das dependências do projeto
+- `ng serve -o` para abrir o projeto Angular em seu navegador
