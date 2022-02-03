@@ -92,7 +92,7 @@ export class AppCadastroComponent implements OnInit {
     const user: User = {
       name: this.clientName,
       email: this.clientEmail,
-      photo: '../../assets/imagens/profile.png'
+      photo: './../../assets/imagens/profile.png'
     }
 
     if(this.inputPhoto.nativeElement.value !== '' && (this.inputPhoto.nativeElement.value.includes('.jpg') || this.inputPhoto.nativeElement.value.includes('.png'))){
@@ -134,7 +134,7 @@ export class AppCadastroComponent implements OnInit {
       this.imgLoad = this.inputPhoto.nativeElement.value
       this.state = true
     } else {
-      this.toast.error('BS#012 - Imagem não Suportada');
+      this.toast.error('BS#011 - Formato não suportado, tente outra imagem');
       this.inputPhoto.nativeElement.value = '';
     }
   }

@@ -10,6 +10,7 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
+  updateProfile,
 } from 'firebase/auth';
 import { collection, doc, setDoc } from 'firebase/firestore';
 import { authState, user } from 'rxfire/auth';
@@ -50,7 +51,7 @@ export class AutenticacaoFirebaseService {
         const usersDoc = doc(users, payload.uid);
         setDoc(usersDoc, payload);
       }),
-      // switchMap(({ user }) => updateProfile(user, { displayName: nome }))
+      switchMap(({ user }) => updateProfile(user, { displayName: nome, photoURL: payload.photo }))
     );
   }
 
