@@ -12,6 +12,10 @@
 
 <img src="https://i.imgur.com/fsQXC54.png" />
 
+## Pré-requisitos
+- `Node.js` - [Baixar](https://nodejs.org/en/)
+- `Angular/CLI` - npm i -g @angular/cli 
+
 ## Instalação
 - `git clone` para clonar para sua máquina
 - `npm i` na pasta clonada, para instalação das dependências do projeto
